@@ -153,8 +153,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 2027.000010828059,
-            "y" : 527.000003760877
+            "x" : 2136.0,
+            "y" : 520.0
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -188,8 +188,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 1251.000010828059,
-            "y" : 519.000003760877
+            "x" : 1168.0,
+            "y" : 520.0
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -252,6 +252,39 @@
             "id" : "97a842a9-e872-3e73-abae-ae58e0932a05",
             "instanceIdentifier" : "116f3e72-516d-3f0a-aa0a-ef35e255dff9",
             "name" : "ListenHTTP",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "021d2608-1560-3154-a2f1-3928de44fd6f",
+            "id" : "00e9262a-5171-3296-9b61-5711c9306ac1",
+            "instanceIdentifier" : "e9d4a6ea-0182-1000-ffff-ffffa759705a",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "021d2608-1560-3154-a2f1-3928de44fd6f",
+          "identifier" : "066f30f0-3db4-33fd-9f14-2113ecf037ad",
+          "instanceIdentifier" : "e9d4bff7-0182-1000-0000-00004c46141e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "unmatched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "021d2608-1560-3154-a2f1-3928de44fd6f",
+            "id" : "c2c63544-4ce8-38af-96d5-090337ae43f4",
+            "instanceIdentifier" : "e3226a70-c630-39e6-aaa8-ff06eb759614",
+            "name" : "RouteOnAttribute",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -722,6 +755,15 @@
             "x" : 643.000010828059,
             "y" : 399.000003760877
           }
+        }, {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "021d2608-1560-3154-a2f1-3928de44fd6f",
+          "identifier" : "00e9262a-5171-3296-9b61-5711c9306ac1",
+          "instanceIdentifier" : "e9d4a6ea-0182-1000-ffff-ffffa759705a",
+          "position" : {
+            "x" : 1584.0,
+            "y" : 1104.0
+          }
         } ],
         "identifier" : "021d2608-1560-3154-a2f1-3928de44fd6f",
         "inputPorts" : [ ],
@@ -766,14 +808,14 @@
           "instanceIdentifier" : "75716e84-2b5e-3c6b-b439-3cd76a58ae6e",
           "label" : "TMS",
           "position" : {
-            "x" : 963.000010828059,
-            "y" : 591.000003760877
+            "x" : 952.0,
+            "y" : 600.0
           },
           "style" : {
             "background-color" : "#d6fff9",
             "font-size" : "24px"
           },
-          "width" : 608.0,
+          "width" : 432.0,
           "zIndex" : 0
         }, {
           "componentType" : "LABEL",
@@ -783,14 +825,14 @@
           "instanceIdentifier" : "08961b78-e443-39c9-b830-d6670ec9f1fd",
           "label" : "WMSZnO",
           "position" : {
-            "x" : 1731.000010828059,
-            "y" : 591.000003760877
+            "x" : 1888.0,
+            "y" : 600.0
           },
           "style" : {
             "background-color" : "#d6fff9",
             "font-size" : "24px"
           },
-          "width" : 560.0,
+          "width" : 456.0,
           "zIndex" : 0
         }, {
           "componentType" : "LABEL",
@@ -2470,8 +2512,8 @@
           "name" : "TMS",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 1059.000010828059,
-            "y" : 623.000003760877
+            "x" : 976.0,
+            "y" : 640.0
           },
           "processGroups" : [ ],
           "processors" : [ {
@@ -3793,11 +3835,11 @@
             "width" : 392.0,
             "zIndex" : 0
           } ],
-          "name" : "Logs",
+          "name" : "Logs test",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 1088.0,
-            "y" : 1160.0
+            "x" : 488.0,
+            "y" : 1016.0
           },
           "processGroups" : [ ],
           "processors" : [ {
@@ -3978,7 +4020,7 @@
               "Log Level" : "info",
               "Attributes to Log" : "Text",
               "attributes-to-log-regex" : ".*",
-              "Output Format" : "Single Line",
+              "Output Format" : "Line per Attribute",
               "Log Payload" : "false"
             },
             "propertyDescriptors" : {
@@ -4607,8 +4649,8 @@
           "name" : "WMSZnO",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 1835.000010828059,
-            "y" : 623.000003760877
+            "x" : 1944.0,
+            "y" : 632.0
           },
           "processGroups" : [ {
             "comments" : "",
@@ -7213,7 +7255,7 @@
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "unmatched" ],
+          "autoTerminatedRelationships" : [ ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
