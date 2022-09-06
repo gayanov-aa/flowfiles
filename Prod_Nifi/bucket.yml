@@ -3,6 +3,8 @@ flows:
     author: anonymous, created: 1662457770955, flowName: Brands, flowDesc: Start}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 2, file: Contractors.snapshot, comments: Start,
     author: anonymous, created: 1662455689225, flowName: Contractors, flowDesc: ''}
+  f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 1, file: Сontracts.snapshot, comments: '',
+    author: anonymous, created: 1662460573247, flowName: Сontracts, flowDesc: Start}
   34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   20d4132f-443e-4051-8df9-4cc510552662: {ver: 2, file: contractors_subtypes.snapshot,
