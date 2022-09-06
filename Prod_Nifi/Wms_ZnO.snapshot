@@ -12,8 +12,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 678.186793664973,
-            "y" : 735.3777427135137
+            "x" : 673.879176477473,
+            "y" : 703.7885398326544
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -152,8 +152,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 669.6030992069652,
-            "y" : 357.90570444447076
+            "x" : 665.2954820194652,
+            "y" : 326.3165015636114
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -734,8 +734,8 @@
           "identifier" : "217b45dd-f3bb-301d-9777-6ea6dabe4455",
           "instanceIdentifier" : "217b45dd-f3bb-301d-b633-79dd18695f00",
           "position" : {
-            "x" : 651.000010828059,
-            "y" : 783.000003760877
+            "x" : 648.0,
+            "y" : 752.0
           }
         }, {
           "componentType" : "FUNNEL",
@@ -761,8 +761,8 @@
           "identifier" : "fa784e18-6068-3431-9860-dbcdf3f889cf",
           "instanceIdentifier" : "fa784e18-6068-3431-bd9d-7ee9980398fb",
           "position" : {
-            "x" : 643.000010828059,
-            "y" : 399.000003760877
+            "x" : 640.0,
+            "y" : 368.0
           }
         } ],
         "identifier" : "c67dc819-34fd-30a9-b754-e8f1afb9f440",
@@ -793,8 +793,8 @@
           "instanceIdentifier" : "3c600b20-5c12-3225-9f5e-e2ceee9285c2",
           "label" : "Для запуска выгрузки \n\nНужен пароль ",
           "position" : {
-            "x" : 443.000010828059,
-            "y" : 487.000003760877
+            "x" : 440.0,
+            "y" : 456.0
           },
           "style" : {
             "font-size" : "24px"
@@ -842,8 +842,8 @@
           "instanceIdentifier" : "777f87dc-9b85-31f6-87df-97d22f2d00bf",
           "label" : "Для запуска выгрузки TMS",
           "position" : {
-            "x" : 443.000010828059,
-            "y" : 119.00000376087701
+            "x" : 440.0,
+            "y" : 88.0
           },
           "style" : {
             "font-size" : "24px"
@@ -858,8 +858,8 @@
           "instanceIdentifier" : "c4b4811d-623e-3f24-81b9-bacbc572fac4",
           "label" : "GayanovA/1123581321\nhttps://84.23.54.182/alpha#!/\n",
           "position" : {
-            "x" : 587.000010828059,
-            "y" : 887.000003760877
+            "x" : 584.0,
+            "y" : 856.0
           },
           "style" : {
             "font-size" : "12px"
@@ -6279,7 +6279,7 @@
             "Max Unconfirmed Flowfile Time" : "60 secs",
             "client-authentication" : "AUTO",
             "Return Code" : "200",
-            "Listening Port" : "8889"
+            "Listening Port" : "8888"
           },
           "propertyDescriptors" : {
             "authorized-issuer-dn-pattern" : {
@@ -6414,8 +6414,8 @@
           "name" : "InvokeHTTP",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 499.000010828059,
-            "y" : 575.000003760877
+            "x" : 496.0,
+            "y" : 544.0
           },
           "properties" : {
             "use-etag" : "false",
@@ -6679,8 +6679,8 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "1 min",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingPeriod" : "* 10 * * * ?",
+          "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
           "yieldDuration" : "1 sec"
@@ -6832,8 +6832,8 @@
           "name" : "InvokeHTTP",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 491.000010828059,
-            "y" : 199.000003760877
+            "x" : 488.0,
+            "y" : 168.0
           },
           "properties" : {
             "use-etag" : "false",
