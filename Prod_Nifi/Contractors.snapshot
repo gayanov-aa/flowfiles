@@ -4,7 +4,12 @@
   },
   "content" : {
     "flowSnapshot" : {
-      "externalControllerServices" : { },
+      "externalControllerServices" : {
+        "9e1423bd-bcf2-318b-a4de-c6178270e6eb" : {
+          "identifier" : "9e1423bd-bcf2-318b-a4de-c6178270e6eb",
+          "name" : "MsSqlConnector(92)"
+        }
+      },
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
@@ -308,6 +313,42 @@
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 1376.0,
+            "y" : 1288.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7308c4e6-aea0-31c2-8b05-e89542ffc9a9",
+            "id" : "c0e3c3f4-2ba8-304f-95eb-0e0d6f50c3f2",
+            "instanceIdentifier" : "9c6ddf51-c814-3817-aaa5-ef9367a9f620",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7308c4e6-aea0-31c2-8b05-e89542ffc9a9",
+          "identifier" : "cc607e58-2617-3475-9c7a-5d91c86fd669",
+          "instanceIdentifier" : "b33c3dcb-6d5a-1298-0000-000074f21c98",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7308c4e6-aea0-31c2-8b05-e89542ffc9a9",
+            "id" : "81fe806f-87c4-3c61-a605-fa13a6ee8ab8",
+            "instanceIdentifier" : "dc96fa86-0b84-3c48-96b2-33ead7744a3a",
+            "name" : "PutSQL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -404,6 +445,42 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 2304.0,
+            "y" : 1280.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7308c4e6-aea0-31c2-8b05-e89542ffc9a9",
+            "id" : "c0e3c3f4-2ba8-304f-95eb-0e0d6f50c3f2",
+            "instanceIdentifier" : "9c6ddf51-c814-3817-aaa5-ef9367a9f620",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7308c4e6-aea0-31c2-8b05-e89542ffc9a9",
+          "identifier" : "cf00a47e-4487-30bd-9acd-0faac9efcea7",
+          "instanceIdentifier" : "b33c3dd3-6d5a-1298-0000-000042ac6fb7",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7308c4e6-aea0-31c2-8b05-e89542ffc9a9",
+            "id" : "107ff16a-ac8f-32c0-a3f9-ded02ebdc8e2",
+            "instanceIdentifier" : "aa8a3e3d-9155-3089-8031-63ec4b90da9d",
+            "name" : "PutSQL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
         } ],
         "controllerServices" : [ ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -429,8 +506,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "Connector",
         "position" : {
-          "x" : 280.0,
-          "y" : 48.0
+          "x" : 40.0,
+          "y" : -16.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -520,7 +597,7 @@
             "Unmatched Column Behavior" : "Fail on Unmatched Columns",
             "jts-quoted-identifiers" : "false",
             "jts-quoted-table-identifiers" : "false",
-            "JDBC Connection Pool" : "8005761b-d2a4-3a58-ac6a-0303c4402fbd",
+            "JDBC Connection Pool" : "9e1423bd-bcf2-318b-a4de-c6178270e6eb",
             "Translate Field Names" : "true",
             "Statement Type" : "INSERT"
           },
@@ -535,6 +612,24 @@
               "displayName" : "Table Name",
               "identifiesControllerService" : false,
               "name" : "Table Name",
+              "sensitive" : false
+            },
+            "Catalog Name" : {
+              "displayName" : "Catalog Name",
+              "identifiesControllerService" : false,
+              "name" : "Catalog Name",
+              "sensitive" : false
+            },
+            "jts-sql-param-attr-prefix" : {
+              "displayName" : "SQL Parameter Attribute Prefix",
+              "identifiesControllerService" : false,
+              "name" : "jts-sql-param-attr-prefix",
+              "sensitive" : false
+            },
+            "Schema Name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "Schema Name",
               "sensitive" : false
             },
             "Unmatched Field Behavior" : {
@@ -561,10 +656,10 @@
               "name" : "jts-quoted-table-identifiers",
               "sensitive" : false
             },
-            "Catalog Name" : {
-              "displayName" : "Catalog Name",
-              "identifiesControllerService" : false,
-              "name" : "Catalog Name",
+            "JDBC Connection Pool" : {
+              "displayName" : "JDBC Connection Pool",
+              "identifiesControllerService" : true,
+              "name" : "JDBC Connection Pool",
               "sensitive" : false
             },
             "Update Keys" : {
@@ -579,22 +674,10 @@
               "name" : "Translate Field Names",
               "sensitive" : false
             },
-            "jts-sql-param-attr-prefix" : {
-              "displayName" : "SQL Parameter Attribute Prefix",
-              "identifiesControllerService" : false,
-              "name" : "jts-sql-param-attr-prefix",
-              "sensitive" : false
-            },
             "Statement Type" : {
               "displayName" : "Statement Type",
               "identifiesControllerService" : false,
               "name" : "Statement Type",
-              "sensitive" : false
-            },
-            "Schema Name" : {
-              "displayName" : "Schema Name",
-              "identifiesControllerService" : false,
-              "name" : "Schema Name",
               "sensitive" : false
             }
           },
@@ -1162,7 +1245,7 @@
           "type" : "org.apache.nifi.processors.standard.JoltTransformJSON",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "failure", "retry" ],
+          "autoTerminatedRelationships" : [ "retry" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -1188,7 +1271,7 @@
             "Support Fragmented Transactions" : "true",
             "Batch Size" : "100",
             "Obtain Generated Keys" : "false",
-            "JDBC Connection Pool" : "8005761b-d2a4-3a58-ac6a-0303c4402fbd",
+            "JDBC Connection Pool" : "9e1423bd-bcf2-318b-a4de-c6178270e6eb",
             "database-session-autocommit" : "false",
             "rollback-on-failure" : "false"
           },
@@ -1221,6 +1304,12 @@
               "displayName" : "Obtain Generated Keys",
               "identifiesControllerService" : false,
               "name" : "Obtain Generated Keys",
+              "sensitive" : false
+            },
+            "JDBC Connection Pool" : {
+              "displayName" : "JDBC Connection Pool",
+              "identifiesControllerService" : true,
+              "name" : "JDBC Connection Pool",
               "sensitive" : false
             },
             "database-session-autocommit" : {
@@ -1276,7 +1365,7 @@
             "Unmatched Column Behavior" : "Fail on Unmatched Columns",
             "jts-quoted-identifiers" : "false",
             "jts-quoted-table-identifiers" : "false",
-            "JDBC Connection Pool" : "8005761b-d2a4-3a58-ac6a-0303c4402fbd",
+            "JDBC Connection Pool" : "9e1423bd-bcf2-318b-a4de-c6178270e6eb",
             "Update Keys" : "id",
             "Translate Field Names" : "true",
             "Statement Type" : "UPDATE"
@@ -1292,6 +1381,24 @@
               "displayName" : "Table Name",
               "identifiesControllerService" : false,
               "name" : "Table Name",
+              "sensitive" : false
+            },
+            "Catalog Name" : {
+              "displayName" : "Catalog Name",
+              "identifiesControllerService" : false,
+              "name" : "Catalog Name",
+              "sensitive" : false
+            },
+            "jts-sql-param-attr-prefix" : {
+              "displayName" : "SQL Parameter Attribute Prefix",
+              "identifiesControllerService" : false,
+              "name" : "jts-sql-param-attr-prefix",
+              "sensitive" : false
+            },
+            "Schema Name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "Schema Name",
               "sensitive" : false
             },
             "Unmatched Field Behavior" : {
@@ -1318,10 +1425,10 @@
               "name" : "jts-quoted-table-identifiers",
               "sensitive" : false
             },
-            "Catalog Name" : {
-              "displayName" : "Catalog Name",
-              "identifiesControllerService" : false,
-              "name" : "Catalog Name",
+            "JDBC Connection Pool" : {
+              "displayName" : "JDBC Connection Pool",
+              "identifiesControllerService" : true,
+              "name" : "JDBC Connection Pool",
               "sensitive" : false
             },
             "Update Keys" : {
@@ -1336,22 +1443,10 @@
               "name" : "Translate Field Names",
               "sensitive" : false
             },
-            "jts-sql-param-attr-prefix" : {
-              "displayName" : "SQL Parameter Attribute Prefix",
-              "identifiesControllerService" : false,
-              "name" : "jts-sql-param-attr-prefix",
-              "sensitive" : false
-            },
             "Statement Type" : {
               "displayName" : "Statement Type",
               "identifiesControllerService" : false,
               "name" : "Statement Type",
-              "sensitive" : false
-            },
-            "Schema Name" : {
-              "displayName" : "Schema Name",
-              "identifiesControllerService" : false,
-              "name" : "Schema Name",
               "sensitive" : false
             }
           },
@@ -1365,7 +1460,7 @@
           "type" : "org.apache.nifi.processors.standard.ConvertJSONToSQL",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "failure", "retry" ],
+          "autoTerminatedRelationships" : [ "retry" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -1391,7 +1486,7 @@
             "Support Fragmented Transactions" : "true",
             "Batch Size" : "100",
             "Obtain Generated Keys" : "false",
-            "JDBC Connection Pool" : "8005761b-d2a4-3a58-ac6a-0303c4402fbd",
+            "JDBC Connection Pool" : "9e1423bd-bcf2-318b-a4de-c6178270e6eb",
             "database-session-autocommit" : "false",
             "rollback-on-failure" : "false"
           },
@@ -1424,6 +1519,12 @@
               "displayName" : "Obtain Generated Keys",
               "identifiesControllerService" : false,
               "name" : "Obtain Generated Keys",
+              "sensitive" : false
+            },
+            "JDBC Connection Pool" : {
+              "displayName" : "JDBC Connection Pool",
+              "identifiesControllerService" : true,
+              "name" : "JDBC Connection Pool",
               "sensitive" : false
             },
             "database-session-autocommit" : {
@@ -1475,7 +1576,7 @@
             "esql-max-rows" : "0",
             "dbf-default-precision" : "10",
             "Max Wait Time" : "0 seconds",
-            "Database Connection Pooling Service" : "8005761b-d2a4-3a58-ac6a-0303c4402fbd",
+            "Database Connection Pooling Service" : "9e1423bd-bcf2-318b-a4de-c6178270e6eb",
             "esql-auto-commit" : "true",
             "dbf-user-logical-types" : "false",
             "dbf-default-scale" : "0",
@@ -1502,6 +1603,12 @@
               "displayName" : "Max Wait Time",
               "identifiesControllerService" : false,
               "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Connection Pooling Service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "Database Connection Pooling Service",
               "sensitive" : false
             },
             "sql-post-query" : {
@@ -1569,8 +1676,8 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "5 min",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingPeriod" : "* 21 * * * ?",
+          "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
           "yieldDuration" : "1 sec"
