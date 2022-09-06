@@ -5,5 +5,8 @@ flows:
     author: anonymous, created: 1662455689225, flowName: Contractors, flowDesc: ''}
   34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
+  20d4132f-443e-4051-8df9-4cc510552662: {ver: 1, file: contractors_subtypes.snapshot,
+    comments: '', author: anonymous, created: 1662458777766, flowName: contractors_subtypes,
+    flowDesc: Start}
 layoutVer: 1
 bucketId: 016c05e8-37e2-40c0-accf-bfc6976b1d9a
