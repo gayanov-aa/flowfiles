@@ -3,6 +3,9 @@ flows:
     author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
   d07df2b3-96ea-450b-b35e-79323fe832e9: {ver: 1, file: contractors.snapshot, comments: '',
     author: anonymous, created: 1662455088917, flowName: contractors, flowDesc: ''}
+  bcaed851-c669-4634-953f-12324a9b791a: {ver: 1, file: contractors_subtypes.snapshot,
+    comments: '', author: anonymous, created: 1662458601448, flowName: contractors_subtypes,
+    flowDesc: Test}
   89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
 layoutVer: 1
