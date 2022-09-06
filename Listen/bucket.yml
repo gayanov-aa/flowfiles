@@ -8,6 +8,8 @@ flows:
     flowDesc: Test}
   be80c94c-e763-4e4e-9d46-912a06fab3c9: {ver: 1, file: Сontracts.snapshot, comments: '',
     author: anonymous, created: 1662460512593, flowName: Сontracts, flowDesc: Test}
+  41d3e8bc-45a5-47e7-b562-05460a95f875: {ver: 1, file: Logistic_cards.snapshot, comments: '',
+    author: anonymous, created: 1662468796386, flowName: Logistic_cards, flowDesc: Test}
   89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
 layoutVer: 1
