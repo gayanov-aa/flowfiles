@@ -1,6 +1,8 @@
 flows:
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457770955, flowName: Brands, flowDesc: Start}
+  29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 1, file: Logistic_cards.snapshot, comments: '',
+    author: anonymous, created: 1662468851171, flowName: Logistic_cards, flowDesc: ''}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 2, file: Contractors.snapshot, comments: Start,
     author: anonymous, created: 1662455689225, flowName: Contractors, flowDesc: ''}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 1, file: Сontracts.snapshot, comments: '',
