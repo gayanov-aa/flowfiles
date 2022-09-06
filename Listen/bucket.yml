@@ -1,5 +1,7 @@
 flows:
   d1b42786-6c61-4456-b932-83756bb53b49: {ver: 1, file: New.snapshot, comments: '',
     author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
+  d07df2b3-96ea-450b-b35e-79323fe832e9: {ver: 1, file: contractors.snapshot, comments: '',
+    author: anonymous, created: 1662455088917, flowName: contractors, flowDesc: ''}
 layoutVer: 1
 bucketId: 06337f92-d08b-4cc4-9c1b-493316e95bae
