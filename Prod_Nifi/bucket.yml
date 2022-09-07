@@ -15,5 +15,7 @@ flows:
   20d4132f-443e-4051-8df9-4cc510552662: {ver: 3, file: contractors_subtypes.snapshot,
     comments: CRON * * 21 * *, author: anonymous, created: 1662536310988, flowName: contractors_subtypes,
     flowDesc: Start}
+  42bbcf65-363e-4252-8850-1ab4bccefc9d: {ver: 1, file: Price_lists.snapshot, comments: '',
+    author: anonymous, created: 1662537197690, flowName: Price_lists, flowDesc: ''}
 layoutVer: 1
 bucketId: 016c05e8-37e2-40c0-accf-bfc6976b1d9a
