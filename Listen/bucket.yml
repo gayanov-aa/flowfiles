@@ -17,5 +17,8 @@ flows:
     author: anonymous, created: 1662468796386, flowName: Logistic_cards, flowDesc: Test}
   89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
+  76b0def2-3a3f-48c7-92b7-b1f444c37776: {ver: 1, file: Price_lists_conform.snapshot,
+    comments: '', author: anonymous, created: 1662539602749, flowName: Price_lists_conform,
+    flowDesc: Test}
 layoutVer: 1
 bucketId: 06337f92-d08b-4cc4-9c1b-493316e95bae
