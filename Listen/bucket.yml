@@ -1,6 +1,8 @@
 flows:
   d1b42786-6c61-4456-b932-83756bb53b49: {ver: 1, file: New.snapshot, comments: '',
     author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
+  4851391a-5fa8-4705-9c75-3776fef00026: {ver: 1, file: storages.snapshot, comments: '',
+    author: anonymous, created: 1662560778892, flowName: storages, flowDesc: Test}
   d07df2b3-96ea-450b-b35e-79323fe832e9: {ver: 1, file: contractors.snapshot, comments: '',
     author: anonymous, created: 1662455088917, flowName: contractors, flowDesc: ''}
   5dd03003-0867-4392-bebc-5aa1d3b922f6: {ver: 2, file: Price_list.snapshot, comments: Group
