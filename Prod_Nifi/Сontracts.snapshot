@@ -506,7 +506,7 @@
         "outputPorts" : [ ],
         "parameterContextName" : "Connector",
         "position" : {
-          "x" : 480.0,
+          "x" : 472.0,
           "y" : -16.0
         },
         "processGroups" : [ ],
@@ -1508,7 +1508,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "* 21 * * * ?",
+          "schedulingPeriod" : "* * 21 * * ?",
           "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
@@ -1728,14 +1728,14 @@
             "value" : "/drivers_nifi/sqljdbc_10.2/rus/mssql-jdbc-10.2.0.jre8.jar"
           }, {
             "description" : "",
-            "name" : "UrlJdbcMsSql",
-            "sensitive" : false,
-            "value" : "jdbc:sqlserver://"
-          }, {
-            "description" : "",
             "name" : "Bearer",
             "sensitive" : false,
             "value" : "Bearer bddba698214e6a4de9ae38bce45435fd"
+          }, {
+            "description" : "",
+            "name" : "UrlJdbcMsSql",
+            "sensitive" : false,
+            "value" : "jdbc:sqlserver://"
           }, {
             "description" : "",
             "name" : "UrlApiABOM",
