@@ -3,8 +3,8 @@ flows:
     author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
   d07df2b3-96ea-450b-b35e-79323fe832e9: {ver: 1, file: contractors.snapshot, comments: '',
     author: anonymous, created: 1662455088917, flowName: contractors, flowDesc: ''}
-  5dd03003-0867-4392-bebc-5aa1d3b922f6: {ver: 1, file: Price_list.snapshot, comments: '',
-    author: anonymous, created: 1662476696433, flowName: Price_list, flowDesc: 'цикл '}
+  5dd03003-0867-4392-bebc-5aa1d3b922f6: {ver: 2, file: Price_list.snapshot, comments: Group
+      cycle, author: anonymous, created: 1662537138646, flowName: Price_list, flowDesc: 'цикл '}
   bcaed851-c669-4634-953f-12324a9b791a: {ver: 1, file: contractors_subtypes.snapshot,
     comments: '', author: anonymous, created: 1662458601448, flowName: contractors_subtypes,
     flowDesc: Test}
