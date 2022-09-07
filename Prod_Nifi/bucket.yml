@@ -1,6 +1,9 @@
 flows:
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 2, file: Brands.snapshot, comments: CRON
       * * 21 * *, author: anonymous, created: 1662536301667, flowName: Brands, flowDesc: Start}
+  6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 1, file: Price_lists_categories.snapshot,
+    comments: '', author: anonymous, created: 1662538762878, flowName: Price_lists_categories,
+    flowDesc: Start}
   29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 2, file: Logistic_cards.snapshot, comments: CRON
       * * 21 * *, author: anonymous, created: 1662536307329, flowName: Logistic_cards,
     flowDesc: ''}
