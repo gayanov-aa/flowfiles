@@ -1,6 +1,6 @@
 flows:
-  0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 2, file: Storages.snapshot, comments: Небольшие
-      правки, author: anonymous, created: 1662560933533, flowName: Storages, flowDesc: Start}
+  0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 3, file: Storages.snapshot, comments: 'Небольшие
+      правки ', author: anonymous, created: 1662560950980, flowName: Storages, flowDesc: Start}
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 2, file: Brands.snapshot, comments: CRON
       * * 21 * *, author: anonymous, created: 1662536301667, flowName: Brands, flowDesc: Start}
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 1, file: Price_lists_categories.snapshot,
