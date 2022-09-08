@@ -13,8 +13,8 @@ flows:
   32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 1, file: Price_lists_conform.snapshot,
     comments: '', author: anonymous, created: 1662539692032, flowName: Price_lists_conform,
     flowDesc: Start}
-  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 3, file: Contractors.snapshot, comments: CRON
-      * * 21 * *, author: anonymous, created: 1662536289446, flowName: Contractors,
+  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 4, file: Contractors.snapshot, comments: Redundant
+      queues removed, author: anonymous, created: 1662622532925, flowName: Contractors,
     flowDesc: ''}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 2, file: Сontracts.snapshot, comments: CRON
       * * 21 * *, author: anonymous, created: 1662536295486, flowName: Сontracts,
