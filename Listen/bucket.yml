@@ -5,6 +5,8 @@ flows:
     author: anonymous, created: 1662560778892, flowName: storages, flowDesc: Test}
   d07df2b3-96ea-450b-b35e-79323fe832e9: {ver: 1, file: contractors.snapshot, comments: '',
     author: anonymous, created: 1662455088917, flowName: contractors, flowDesc: ''}
+  2d25523c-5d87-4966-8e38-e95d06921bc8: {ver: 1, file: Products.snapshot, comments: '',
+    author: anonymous, created: 1662625388345, flowName: Products, flowDesc: Test}
   5dd03003-0867-4392-bebc-5aa1d3b922f6: {ver: 2, file: Price_list.snapshot, comments: Group
       cycle, author: anonymous, created: 1662537138646, flowName: Price_list, flowDesc: 'цикл '}
   bcaed851-c669-4634-953f-12324a9b791a: {ver: 1, file: contractors_subtypes.snapshot,
