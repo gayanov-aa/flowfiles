@@ -3065,8 +3065,8 @@
               "y" : 584.0
             },
             "properties" : {
-              "Regular Expression" : ".$",
-              "Replacement Value" : "  ,\"order_id\" : \"${order_id}\"}",
+              "Regular Expression" : "{",
+              "Replacement Value" : "{\"order_id\" : \"${order_id}\",",
               "Evaluation Mode" : "Line-by-Line",
               "Line-by-Line Evaluation Mode" : "Last-Line",
               "Character Set" : "UTF-8",
