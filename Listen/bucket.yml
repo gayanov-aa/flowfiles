@@ -24,8 +24,8 @@ flows:
   76b0def2-3a3f-48c7-92b7-b1f444c37776: {ver: 1, file: Price_lists_conform.snapshot,
     comments: '', author: anonymous, created: 1662539602749, flowName: Price_lists_conform,
     flowDesc: Test}
-  e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 1, file: OrderAndOrderItem.snapshot,
-    comments: '', author: anonymous, created: 1662649464538, flowName: OrderAndOrderItem,
+  e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 2, file: OrderAndOrderItem.snapshot,
+    comments: Test, author: anonymous, created: 1662705023263, flowName: OrderAndOrderItem,
     flowDesc: ''}
 layoutVer: 1
 bucketId: 06337f92-d08b-4cc4-9c1b-493316e95bae

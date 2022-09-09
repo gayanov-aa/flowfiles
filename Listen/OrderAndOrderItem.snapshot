@@ -148,6 +148,39 @@
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
+            "id" : "895b5593-5aca-35a8-a0e9-e650c0df36d2",
+            "instanceIdentifier" : "93bd3d18-f712-1fc1-84c7-6c95ca0784b1",
+            "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
+          "identifier" : "31bd8a20-b3d9-306e-92e6-d209112c968b",
+          "instanceIdentifier" : "20db2730-0183-1000-0000-000040127793",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
+            "id" : "c5521ece-6a02-3dc7-b7f6-08ee3f583af1",
+            "instanceIdentifier" : "6b9d3976-0f11-1b52-a51a-2e10dc4d3267",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
           "bends" : [ {
             "x" : -656.9817770728387,
             "y" : -546.5070364635852
@@ -425,21 +458,21 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
-          "identifier" : "801625c0-6bba-3f1e-8bc5-b520db3c75da",
-          "instanceIdentifier" : "e4df363c-9f02-1654-ad5b-8d91cc27e5f8",
+          "identifier" : "2c6a6197-d6e4-334e-a885-52aee379260e",
+          "instanceIdentifier" : "20dd69c7-0183-1000-0000-00000bbb3259",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
+          "selectedRelationships" : [ "matched" ],
           "source" : {
             "comments" : "",
             "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
-            "id" : "0bf1d487-363e-322d-8645-d94530e83158",
-            "instanceIdentifier" : "30ef3aa4-f435-1a17-8b60-3fc1d326c1fc",
-            "name" : "GenerateFlowFile",
+            "id" : "33b87fe5-0662-385a-bb50-337b329ac9e2",
+            "instanceIdentifier" : "22b9319f-71fc-1fa6-a657-06fd2bfbf41f",
+            "name" : "EvaluateJsonPath",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -473,6 +506,42 @@
             "id" : "895b5593-5aca-35a8-a0e9-e650c0df36d2",
             "instanceIdentifier" : "93bd3d18-f712-1fc1-84c7-6c95ca0784b1",
             "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -608.0,
+            "y" : -208.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
+            "id" : "a82b108c-be84-32a5-8a82-e23f30b77bb3",
+            "instanceIdentifier" : "e2a83271-2279-157e-a114-984f6f21e73e",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
+          "identifier" : "b3af5929-5a1b-3d33-9e6c-d032500c59e6",
+          "instanceIdentifier" : "20e62a0c-0183-1000-0000-00001e680e5b",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Response" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
+            "id" : "769f2490-75e4-3d59-8391-024583c905cf",
+            "instanceIdentifier" : "81d83a9f-5d59-1962-a40d-9ef108cd77f1",
+            "name" : "InvokeHTTP",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -572,39 +641,6 @@
             "id" : "6a77b6e8-59c3-31fd-9c05-4a01fda8d9b2",
             "instanceIdentifier" : "fc5e38ae-4f7a-10d8-9b0e-646eed75e8fc",
             "name" : "PutSQL",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 3000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
-            "id" : "92e32c10-a4a9-3563-881d-2ba788420225",
-            "instanceIdentifier" : "e33f3c55-3754-1a73-ae2a-d25e4bc00494",
-            "name" : "ConvertJSONToSQL",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
-          "identifier" : "26f4893d-5695-3704-8177-021c31f60889",
-          "instanceIdentifier" : "ae7e38cf-5cca-1be2-9a7f-389b51ecf6dc",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
-            "id" : "c5521ece-6a02-3dc7-b7f6-08ee3f583af1",
-            "instanceIdentifier" : "6b9d3976-0f11-1b52-a51a-2e10dc4d3267",
-            "name" : "JoltTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -1210,7 +1246,7 @@
             "zIndex" : 0
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
+            "backPressureObjectThreshold" : 3000,
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
@@ -1227,7 +1263,7 @@
             "instanceIdentifier" : "f9613bbc-2911-1c13-8cfa-17334ce94da6",
             "labelIndex" : 1,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "loadBalanceStrategy" : "ROUND_ROBIN",
             "name" : "",
             "partitioningAttribute" : "",
             "prioritizers" : [ ],
@@ -1276,7 +1312,7 @@
             "zIndex" : 0
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
+            "backPressureObjectThreshold" : 3000,
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
@@ -1293,7 +1329,7 @@
             "instanceIdentifier" : "462c314d-e75b-1069-be9f-9a4aace60573",
             "labelIndex" : 1,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "loadBalanceStrategy" : "ROUND_ROBIN",
             "name" : "",
             "partitioningAttribute" : "",
             "prioritizers" : [ ],
@@ -1309,7 +1345,7 @@
             "zIndex" : 0
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
+            "backPressureObjectThreshold" : 3000,
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
@@ -1324,9 +1360,9 @@
             "groupIdentifier" : "f11868be-1bce-38b2-a44f-1833b574caac",
             "identifier" : "9ba2e2c1-aff5-3499-a576-c4e17b990ead",
             "instanceIdentifier" : "6e163f6e-1117-11f7-ada3-490a9860349e",
-            "labelIndex" : 1,
+            "labelIndex" : 0,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "loadBalanceStrategy" : "ROUND_ROBIN",
             "name" : "",
             "partitioningAttribute" : "",
             "prioritizers" : [ ],
@@ -1342,7 +1378,7 @@
             "zIndex" : 0
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
+            "backPressureObjectThreshold" : 3000,
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
@@ -1359,7 +1395,7 @@
             "instanceIdentifier" : "62753509-b73b-1236-8d6d-3d8d6c5add2e",
             "labelIndex" : 1,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "loadBalanceStrategy" : "ROUND_ROBIN",
             "name" : "",
             "partitioningAttribute" : "",
             "prioritizers" : [ ],
@@ -1375,7 +1411,7 @@
             "zIndex" : 0
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
-            "backPressureObjectThreshold" : 10000,
+            "backPressureObjectThreshold" : 3000,
             "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
@@ -1392,7 +1428,7 @@
             "instanceIdentifier" : "6b6830ed-ca91-1e7a-ab4b-4b03bade2622",
             "labelIndex" : 1,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
-            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "loadBalanceStrategy" : "ROUND_ROBIN",
             "name" : "",
             "partitioningAttribute" : "",
             "prioritizers" : [ ],
@@ -1403,6 +1439,39 @@
               "id" : "8e933492-e082-3018-bd6b-cdd564370377",
               "instanceIdentifier" : "ccff3a39-799f-17b9-8a6e-97377ce2e01f",
               "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "f11868be-1bce-38b2-a44f-1833b574caac",
+              "id" : "6ca083da-16cf-33f8-a5a3-9f036b372c01",
+              "instanceIdentifier" : "20ec4663-0183-1000-0000-00004cebae1e",
+              "name" : "Funnel",
+              "type" : "FUNNEL"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "f11868be-1bce-38b2-a44f-1833b574caac",
+            "identifier" : "1056848e-790f-3252-bc6a-456e5fb6ec46",
+            "instanceIdentifier" : "20ec56cf-0183-1000-ffff-ffff96135881",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "failure" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "f11868be-1bce-38b2-a44f-1833b574caac",
+              "id" : "52e79397-77ac-3499-9260-ed512ab7ce25",
+              "instanceIdentifier" : "0c5133e9-52fe-16f6-96f4-91b25a211933",
+              "name" : "SplitJson",
               "type" : "PROCESSOR"
             },
             "zIndex" : 0
@@ -1421,6 +1490,15 @@
             "position" : {
               "x" : 1776.0,
               "y" : 864.0
+            }
+          }, {
+            "componentType" : "FUNNEL",
+            "groupIdentifier" : "f11868be-1bce-38b2-a44f-1833b574caac",
+            "identifier" : "6ca083da-16cf-33f8-a5a3-9f036b372c01",
+            "instanceIdentifier" : "20ec4663-0183-1000-0000-00004cebae1e",
+            "position" : {
+              "x" : 1008.837080723808,
+              "y" : 400.09219889463236
             }
           }, {
             "componentType" : "FUNNEL",
@@ -1686,7 +1764,7 @@
             },
             "comments" : "",
             "componentType" : "PROCESSOR",
-            "concurrentlySchedulableTaskCount" : 1,
+            "concurrentlySchedulableTaskCount" : 10,
             "executionNode" : "ALL",
             "groupIdentifier" : "f11868be-1bce-38b2-a44f-1833b574caac",
             "identifier" : "ccb6d998-6a3c-3223-b29e-06f8784f1a7c",
@@ -1972,7 +2050,7 @@
             "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
             "yieldDuration" : "1 sec"
           }, {
-            "autoTerminatedRelationships" : [ "original", "failure" ],
+            "autoTerminatedRelationships" : [ "original" ],
             "backoffMechanism" : "PENALIZE_FLOWFILE",
             "bulletinLevel" : "WARN",
             "bundle" : {
@@ -3196,7 +3274,7 @@
             "idle-timeout" : "30 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{UrlApiABOM}orders?page_size=3000&page=${page}",
+            "Remote URL" : "#{UrlApiABOM}orders?page_size=3000&page=${page}&updated=${yesterday}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
@@ -3758,7 +3836,7 @@
             "compression-format" : "NONE",
             "esql-output-batch-size" : "0",
             "esql-fetch-size" : "0",
-            "SQL select query" : "  SELECT TOP(1) id as maxid,\n\t\tFORMAT(DATEADD(d,-1,GETDATE()),'yyyy-MM-dd 00:00:00') AS yesterday,\n\t\t1 AS page\n  FROM orders\n  ORDER BY id DESC \n",
+            "SQL select query" : "  SELECT TOP(1) id as maxid,\n\t\tFORMAT(DATEADD(d,-2,GETDATE()),'yyyy-MM-dd 00:00:00') AS yesterday,\n\t\t1 AS page\n  FROM orders\n  ORDER BY id DESC \n",
             "dbf-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -3855,96 +3933,6 @@
           "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.17.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "PRIMARY",
-          "groupIdentifier" : "d8bbef55-8061-3d7a-8dac-fe38ed933acd",
-          "identifier" : "0bf1d487-363e-322d-8645-d94530e83158",
-          "instanceIdentifier" : "30ef3aa4-f435-1a17-8b60-3fc1d326c1fc",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "GenerateFlowFile",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : -1500.8281706580437,
-            "y" : -790.9116385143665
-          },
-          "properties" : {
-            "character-set" : "UTF-8",
-            "File Size" : "0B",
-            "Batch Size" : "1",
-            "Unique FlowFiles" : "false",
-            "page" : "1",
-            "Data Format" : "Text"
-          },
-          "propertyDescriptors" : {
-            "character-set" : {
-              "displayName" : "Character Set",
-              "identifiesControllerService" : false,
-              "name" : "character-set",
-              "sensitive" : false
-            },
-            "File Size" : {
-              "displayName" : "File Size",
-              "identifiesControllerService" : false,
-              "name" : "File Size",
-              "sensitive" : false
-            },
-            "mime-type" : {
-              "displayName" : "Mime Type",
-              "identifiesControllerService" : false,
-              "name" : "mime-type",
-              "sensitive" : false
-            },
-            "generate-ff-custom-text" : {
-              "displayName" : "Custom Text",
-              "identifiesControllerService" : false,
-              "name" : "generate-ff-custom-text",
-              "sensitive" : false
-            },
-            "Batch Size" : {
-              "displayName" : "Batch Size",
-              "identifiesControllerService" : false,
-              "name" : "Batch Size",
-              "sensitive" : false
-            },
-            "Unique FlowFiles" : {
-              "displayName" : "Unique FlowFiles",
-              "identifiesControllerService" : false,
-              "name" : "Unique FlowFiles",
-              "sensitive" : false
-            },
-            "page" : {
-              "displayName" : "page",
-              "identifiesControllerService" : false,
-              "name" : "page",
-              "sensitive" : false
-            },
-            "Data Format" : {
-              "displayName" : "Data Format",
-              "identifiesControllerService" : false,
-              "name" : "Data Format",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure" ],
