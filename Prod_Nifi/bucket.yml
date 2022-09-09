@@ -4,6 +4,9 @@ flows:
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 3, file: Brands.snapshot, comments: Redundant
       queues removed, author: anonymous, created: 1662622528451, flowName: Brands,
     flowDesc: Start}
+  390807f6-38ac-416f-9ce4-f871a4b04310: {ver: 1, file: OrderAndOrderItem.snapshot,
+    comments: '', author: anonymous, created: 1662708634630, flowName: OrderAndOrderItem,
+    flowDesc: Start}
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 2, file: Price_lists_categories.snapshot,
     comments: Redundant queues removed, author: anonymous, created: 1662622554869,
     flowName: Price_lists_categories, flowDesc: Start}
