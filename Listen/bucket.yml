@@ -19,6 +19,9 @@ flows:
     flowDesc: Test}
   41d3e8bc-45a5-47e7-b562-05460a95f875: {ver: 1, file: Logistic_cards.snapshot, comments: '',
     author: anonymous, created: 1662468796386, flowName: Logistic_cards, flowDesc: Test}
+  edb886d7-914f-43f7-89b3-f7dfae0dcba3: {ver: 1, file: ShipmentAndShipmentItem.snapshot,
+    comments: '', author: anonymous, created: 1662725011191, flowName: ShipmentAndShipmentItem,
+    flowDesc: v1}
   89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
   76b0def2-3a3f-48c7-92b7-b1f444c37776: {ver: 1, file: Price_lists_conform.snapshot,
