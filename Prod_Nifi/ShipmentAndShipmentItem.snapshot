@@ -3394,7 +3394,7 @@
             "idle-timeout" : "30 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{UrlApiABOM}shipments?page_size=3000&page=${page}",
+            "Remote URL" : "#{UrlApiABOM}shipments?page_size=3000&page=${page}&updated=${yesterday}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",

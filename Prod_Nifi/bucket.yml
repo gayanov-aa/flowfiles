@@ -16,19 +16,19 @@ flows:
   32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 2, file: Price_lists_conform.snapshot,
     comments: Redundant queues removed, author: anonymous, created: 1662622564711,
     flowName: Price_lists_conform, flowDesc: Start}
-  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 4, file: Contractors.snapshot, comments: Redundant
-      queues removed, author: anonymous, created: 1662622532925, flowName: Contractors,
-    flowDesc: ''}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 3, file: Сontracts.snapshot, comments: Redundant
       queues removed, author: anonymous, created: 1662622546181, flowName: Сontracts,
     flowDesc: Start}
+  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 4, file: Contractors.snapshot, comments: Redundant
+      queues removed, author: anonymous, created: 1662622532925, flowName: Contractors,
+    flowDesc: ''}
   4b680076-79da-4710-b023-1f76d223a286: {ver: 2, file: Products.snapshot, comments: Redundant
       queues removed, author: anonymous, created: 1662625489288, flowName: Products,
     flowDesc: Test}
   34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
-  427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 1, file: ShipmentAndShipmentItem.snapshot,
-    comments: '', author: anonymous, created: 1662795507759, flowName: ShipmentAndShipmentItem,
+  427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 2, file: ShipmentAndShipmentItem.snapshot,
+    comments: Update, author: anonymous, created: 1662796062983, flowName: ShipmentAndShipmentItem,
     flowDesc: Start}
   20d4132f-443e-4051-8df9-4cc510552662: {ver: 4, file: contractors_subtypes.snapshot,
     comments: Redundant queues removed, author: anonymous, created: 1662622538389,
