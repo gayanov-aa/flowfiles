@@ -25,9 +25,9 @@ flows:
   76b0def2-3a3f-48c7-92b7-b1f444c37776: {ver: 1, file: Price_lists_conform.snapshot,
     comments: '', author: anonymous, created: 1662539602749, flowName: Price_lists_conform,
     flowDesc: Test}
-  e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 4, file: OrderAndOrderItem.snapshot,
-    comments: RepTxt, author: anonymous, created: 1662724903487, flowName: OrderAndOrderItem,
-    flowDesc: ''}
+  e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 5, file: OrderAndOrderItem.snapshot,
+    comments: 'Проблема с подстановкой order_id ', author: anonymous, created: 1662962180889,
+    flowName: OrderAndOrderItem, flowDesc: ''}
   89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
 layoutVer: 1
