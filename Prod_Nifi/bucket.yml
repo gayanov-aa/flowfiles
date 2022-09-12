@@ -18,9 +18,8 @@ flows:
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 3, file: Сontracts.snapshot, comments: Redundant
       queues removed, author: anonymous, created: 1662622546181, flowName: Сontracts,
     flowDesc: Start}
-  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 4, file: Contractors.snapshot, comments: Redundant
-      queues removed, author: anonymous, created: 1662622532925, flowName: Contractors,
-    flowDesc: ''}
+  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
+    author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
   4b680076-79da-4710-b023-1f76d223a286: {ver: 2, file: Products.snapshot, comments: Redundant
       queues removed, author: anonymous, created: 1662625489288, flowName: Products,
     flowDesc: Test}
