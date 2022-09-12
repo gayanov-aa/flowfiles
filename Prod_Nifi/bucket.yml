@@ -28,9 +28,9 @@ flows:
   427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 2, file: ShipmentAndShipmentItem.snapshot,
     comments: Update, author: anonymous, created: 1662796062983, flowName: ShipmentAndShipmentItem,
     flowDesc: Start}
-  20d4132f-443e-4051-8df9-4cc510552662: {ver: 4, file: contractors_subtypes.snapshot,
-    comments: Redundant queues removed, author: anonymous, created: 1662622538389,
-    flowName: contractors_subtypes, flowDesc: Start}
+  20d4132f-443e-4051-8df9-4cc510552662: {ver: 5, file: contractors_subtypes.snapshot,
+    comments: CRON, author: anonymous, created: 1662964671126, flowName: contractors_subtypes,
+    flowDesc: Start}
   42bbcf65-363e-4252-8850-1ab4bccefc9d: {ver: 2, file: Price_lists.snapshot, comments: Redundant
       queues removed, author: anonymous, created: 1662622551087, flowName: Price_lists,
     flowDesc: ''}
