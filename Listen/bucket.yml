@@ -22,6 +22,9 @@ flows:
   df2e041c-3a76-4a8d-aa36-42be457976bf: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1662974419175, flowName: PriceListAndPriceListeItem,
     flowDesc: PriceListAndPriceListeItem}
+  7c2fc5fe-9d04-4e50-88e3-8f21427a9d0c: {ver: 1, file: RequestAndRequestItem.snapshot,
+    comments: '', author: anonymous, created: 1662974809731, flowName: RequestAndRequestItem,
+    flowDesc: v1}
   08d79aa2-080d-4171-8630-a42ecd6c16c2: {ver: 1, file: RefusalAndRefusalItem.snapshot,
     comments: '', author: anonymous, created: 1662970007139, flowName: RefusalAndRefusalItem,
     flowDesc: v1}
