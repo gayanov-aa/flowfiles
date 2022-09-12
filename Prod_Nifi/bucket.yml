@@ -18,9 +18,8 @@ flows:
     author: anonymous, created: 1662964682608, flowName: Сontracts, flowDesc: Start}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
     author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
-  4b680076-79da-4710-b023-1f76d223a286: {ver: 2, file: Products.snapshot, comments: Redundant
-      queues removed, author: anonymous, created: 1662625489288, flowName: Products,
-    flowDesc: Test}
+  4b680076-79da-4710-b023-1f76d223a286: {ver: 3, file: Products.snapshot, comments: CRON,
+    author: anonymous, created: 1662964715160, flowName: Products, flowDesc: Test}
   34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 2, file: ShipmentAndShipmentItem.snapshot,
