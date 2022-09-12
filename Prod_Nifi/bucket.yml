@@ -9,9 +9,8 @@ flows:
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
     comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
     flowDesc: Start}
-  29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 3, file: Logistic_cards.snapshot, comments: Redundant
-      queues removed, author: anonymous, created: 1662622559219, flowName: Logistic_cards,
-    flowDesc: ''}
+  29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 4, file: Logistic_cards.snapshot, comments: CRON,
+    author: anonymous, created: 1662964706420, flowName: Logistic_cards, flowDesc: ''}
   32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 2, file: Price_lists_conform.snapshot,
     comments: Redundant queues removed, author: anonymous, created: 1662622564711,
     flowName: Price_lists_conform, flowDesc: Start}
