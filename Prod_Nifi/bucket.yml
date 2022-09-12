@@ -11,6 +11,9 @@ flows:
     author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
   34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
+  e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
+    comments: '', author: anonymous, created: 1662974481596, flowName: PriceListAndPriceListeItem,
+    flowDesc: Start}
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 4, file: Brands.snapshot, comments: CRON,
     author: anonymous, created: 1662964660798, flowName: Brands, flowDesc: Start}
   a4c5b5e2-9fc7-451b-9785-4df3e0904332: {ver: 2, file: OrderAndOrderItem.snapshot,
