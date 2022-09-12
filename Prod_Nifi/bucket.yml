@@ -1,14 +1,21 @@
 flows:
+  349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 1, file: RefusalAndRefusalItem.snapshot,
+    comments: '', author: anonymous, created: 1662970060983, flowName: RefusalAndRefusalItem,
+    flowDesc: Start}
   0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 4, file: Storages.snapshot, comments: CRON,
     author: anonymous, created: 1662964676850, flowName: Storages, flowDesc: Start}
+  6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
+    comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
+    flowDesc: Start}
+  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
+    author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
+  34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
+      conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 4, file: Brands.snapshot, comments: CRON,
     author: anonymous, created: 1662964660798, flowName: Brands, flowDesc: Start}
   a4c5b5e2-9fc7-451b-9785-4df3e0904332: {ver: 2, file: OrderAndOrderItem.snapshot,
     comments: CRON, author: anonymous, created: 1662964719741, flowName: OrderAndOrderItem,
     flowDesc: v2}
-  6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
-    comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
-    flowDesc: Start}
   29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 4, file: Logistic_cards.snapshot, comments: CRON,
     author: anonymous, created: 1662964706420, flowName: Logistic_cards, flowDesc: ''}
   32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 3, file: Price_lists_conform.snapshot,
@@ -16,12 +23,8 @@ flows:
     flowDesc: Start}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 4, file: Сontracts.snapshot, comments: CRON,
     author: anonymous, created: 1662964682608, flowName: Сontracts, flowDesc: Start}
-  d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
-    author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
   4b680076-79da-4710-b023-1f76d223a286: {ver: 3, file: Products.snapshot, comments: CRON,
     author: anonymous, created: 1662964715160, flowName: Products, flowDesc: Test}
-  34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
-      conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 3, file: ShipmentAndShipmentItem.snapshot,
     comments: CRON, author: anonymous, created: 1662964723579, flowName: ShipmentAndShipmentItem,
     flowDesc: Start}
