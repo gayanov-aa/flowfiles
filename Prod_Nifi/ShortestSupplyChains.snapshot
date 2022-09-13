@@ -910,7 +910,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 5,
           "executionNode" : "ALL",
           "groupIdentifier" : "56002b0d-697e-3016-997d-b6fa801bd1f8",
           "identifier" : "bb8838f2-18c3-3b5c-a38f-50a836bfce14",
