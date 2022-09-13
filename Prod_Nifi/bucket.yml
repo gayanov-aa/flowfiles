@@ -1,6 +1,6 @@
 flows:
-  349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 1, file: RefusalAndRefusalItem.snapshot,
-    comments: '', author: anonymous, created: 1662970060983, flowName: RefusalAndRefusalItem,
+  349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 2, file: RefusalAndRefusalItem.snapshot,
+    comments: Cron, author: anonymous, created: 1663049138039, flowName: RefusalAndRefusalItem,
     flowDesc: Start}
   0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 4, file: Storages.snapshot, comments: CRON,
     author: anonymous, created: 1662964676850, flowName: Storages, flowDesc: Start}
