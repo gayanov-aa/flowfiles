@@ -81,6 +81,39 @@
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
+            "id" : "8f7b8565-5813-3933-9951-5ed92bc30e33",
+            "instanceIdentifier" : "808a30ba-4d86-16c3-911a-126c2d9d4e01",
+            "name" : "InvokeHTTP",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
+          "identifier" : "7f96d85b-017c-3aa1-a65b-a66a4cba2e91",
+          "instanceIdentifier" : "8ff74361-f9a4-1c91-0000-00005c090a9e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
+            "id" : "22d6afd6-6809-353f-bc04-967ac1414996",
+            "instanceIdentifier" : "510836c5-66ad-19c0-aaab-ed652180e5ee",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
           "bends" : [ {
             "x" : -656.9817770728387,
             "y" : -546.5070364635852
@@ -220,39 +253,6 @@
           "destination" : {
             "comments" : "",
             "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
-            "id" : "80665d2d-92df-37ab-92ee-84437db02776",
-            "instanceIdentifier" : "c50f3360-fd60-134f-86f5-5b148a6c7199",
-            "name" : "RouteOnAttribute",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
-          "identifier" : "b58a9819-676b-3d29-ab24-25122bf17052",
-          "instanceIdentifier" : "dc66387f-b8a0-18ac-a53c-c8254380871e",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
-            "id" : "d718fc69-3fe9-3ddb-8c76-a539e074ec6a",
-            "instanceIdentifier" : "869534be-d658-1b64-bf0f-e28ad3e18dde",
-            "name" : "JoltTransformJSON",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
             "id" : "3983d6ed-26dc-374d-bc5c-9a16780806d6",
             "instanceIdentifier" : "9f163141-eacb-16ef-a190-cf90d59c4895",
             "name" : "ConvertAvroToJSON",
@@ -308,6 +308,39 @@
             "id" : "3983d6ed-26dc-374d-bc5c-9a16780806d6",
             "instanceIdentifier" : "9f163141-eacb-16ef-a190-cf90d59c4895",
             "name" : "ConvertAvroToJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
+            "id" : "80665d2d-92df-37ab-92ee-84437db02776",
+            "instanceIdentifier" : "c50f3360-fd60-134f-86f5-5b148a6c7199",
+            "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
+          "identifier" : "a1bc15c5-8d46-3198-b548-1e7655373788",
+          "instanceIdentifier" : "8ff7439c-f9a4-1c91-0000-00000d0f86d8",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
+            "id" : "d718fc69-3fe9-3ddb-8c76-a539e074ec6a",
+            "instanceIdentifier" : "869534be-d658-1b64-bf0f-e28ad3e18dde",
+            "name" : "JoltTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -473,39 +506,6 @@
             "id" : "80665d2d-92df-37ab-92ee-84437db02776",
             "instanceIdentifier" : "c50f3360-fd60-134f-86f5-5b148a6c7199",
             "name" : "RouteOnAttribute",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
-            "id" : "8f7b8565-5813-3933-9951-5ed92bc30e33",
-            "instanceIdentifier" : "808a30ba-4d86-16c3-911a-126c2d9d4e01",
-            "name" : "InvokeHTTP",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
-          "identifier" : "bda73d20-9318-36f0-9fbd-42d9313d209d",
-          "instanceIdentifier" : "cc5233e5-f7e2-1ac6-9ce0-5973a2ed8e93",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "matched" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "2fe98988-1e5a-3ee6-83e3-d0455a27ec21",
-            "id" : "22d6afd6-6809-353f-bc04-967ac1414996",
-            "instanceIdentifier" : "510836c5-66ad-19c0-aaab-ed652180e5ee",
-            "name" : "EvaluateJsonPath",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -999,8 +999,8 @@
               "y" : 592.0
             },
             "properties" : {
-              "Regular Expression" : "\"refusal\":\"\"",
-              "Replacement Value" : "\"refusal_id\":\"${refusal_id}\"",
+              "Regular Expression" : "\"request\":\"\"",
+              "Replacement Value" : "\"request_id\":\"${request_id}\"",
               "Evaluation Mode" : "Line-by-Line",
               "Line-by-Line Evaluation Mode" : "First-Line",
               "Character Set" : "UTF-8",
@@ -1085,7 +1085,7 @@
             },
             "properties" : {
               "Support Fragmented Transactions" : "true",
-              "Batch Size" : "100",
+              "Batch Size" : "1000",
               "Obtain Generated Keys" : "false",
               "JDBC Connection Pool" : "8005761b-d2a4-3a58-ac6a-0303c4402fbd",
               "database-session-autocommit" : "false",
@@ -1224,7 +1224,7 @@
               "y" : 400.0
             },
             "properties" : {
-              "jolt-spec" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"*\": \"&\"\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"refusal\": \"\"\n    }\n  }\n]\n",
+              "jolt-spec" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"*\": \"&\"\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"request\": \"\"\n    }\n  }\n]\n",
               "jolt-transform" : "jolt-transform-chain",
               "pretty_print" : "false",
               "Transform Cache Size" : "1"
@@ -1305,7 +1305,7 @@
             },
             "properties" : {
               "table-schema-cache-size" : "100",
-              "Table Name" : "supplier_refusal_items",
+              "Table Name" : "request_items",
               "jts-sql-param-attr-prefix" : "sql",
               "Unmatched Field Behavior" : "Ignore Unmatched Fields",
               "Unmatched Column Behavior" : "Fail on Unmatched Columns",
@@ -1415,7 +1415,7 @@
             },
             "comments" : "",
             "componentType" : "PROCESSOR",
-            "concurrentlySchedulableTaskCount" : 10,
+            "concurrentlySchedulableTaskCount" : 15,
             "executionNode" : "ALL",
             "groupIdentifier" : "b2fa35b5-77dd-30f5-91ae-75ee743bd895",
             "identifier" : "9d1b5292-b324-3270-9bba-0d1147ada41c",
@@ -1442,7 +1442,7 @@
               "idle-timeout" : "30 mins",
               "Use Chunked Encoding" : "false",
               "Follow Redirects" : "True",
-              "Remote URL" : "#{UrlApiABOM}supplier-refusal-items?page_size=3000&refusal_id=${refusal_id}",
+              "Remote URL" : "#{UrlApiABOM}request-items?page_size=3000&id=${request_id}",
               "Content-Type" : "${mime.type}",
               "flow-file-naming-strategy" : "RANDOM",
               "max-idle-connections" : "5",
@@ -2225,7 +2225,7 @@
             "Delete Attributes Expression" : "sql.*",
             "Store State" : "Do not store state",
             "canonical-value-lookup-cache-size" : "100",
-            "refusal_id" : "${sql.args.1.value}"
+            "request_id" : "${sql.args.1.value}"
           },
           "propertyDescriptors" : {
             "Delete Attributes Expression" : {
@@ -2246,16 +2246,16 @@
               "name" : "canonical-value-lookup-cache-size",
               "sensitive" : false
             },
-            "refusal_id" : {
-              "displayName" : "refusal_id",
-              "identifiesControllerService" : false,
-              "name" : "refusal_id",
-              "sensitive" : false
-            },
             "Stateful Variables Initial Value" : {
               "displayName" : "Stateful Variables Initial Value",
               "identifiesControllerService" : false,
               "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "request_id" : {
+              "displayName" : "request_id",
+              "identifiesControllerService" : false,
+              "name" : "request_id",
               "sensitive" : false
             }
           },
@@ -2382,7 +2382,7 @@
             "y" : -72.0
           },
           "properties" : {
-            "jolt-spec" : "[\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"nupdated\": \"=concat(@(1,updated),'.000')\",\n      \"ncreated\": \"=concat(@(1,created),'.000')\"\n    }\n  },\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"created\": \"\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"*\": \"&\",\n      \"ncreated\": \"created\"\n    }\n  }\n]\n",
+            "jolt-spec" : "[\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"nupdated\": \"=concat(@(1,updated),'.000')\",\n      \"ncreated\": \"=concat(@(1,created),'.000')\"\n    }\n  },\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"created\": \"\",\n      \"updated\": \"\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"*\": \"&\",\n      \"ncreated\": \"created\",\n      \"nupdated\": \"updated\"\n    }\n  }\n]\n",
             "jolt-transform" : "jolt-transform-chain",
             "pretty_print" : "false",
             "Transform Cache Size" : "1"
@@ -2472,7 +2472,7 @@
             "compression-format" : "NONE",
             "esql-output-batch-size" : "0",
             "esql-fetch-size" : "0",
-            "SQL select query" : "  SELECT TOP(1) id as maxid,\n\t\tFORMAT(DATEADD(d,-2,GETDATE()),'yyyy-MM-dd 00:00:00') AS yesterday,\n\t\t1 AS page\n  FROM supplier_refusals\n  ORDER BY id DESC \n",
+            "SQL select query" : "  SELECT TOP(1) id as maxid,\n\t\tFORMAT(DATEADD(d,-2,GETDATE()),'yyyy-MM-dd 00:00:00') AS yesterday,\n\t\t1 AS page\n  FROM requests\n  ORDER BY id DESC \n",
             "dbf-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -2651,7 +2651,7 @@
           },
           "properties" : {
             "table-schema-cache-size" : "100",
-            "Table Name" : "supplier_refusals",
+            "Table Name" : "requests",
             "jts-sql-param-attr-prefix" : "sql",
             "Unmatched Field Behavior" : "Ignore Unmatched Fields",
             "Unmatched Column Behavior" : "Fail on Unmatched Columns",
@@ -2788,7 +2788,7 @@
             "idle-timeout" : "30 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{UrlApiABOM}supplier-refusals?page_size=3000&page=${page}&updated=${yesterday}",
+            "Remote URL" : "#{UrlApiABOM}requests?page_size=3000&page=${page}&updated=${yesterday}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
