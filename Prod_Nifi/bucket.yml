@@ -7,6 +7,9 @@ flows:
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
     comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
     flowDesc: Start}
+  a73aba11-1a2a-432e-ae14-23a41a4f5dea: {ver: 1, file: ShortestSupplyChains.snapshot,
+    comments: 'Очень медленно получает ответ ', author: anonymous, created: 1663051270973,
+    flowName: ShortestSupplyChains, flowDesc: Start}
   008498f3-7ae6-41dc-91f9-003716df20cf: {ver: 2, file: RequestAndRequestItem.snapshot,
     comments: cron, author: anonymous, created: 1663049217503, flowName: RequestAndRequestItem,
     flowDesc: Start}
