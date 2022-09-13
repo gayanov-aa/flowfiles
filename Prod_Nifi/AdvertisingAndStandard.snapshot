@@ -87,39 +87,6 @@
           "destination" : {
             "comments" : "",
             "groupId" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-            "id" : "984a3f1d-6373-3a78-be42-a2463ae41c96",
-            "instanceIdentifier" : "3fc63562-658c-1052-8dd3-bd3c1f16caf8",
-            "name" : "Funnel",
-            "type" : "FUNNEL"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-          "identifier" : "e420b497-1cf7-3536-b8fa-5a7f33b5d5ff",
-          "instanceIdentifier" : "e9a538ac-6ff9-1c7e-b3fa-62e2f4695e09",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "failure" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-            "id" : "18b77939-2de5-3c45-ba57-c3a596aeb183",
-            "instanceIdentifier" : "efbb30af-01b6-10a6-9be7-d357d8cb1b5e",
-            "name" : "PutSQL",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
             "id" : "1d1e9226-8d5c-3207-a009-3c34959d81dc",
             "instanceIdentifier" : "35ead707-0183-1000-0000-00004cdb5df1",
             "name" : "UpdateAttribute",
@@ -219,39 +186,6 @@
           "destination" : {
             "comments" : "",
             "groupId" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-            "id" : "18b77939-2de5-3c45-ba57-c3a596aeb183",
-            "instanceIdentifier" : "efbb30af-01b6-10a6-9be7-d357d8cb1b5e",
-            "name" : "PutSQL",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-          "identifier" : "b0878f6b-30b2-3791-bcfd-4e4a6032b7e1",
-          "instanceIdentifier" : "35eb0f2e-0183-1000-0000-00004764038d",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-            "id" : "1d1e9226-8d5c-3207-a009-3c34959d81dc",
-            "instanceIdentifier" : "35ead707-0183-1000-0000-00004cdb5df1",
-            "name" : "UpdateAttribute",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
             "id" : "ed556277-3822-34ed-a7df-7b87f59b08cf",
             "instanceIdentifier" : "93503cce-b931-10cb-a082-dc35f875ca5d",
             "name" : "UpdateAttribute",
@@ -325,15 +259,6 @@
           "position" : {
             "x" : -572.8281706580437,
             "y" : -374.9116385143665
-          }
-        }, {
-          "componentType" : "FUNNEL",
-          "groupIdentifier" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-          "identifier" : "984a3f1d-6373-3a78-be42-a2463ae41c96",
-          "instanceIdentifier" : "3fc63562-658c-1052-8dd3-bd3c1f16caf8",
-          "position" : {
-            "x" : -728.0,
-            "y" : 576.0
           }
         } ],
         "identifier" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
@@ -640,8 +565,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "Connector",
           "position" : {
-            "x" : -1504.0,
-            "y" : 576.0
+            "x" : -456.0,
+            "y" : 192.0
           },
           "processGroups" : [ ],
           "processors" : [ {
@@ -1420,7 +1345,7 @@
             "compression-format" : "NONE",
             "esql-output-batch-size" : "0",
             "esql-fetch-size" : "0",
-            "SQL select query" : "TRUNCATE TABLE advertising;\nTRUNCATE TABLE standard_advertising;",
+            "SQL select query" : "TRUNCATE TABLE standard_advertising;",
             "dbf-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -1513,8 +1438,8 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingPeriod" : "0 50 17 * * ?",
+          "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
           "yieldDuration" : "1 sec"
@@ -1934,97 +1859,6 @@
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "success", "retry" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.17.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
-          "identifier" : "18b77939-2de5-3c45-ba57-c3a596aeb183",
-          "instanceIdentifier" : "efbb30af-01b6-10a6-9be7-d357d8cb1b5e",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "PutSQL",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : -896.0,
-            "y" : 272.0
-          },
-          "properties" : {
-            "Support Fragmented Transactions" : "true",
-            "putsql-sql-statement" : "INSERT INTO advertising (id) VALUES (?)",
-            "Batch Size" : "100",
-            "Obtain Generated Keys" : "false",
-            "JDBC Connection Pool" : "d01a89eb-d67d-3658-8b3c-b4d9ee061326",
-            "database-session-autocommit" : "false",
-            "rollback-on-failure" : "false"
-          },
-          "propertyDescriptors" : {
-            "Support Fragmented Transactions" : {
-              "displayName" : "Support Fragmented Transactions",
-              "identifiesControllerService" : false,
-              "name" : "Support Fragmented Transactions",
-              "sensitive" : false
-            },
-            "putsql-sql-statement" : {
-              "displayName" : "SQL Statement",
-              "identifiesControllerService" : false,
-              "name" : "putsql-sql-statement",
-              "sensitive" : false
-            },
-            "Transaction Timeout" : {
-              "displayName" : "Transaction Timeout",
-              "identifiesControllerService" : false,
-              "name" : "Transaction Timeout",
-              "sensitive" : false
-            },
-            "Batch Size" : {
-              "displayName" : "Batch Size",
-              "identifiesControllerService" : false,
-              "name" : "Batch Size",
-              "sensitive" : false
-            },
-            "Obtain Generated Keys" : {
-              "displayName" : "Obtain Generated Keys",
-              "identifiesControllerService" : false,
-              "name" : "Obtain Generated Keys",
-              "sensitive" : false
-            },
-            "JDBC Connection Pool" : {
-              "displayName" : "JDBC Connection Pool",
-              "identifiesControllerService" : true,
-              "name" : "JDBC Connection Pool",
-              "sensitive" : false
-            },
-            "database-session-autocommit" : {
-              "displayName" : "Database Session AutoCommit",
-              "identifiesControllerService" : false,
-              "name" : "database-session-autocommit",
-              "sensitive" : false
-            },
-            "rollback-on-failure" : {
-              "displayName" : "Rollback On Failure",
-              "identifiesControllerService" : false,
-              "name" : "rollback-on-failure",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.PutSQL",
-          "yieldDuration" : "1 sec"
-        }, {
           "autoTerminatedRelationships" : [ ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -2044,7 +1878,7 @@
           "name" : "UpdateAttribute",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -1488.0,
+            "x" : -1216.0,
             "y" : 280.0
           },
           "properties" : {
