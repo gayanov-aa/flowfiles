@@ -19,6 +19,9 @@ flows:
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
   4851391a-5fa8-4705-9c75-3776fef00026: {ver: 1, file: storages.snapshot, comments: '',
     author: anonymous, created: 1662560778892, flowName: storages, flowDesc: Test}
+  5916b0b9-4202-42f1-8e75-0a6f9af9738d: {ver: 1, file: ShortestSupplyChains.snapshot,
+    comments: '', author: anonymous, created: 1663051189971, flowName: ShortestSupplyChains,
+    flowDesc: v1}
   df2e041c-3a76-4a8d-aa36-42be457976bf: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1662974419175, flowName: PriceListAndPriceListeItem,
     flowDesc: PriceListAndPriceListeItem}
