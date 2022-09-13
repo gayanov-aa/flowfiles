@@ -7,8 +7,8 @@ flows:
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
     comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
     flowDesc: Start}
-  008498f3-7ae6-41dc-91f9-003716df20cf: {ver: 1, file: RequestAndRequestItem.snapshot,
-    comments: '', author: anonymous, created: 1663049174935, flowName: RequestAndRequestItem,
+  008498f3-7ae6-41dc-91f9-003716df20cf: {ver: 2, file: RequestAndRequestItem.snapshot,
+    comments: cron, author: anonymous, created: 1663049217503, flowName: RequestAndRequestItem,
     flowDesc: Start}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
     author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
