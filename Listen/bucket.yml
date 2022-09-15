@@ -33,6 +33,8 @@ flows:
   7c2fc5fe-9d04-4e50-88e3-8f21427a9d0c: {ver: 2, file: RequestAndRequestItem.snapshot,
     comments: v2, author: anonymous, created: 1663048952946, flowName: RequestAndRequestItem,
     flowDesc: v1}
+  82dc5a5f-011e-4a01-a608-892aed93d23d: {ver: 1, file: StandardSigns.snapshot, comments: '',
+    author: anonymous, created: 1663234894782, flowName: StandardSigns, flowDesc: ''}
   08d79aa2-080d-4171-8630-a42ecd6c16c2: {ver: 1, file: RefusalAndRefusalItem.snapshot,
     comments: '', author: anonymous, created: 1662970007139, flowName: RefusalAndRefusalItem,
     flowDesc: v1}
