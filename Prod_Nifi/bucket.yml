@@ -22,8 +22,8 @@ flows:
   e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1662974481596, flowName: PriceListAndPriceListeItem,
     flowDesc: Start}
-  15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 1, file: StandardSigns.snapshot, comments: '',
-    author: anonymous, created: 1663234944957, flowName: StandardSigns, flowDesc: ''}
+  15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 2, file: StandardSigns.snapshot, comments: '',
+    author: anonymous, created: 1663235010661, flowName: StandardSigns, flowDesc: ''}
   2151bc30-03f8-4249-abe0-a29cb821889e: {ver: 2, file: AdvertisingAndStandard.snapshot,
     comments: '', author: anonymous, created: 1663059384310, flowName: AdvertisingAndStandard,
     flowDesc: ''}

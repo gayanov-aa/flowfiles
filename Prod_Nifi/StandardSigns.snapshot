@@ -256,7 +256,23 @@
         "identifier" : "4fc98566-057c-31a7-96d1-82b05009fdc0",
         "inputPorts" : [ ],
         "instanceIdentifier" : "4086d8b9-0183-1000-0000-000054ae49cf",
-        "labels" : [ ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "4fc98566-057c-31a7-96d1-82b05009fdc0",
+          "height" : 48.0,
+          "identifier" : "23a8e969-274c-394a-a7e1-bd7c3486ab93",
+          "instanceIdentifier" : "4087cbfa-0183-1000-0000-000075a6799f",
+          "label" : "Группы продукции (признаки номенклатуры)\n",
+          "position" : {
+            "x" : 552.0,
+            "y" : -528.0
+          },
+          "style" : {
+            "font-size" : "20px"
+          },
+          "width" : 472.0,
+          "zIndex" : 0
+        } ],
         "name" : "StandardSigns",
         "outputPorts" : [ ],
         "parameterContextName" : "Connector",
