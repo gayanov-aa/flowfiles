@@ -1561,7 +1561,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 50 17 * * ?",
+          "schedulingPeriod" : "0 20 11 ? * SAT",
           "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
