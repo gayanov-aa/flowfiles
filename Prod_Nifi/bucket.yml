@@ -39,6 +39,8 @@ flows:
     flowDesc: Start}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 4, file: Сontracts.snapshot, comments: CRON,
     author: anonymous, created: 1662964682608, flowName: Сontracts, flowDesc: Start}
+  76565a03-3cca-440c-9420-649fc3deaca2: {ver: 1, file: Standard.snapshot, comments: '',
+    author: anonymous, created: 1663308455046, flowName: Standard, flowDesc: Start}
   4b680076-79da-4710-b023-1f76d223a286: {ver: 3, file: Products.snapshot, comments: CRON,
     author: anonymous, created: 1662964715160, flowName: Products, flowDesc: Test}
   427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 3, file: ShipmentAndShipmentItem.snapshot,
