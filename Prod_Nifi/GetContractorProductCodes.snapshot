@@ -178,7 +178,7 @@
         "parameterContextName" : "Connector",
         "position" : {
           "x" : 1952.0,
-          "y" : 456.0
+          "y" : 448.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -1675,6 +1675,7 @@
             "esql-auto-commit" : "true",
             "dbf-user-logical-types" : "false",
             "dbf-default-scale" : "0",
+            "sql-pre-query" : "TRUNCATE TABLE get_contractor_product_codes;",
             "compression-format" : "NONE",
             "esql-output-batch-size" : "0",
             "esql-fetch-size" : "0",
@@ -1771,7 +1772,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 50 17 * * ?",
+          "schedulingPeriod" : "0 20 14 ? * SAT",
           "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
