@@ -12,6 +12,9 @@ flows:
   a73aba11-1a2a-432e-ae14-23a41a4f5dea: {ver: 2, file: ShortestSupplyChains.snapshot,
     comments: '', author: anonymous, created: 1663051294554, flowName: ShortestSupplyChains,
     flowDesc: Start}
+  885517f0-1c4b-44af-ad3f-3693d043cbd4: {ver: 1, file: StandardsAnalogs.snapshot,
+    comments: '', author: anonymous, created: 1663327936419, flowName: StandardsAnalogs,
+    flowDesc: ''}
   008498f3-7ae6-41dc-91f9-003716df20cf: {ver: 2, file: RequestAndRequestItem.snapshot,
     comments: cron, author: anonymous, created: 1663049217503, flowName: RequestAndRequestItem,
     flowDesc: Start}
