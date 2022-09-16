@@ -14,6 +14,9 @@ flows:
   b9c05314-111f-4648-9712-17e94c236112: {ver: 1, file: AdvertisingAndStandard.snapshot,
     comments: '', author: anonymous, created: 1663059164658, flowName: AdvertisingAndStandard,
     flowDesc: ''}
+  972250a5-c0f9-445c-b98a-c5dd7f828b94: {ver: 1, file: StandardProdCategory.snapshot,
+    comments: '', author: anonymous, created: 1663315297211, flowName: StandardProdCategory,
+    flowDesc: ''}
   be80c94c-e763-4e4e-9d46-912a06fab3c9: {ver: 1, file: Сontracts.snapshot, comments: '',
     author: anonymous, created: 1662460512593, flowName: Сontracts, flowDesc: Test}
   32d2bb6f-c8b8-4a7f-a907-8159cf7ba611: {ver: 1, file: Price_lists_categories.snapshot,
