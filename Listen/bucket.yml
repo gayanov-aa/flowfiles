@@ -1,8 +1,4 @@
 flows:
-  00cccf97-4ce4-4d74-996f-af3e1273d13f: {ver: 1, file: Standard.snapshot, comments: '',
-    author: anonymous, created: 1663308395695, flowName: Standard, flowDesc: ''}
-  d1b42786-6c61-4456-b932-83756bb53b49: {ver: 1, file: New.snapshot, comments: '',
-    author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
   d07df2b3-96ea-450b-b35e-79323fe832e9: {ver: 1, file: contractors.snapshot, comments: '',
     author: anonymous, created: 1662455088917, flowName: contractors, flowDesc: ''}
   2d25523c-5d87-4966-8e38-e95d06921bc8: {ver: 1, file: Products.snapshot, comments: '',
@@ -10,6 +6,28 @@ flows:
   810d8043-d39f-46f4-a4a9-f3e38f576b67: {ver: 1, file: GetContractorProductCodes.snapshot,
     comments: '', author: anonymous, created: 1663335693344, flowName: GetContractorProductCodes,
     flowDesc: ''}
+  be80c94c-e763-4e4e-9d46-912a06fab3c9: {ver: 1, file: Сontracts.snapshot, comments: '',
+    author: anonymous, created: 1662460512593, flowName: Сontracts, flowDesc: Test}
+  32d2bb6f-c8b8-4a7f-a907-8159cf7ba611: {ver: 1, file: Price_lists_categories.snapshot,
+    comments: '', author: anonymous, created: 1662538712067, flowName: Price_lists_categories,
+    flowDesc: Test}
+  89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
+    author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
+  87157c28-f543-4624-a3cb-69d88085faaf: {ver: 1, file: hits.snapshot, comments: '',
+    author: anonymous, created: 1663325338961, flowName: hits, flowDesc: ''}
+  46d38b8d-5910-4d80-a480-1323e59d93d6: {ver: 1, file: StandardsAnalogs.snapshot,
+    comments: '', author: anonymous, created: 1663327895748, flowName: StandardsAnalogs,
+    flowDesc: ''}
+  08d79aa2-080d-4171-8630-a42ecd6c16c2: {ver: 1, file: RefusalAndRefusalItem.snapshot,
+    comments: '', author: anonymous, created: 1662970007139, flowName: RefusalAndRefusalItem,
+    flowDesc: v1}
+  e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 5, file: OrderAndOrderItem.snapshot,
+    comments: 'Проблема с подстановкой order_id ', author: anonymous, created: 1662962180889,
+    flowName: OrderAndOrderItem, flowDesc: ''}
+  00cccf97-4ce4-4d74-996f-af3e1273d13f: {ver: 1, file: Standard.snapshot, comments: '',
+    author: anonymous, created: 1663308395695, flowName: Standard, flowDesc: ''}
+  d1b42786-6c61-4456-b932-83756bb53b49: {ver: 1, file: New.snapshot, comments: '',
+    author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
   5dd03003-0867-4392-bebc-5aa1d3b922f6: {ver: 2, file: Price_list.snapshot, comments: Group
       cycle, author: anonymous, created: 1662537138646, flowName: Price_list, flowDesc: 'цикл '}
   8a004c4e-22df-4b3b-a898-29b336c2ee1d: {ver: 1, file: ShortestRoutes.snapshot, comments: '',
@@ -20,16 +38,12 @@ flows:
   972250a5-c0f9-445c-b98a-c5dd7f828b94: {ver: 1, file: StandardProdCategory.snapshot,
     comments: '', author: anonymous, created: 1663315297211, flowName: StandardProdCategory,
     flowDesc: ''}
-  be80c94c-e763-4e4e-9d46-912a06fab3c9: {ver: 1, file: Сontracts.snapshot, comments: '',
-    author: anonymous, created: 1662460512593, flowName: Сontracts, flowDesc: Test}
-  32d2bb6f-c8b8-4a7f-a907-8159cf7ba611: {ver: 1, file: Price_lists_categories.snapshot,
-    comments: '', author: anonymous, created: 1662538712067, flowName: Price_lists_categories,
-    flowDesc: Test}
   edb886d7-914f-43f7-89b3-f7dfae0dcba3: {ver: 4, file: ShipmentAndShipmentItem.snapshot,
     comments: v3, author: anonymous, created: 1662969987340, flowName: ShipmentAndShipmentItem,
     flowDesc: v1}
-  89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
-    author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
+  d26c634c-ccb5-4943-a632-99435a0a87af: {ver: 1, file: standard_ids_with_product_reserve.snapshot,
+    comments: '', author: anonymous, created: 1663339528794, flowName: standard_ids_with_product_reserve,
+    flowDesc: ''}
   4851391a-5fa8-4705-9c75-3776fef00026: {ver: 1, file: storages.snapshot, comments: '',
     author: anonymous, created: 1662560778892, flowName: storages, flowDesc: Test}
   5916b0b9-4202-42f1-8e75-0a6f9af9738d: {ver: 1, file: ShortestSupplyChains.snapshot,
@@ -41,16 +55,8 @@ flows:
   7c2fc5fe-9d04-4e50-88e3-8f21427a9d0c: {ver: 2, file: RequestAndRequestItem.snapshot,
     comments: v2, author: anonymous, created: 1663048952946, flowName: RequestAndRequestItem,
     flowDesc: v1}
-  87157c28-f543-4624-a3cb-69d88085faaf: {ver: 1, file: hits.snapshot, comments: '',
-    author: anonymous, created: 1663325338961, flowName: hits, flowDesc: ''}
   82dc5a5f-011e-4a01-a608-892aed93d23d: {ver: 1, file: StandardSigns.snapshot, comments: '',
     author: anonymous, created: 1663234894782, flowName: StandardSigns, flowDesc: ''}
-  46d38b8d-5910-4d80-a480-1323e59d93d6: {ver: 1, file: StandardsAnalogs.snapshot,
-    comments: '', author: anonymous, created: 1663327895748, flowName: StandardsAnalogs,
-    flowDesc: ''}
-  08d79aa2-080d-4171-8630-a42ecd6c16c2: {ver: 1, file: RefusalAndRefusalItem.snapshot,
-    comments: '', author: anonymous, created: 1662970007139, flowName: RefusalAndRefusalItem,
-    flowDesc: v1}
   bcaed851-c669-4634-953f-12324a9b791a: {ver: 1, file: contractors_subtypes.snapshot,
     comments: '', author: anonymous, created: 1662458601448, flowName: contractors_subtypes,
     flowDesc: Test}
@@ -59,8 +65,5 @@ flows:
   76b0def2-3a3f-48c7-92b7-b1f444c37776: {ver: 1, file: Price_lists_conform.snapshot,
     comments: '', author: anonymous, created: 1662539602749, flowName: Price_lists_conform,
     flowDesc: Test}
-  e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 5, file: OrderAndOrderItem.snapshot,
-    comments: 'Проблема с подстановкой order_id ', author: anonymous, created: 1662962180889,
-    flowName: OrderAndOrderItem, flowDesc: ''}
 layoutVer: 1
 bucketId: 06337f92-d08b-4cc4-9c1b-493316e95bae
