@@ -2,65 +2,68 @@ flows:
   349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 2, file: RefusalAndRefusalItem.snapshot,
     comments: Cron, author: anonymous, created: 1663049138039, flowName: RefusalAndRefusalItem,
     flowDesc: Start}
-  0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 4, file: Storages.snapshot, comments: CRON,
-    author: anonymous, created: 1662964676850, flowName: Storages, flowDesc: Start}
-  2739e423-e96f-4abc-8e5c-9f554349c6d8: {ver: 2, file: ShortestRoutes.snapshot, comments: CRON,
-    author: anonymous, created: 1663054264390, flowName: ShortestRoutes, flowDesc: Start}
   fb37e848-ed7c-4061-888c-bc75ff6e1842: {ver: 2, file: GetContractorProductCodes.snapshot,
     comments: '', author: anonymous, created: 1663336216967, flowName: GetContractorProductCodes,
     flowDesc: ''}
-  a73aba11-1a2a-432e-ae14-23a41a4f5dea: {ver: 2, file: ShortestSupplyChains.snapshot,
-    comments: '', author: anonymous, created: 1663051294554, flowName: ShortestSupplyChains,
-    flowDesc: Start}
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
     comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
     flowDesc: Start}
   885517f0-1c4b-44af-ad3f-3693d043cbd4: {ver: 1, file: StandardsAnalogs.snapshot,
     comments: '', author: anonymous, created: 1663327936419, flowName: StandardsAnalogs,
     flowDesc: ''}
+  34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
+      conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
+  15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 2, file: StandardSigns.snapshot, comments: '',
+    author: anonymous, created: 1663235010661, flowName: StandardSigns, flowDesc: ''}
+  c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 4, file: Brands.snapshot, comments: CRON,
+    author: anonymous, created: 1662964660798, flowName: Brands, flowDesc: Start}
+  32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 3, file: Price_lists_conform.snapshot,
+    comments: CRON, author: anonymous, created: 1662964710844, flowName: Price_lists_conform,
+    flowDesc: Start}
+  76565a03-3cca-440c-9420-649fc3deaca2: {ver: 1, file: Standard.snapshot, comments: '',
+    author: anonymous, created: 1663308455046, flowName: Standard, flowDesc: Start}
+  4b680076-79da-4710-b023-1f76d223a286: {ver: 3, file: Products.snapshot, comments: CRON,
+    author: anonymous, created: 1662964715160, flowName: Products, flowDesc: Test}
+  42bbcf65-363e-4252-8850-1ab4bccefc9d: {ver: 3, file: Price_lists.snapshot, comments: CRON,
+    author: anonymous, created: 1662964697325, flowName: Price_lists, flowDesc: ''}
+  0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 4, file: Storages.snapshot, comments: CRON,
+    author: anonymous, created: 1662964676850, flowName: Storages, flowDesc: Start}
+  2739e423-e96f-4abc-8e5c-9f554349c6d8: {ver: 2, file: ShortestRoutes.snapshot, comments: CRON,
+    author: anonymous, created: 1663054264390, flowName: ShortestRoutes, flowDesc: Start}
+  a73aba11-1a2a-432e-ae14-23a41a4f5dea: {ver: 2, file: ShortestSupplyChains.snapshot,
+    comments: '', author: anonymous, created: 1663051294554, flowName: ShortestSupplyChains,
+    flowDesc: Start}
   008498f3-7ae6-41dc-91f9-003716df20cf: {ver: 2, file: RequestAndRequestItem.snapshot,
     comments: cron, author: anonymous, created: 1663049217503, flowName: RequestAndRequestItem,
     flowDesc: Start}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
     author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
+  0bbfdb09-1c22-4dcb-a498-83030bdafd06: {ver: 1, file: standard_ids_with_product_reserve.snapshot,
+    comments: '', author: anonymous, created: 1663339578608, flowName: standard_ids_with_product_reserve,
+    flowDesc: ''}
   e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1662974481596, flowName: PriceListAndPriceListeItem,
     flowDesc: Start}
-  34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
-      conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
-  15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 2, file: StandardSigns.snapshot, comments: '',
-    author: anonymous, created: 1663235010661, flowName: StandardSigns, flowDesc: ''}
   2151bc30-03f8-4249-abe0-a29cb821889e: {ver: 2, file: AdvertisingAndStandard.snapshot,
     comments: '', author: anonymous, created: 1663059384310, flowName: AdvertisingAndStandard,
     flowDesc: ''}
   325df6b3-e98d-4b6d-9184-2157aa1f1069: {ver: 1, file: StandardProdCategory.snapshot,
     comments: '', author: anonymous, created: 1663315328988, flowName: StandardProdCategory,
     flowDesc: ''}
-  c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 4, file: Brands.snapshot, comments: CRON,
-    author: anonymous, created: 1662964660798, flowName: Brands, flowDesc: Start}
   a4c5b5e2-9fc7-451b-9785-4df3e0904332: {ver: 3, file: OrderAndOrderItem.snapshot,
     comments: '', author: anonymous, created: 1663049596441, flowName: OrderAndOrderItem,
     flowDesc: v2}
   29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 4, file: Logistic_cards.snapshot, comments: CRON,
     author: anonymous, created: 1662964706420, flowName: Logistic_cards, flowDesc: ''}
-  32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 3, file: Price_lists_conform.snapshot,
-    comments: CRON, author: anonymous, created: 1662964710844, flowName: Price_lists_conform,
-    flowDesc: Start}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 4, file: Сontracts.snapshot, comments: CRON,
     author: anonymous, created: 1662964682608, flowName: Сontracts, flowDesc: Start}
-  76565a03-3cca-440c-9420-649fc3deaca2: {ver: 1, file: Standard.snapshot, comments: '',
-    author: anonymous, created: 1663308455046, flowName: Standard, flowDesc: Start}
   f470e8ff-5d33-49bb-b4a4-3baddff5db59: {ver: 1, file: Hits.snapshot, comments: '',
     author: anonymous, created: 1663325390649, flowName: Hits, flowDesc: ''}
-  4b680076-79da-4710-b023-1f76d223a286: {ver: 3, file: Products.snapshot, comments: CRON,
-    author: anonymous, created: 1662964715160, flowName: Products, flowDesc: Test}
   427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 3, file: ShipmentAndShipmentItem.snapshot,
     comments: CRON, author: anonymous, created: 1662964723579, flowName: ShipmentAndShipmentItem,
     flowDesc: Start}
   20d4132f-443e-4051-8df9-4cc510552662: {ver: 5, file: contractors_subtypes.snapshot,
     comments: CRON, author: anonymous, created: 1662964671126, flowName: contractors_subtypes,
     flowDesc: Start}
-  42bbcf65-363e-4252-8850-1ab4bccefc9d: {ver: 3, file: Price_lists.snapshot, comments: CRON,
-    author: anonymous, created: 1662964697325, flowName: Price_lists, flowDesc: ''}
 layoutVer: 1
 bucketId: 016c05e8-37e2-40c0-accf-bfc6976b1d9a
