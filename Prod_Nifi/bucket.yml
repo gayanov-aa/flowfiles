@@ -38,8 +38,8 @@ flows:
     flowDesc: Start}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
     author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
-  0bbfdb09-1c22-4dcb-a498-83030bdafd06: {ver: 2, file: standard_ids_with_product_reserve.snapshot,
-    comments: '', author: anonymous, created: 1663339637054, flowName: standard_ids_with_product_reserve,
+  0bbfdb09-1c22-4dcb-a498-83030bdafd06: {ver: 3, file: standard_ids_with_product_reserve.snapshot,
+    comments: '', author: anonymous, created: 1663339707993, flowName: standard_ids_with_product_reserve,
     flowDesc: ''}
   e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1662974481596, flowName: PriceListAndPriceListeItem,
