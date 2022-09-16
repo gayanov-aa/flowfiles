@@ -6,6 +6,9 @@ flows:
     author: anonymous, created: 1662964676850, flowName: Storages, flowDesc: Start}
   2739e423-e96f-4abc-8e5c-9f554349c6d8: {ver: 2, file: ShortestRoutes.snapshot, comments: CRON,
     author: anonymous, created: 1663054264390, flowName: ShortestRoutes, flowDesc: Start}
+  fb37e848-ed7c-4061-888c-bc75ff6e1842: {ver: 1, file: GetContractorProductCodes.snapshot,
+    comments: '', author: anonymous, created: 1663335741858, flowName: GetContractorProductCodes,
+    flowDesc: ''}
   6e6a3c9a-b829-4bb3-90f2-9b8207501f54: {ver: 3, file: Price_lists_categories.snapshot,
     comments: CRON, author: anonymous, created: 1662964702035, flowName: Price_lists_categories,
     flowDesc: Start}
