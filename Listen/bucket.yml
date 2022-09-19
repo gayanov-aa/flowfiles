@@ -21,6 +21,8 @@ flows:
   08d79aa2-080d-4171-8630-a42ecd6c16c2: {ver: 1, file: RefusalAndRefusalItem.snapshot,
     comments: '', author: anonymous, created: 1662970007139, flowName: RefusalAndRefusalItem,
     flowDesc: v1}
+  eea361c5-b453-4af2-bfe3-911b774087a4: {ver: 1, file: ArticleSynonyms.snapshot, comments: '',
+    author: anonymous, created: 1663570555447, flowName: ArticleSynonyms, flowDesc: ''}
   e8099c69-d873-4764-bf6d-181de8ea4edb: {ver: 5, file: OrderAndOrderItem.snapshot,
     comments: 'Проблема с подстановкой order_id ', author: anonymous, created: 1662962180889,
     flowName: OrderAndOrderItem, flowDesc: ''}
