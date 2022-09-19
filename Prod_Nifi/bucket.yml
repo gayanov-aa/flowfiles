@@ -1,6 +1,6 @@
 flows:
-  349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 2, file: RefusalAndRefusalItem.snapshot,
-    comments: Cron, author: anonymous, created: 1663049138039, flowName: RefusalAndRefusalItem,
+  349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 3, file: RefusalAndRefusalItem.snapshot,
+    comments: '', author: anonymous, created: 1663570656540, flowName: RefusalAndRefusalItem,
     flowDesc: Start}
   fb37e848-ed7c-4061-888c-bc75ff6e1842: {ver: 2, file: GetContractorProductCodes.snapshot,
     comments: '', author: anonymous, created: 1663336216967, flowName: GetContractorProductCodes,
