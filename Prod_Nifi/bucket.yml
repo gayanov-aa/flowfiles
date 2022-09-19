@@ -51,8 +51,8 @@ flows:
   2151bc30-03f8-4249-abe0-a29cb821889e: {ver: 3, file: AdvertisingAndStandard.snapshot,
     comments: '', author: anonymous, created: 1663570634653, flowName: AdvertisingAndStandard,
     flowDesc: ''}
-  325df6b3-e98d-4b6d-9184-2157aa1f1069: {ver: 1, file: StandardProdCategory.snapshot,
-    comments: '', author: anonymous, created: 1663315328988, flowName: StandardProdCategory,
+  325df6b3-e98d-4b6d-9184-2157aa1f1069: {ver: 2, file: StandardProdCategory.snapshot,
+    comments: '', author: anonymous, created: 1663570645299, flowName: StandardProdCategory,
     flowDesc: ''}
   a4c5b5e2-9fc7-451b-9785-4df3e0904332: {ver: 3, file: OrderAndOrderItem.snapshot,
     comments: '', author: anonymous, created: 1663049596441, flowName: OrderAndOrderItem,
