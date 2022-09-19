@@ -66,8 +66,8 @@ flows:
   427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 4, file: ShipmentAndShipmentItem.snapshot,
     comments: '', author: anonymous, created: 1663570659667, flowName: ShipmentAndShipmentItem,
     flowDesc: Start}
-  20d4132f-443e-4051-8df9-4cc510552662: {ver: 5, file: contractors_subtypes.snapshot,
-    comments: CRON, author: anonymous, created: 1662964671126, flowName: contractors_subtypes,
+  20d4132f-443e-4051-8df9-4cc510552662: {ver: 6, file: contractors_subtypes.snapshot,
+    comments: '', author: anonymous, created: 1663570682094, flowName: contractors_subtypes,
     flowDesc: Start}
 layoutVer: 1
 bucketId: 016c05e8-37e2-40c0-accf-bfc6976b1d9a
