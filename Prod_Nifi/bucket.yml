@@ -13,6 +13,9 @@ flows:
     flowDesc: ''}
   58b87bcb-2572-41f9-914a-131d4558bd87: {ver: 1, file: ArticleSynonyms.snapshot, comments: '',
     author: anonymous, created: 1663570602276, flowName: ArticleSynonyms, flowDesc: ''}
+  d2917888-86cb-490f-8a7c-299198f42eb6: {ver: 1, file: RegulationDiscounts.snapshot,
+    comments: '', author: anonymous, created: 1663577537358, flowName: RegulationDiscounts,
+    flowDesc: ''}
   34f40fab-625f-4202-a771-665c164a54ac: {ver: 2, file: Wms_ZnO.snapshot, comments: Commit
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 2, file: StandardSigns.snapshot, comments: '',
