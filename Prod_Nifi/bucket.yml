@@ -48,6 +48,9 @@ flows:
   0bbfdb09-1c22-4dcb-a498-83030bdafd06: {ver: 3, file: standard_ids_with_product_reserve.snapshot,
     comments: '', author: anonymous, created: 1663339707993, flowName: standard_ids_with_product_reserve,
     flowDesc: ''}
+  e25907a7-3060-4349-b504-fee214208b65: {ver: 1, file: CategoriesContractors.snapshot,
+    comments: '', author: anonymous, created: 1663579063164, flowName: CategoriesContractors,
+    flowDesc: ''}
   e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91: {ver: 2, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1663570692610, flowName: PriceListAndPriceListeItem,
     flowDesc: Start}
