@@ -670,7 +670,23 @@
         "identifier" : "1889df38-c466-373e-85d5-d08bcf64ef44",
         "inputPorts" : [ ],
         "instanceIdentifier" : "26537c9f-0183-1000-ffff-fffff8a123a1",
-        "labels" : [ ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "1889df38-c466-373e-85d5-d08bcf64ef44",
+          "height" : 64.0,
+          "identifier" : "4cc7397e-b932-394a-abed-719f93fe6544",
+          "instanceIdentifier" : "453f8475-0183-1000-0000-000017463c03",
+          "label" : "Отгрузки и элементы отгрузки",
+          "position" : {
+            "x" : -1472.0,
+            "y" : -640.0
+          },
+          "style" : {
+            "font-size" : "24px"
+          },
+          "width" : 392.0,
+          "zIndex" : 0
+        } ],
         "name" : "ShipmentAndShipmentItem",
         "outputPorts" : [ ],
         "parameterContextName" : "Connector",
@@ -4686,19 +4702,14 @@
           "name" : "Connector",
           "parameters" : [ {
             "description" : "",
-            "name" : "ServerMsSql92",
-            "sensitive" : false,
-            "value" : "10.2.1.92;port=1433;"
-          }, {
-            "description" : "",
             "name" : "Protocols",
             "sensitive" : false,
             "value" : "authentication=NotSpecified;encrypt=true;trustservercertificate=true"
           }, {
             "description" : "",
-            "name" : "DriverClassMsSqlJdbc",
+            "name" : "WMSZnO",
             "sensitive" : false,
-            "value" : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/WMSZnO/NiFi_Info"
           }, {
             "description" : "",
             "name" : "Stop",
@@ -4711,9 +4722,9 @@
             "value" : "database=wmsintegration;"
           }, {
             "description" : "",
-            "name" : "MsSqlAbomApiDB",
+            "name" : "WMSZnP",
             "sensitive" : false,
-            "value" : "database=reports_abomAPI;"
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/WMSZnP/NiFi_Info"
           }, {
             "description" : "",
             "name" : "WmsServer",
@@ -4721,9 +4732,49 @@
             "value" : "10.2.1.51;port=1433;"
           }, {
             "description" : "",
+            "name" : "UrlJdbcMsSql",
+            "sensitive" : false,
+            "value" : "jdbc:sqlserver://"
+          }, {
+            "description" : "",
+            "name" : "WMS_Host",
+            "sensitive" : false,
+            "value" : "10.2.1.51;port=1433;"
+          }, {
+            "description" : "",
+            "name" : "ObmenMagentaZnO",
+            "sensitive" : false,
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/MagentaZnO/NiFi_Info"
+          }, {
+            "description" : "",
+            "name" : "HttpSessionId",
+            "sensitive" : false,
+            "value" : "http://84.23.54.182/rest/2/authentication/createSession?accountID=alpha&user=erpapi&password=yasle5193m "
+          }, {
+            "description" : "",
+            "name" : "ServerMsSql92",
+            "sensitive" : false,
+            "value" : "10.2.1.92;port=1433;"
+          }, {
+            "description" : "",
+            "name" : "DriverClassMsSqlJdbc",
+            "sensitive" : false,
+            "value" : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+          }, {
+            "description" : "",
+            "name" : "MsSqlAbomApiDB",
+            "sensitive" : false,
+            "value" : "database=reports_abomAPI;"
+          }, {
+            "description" : "",
             "name" : "DriverLocation",
             "sensitive" : false,
             "value" : "/drivers_nifi/sqljdbc_10.2/rus/mssql-jdbc-10.2.0.jre8.jar"
+          }, {
+            "description" : "",
+            "name" : "WMS_BD",
+            "sensitive" : false,
+            "value" : "database=wmsintegration;"
           }, {
             "description" : "",
             "name" : "Bearer",
@@ -4731,14 +4782,14 @@
             "value" : "Bearer bddba698214e6a4de9ae38bce45435fd"
           }, {
             "description" : "",
-            "name" : "UrlJdbcMsSql",
-            "sensitive" : false,
-            "value" : "jdbc:sqlserver://"
-          }, {
-            "description" : "",
             "name" : "UrlApiABOM",
             "sensitive" : false,
             "value" : "http://10.2.2.92:9601/"
+          }, {
+            "description" : "",
+            "name" : "supplier-refusals",
+            "sensitive" : false,
+            "value" : "${sql.args.1.value}"
           } ]
         }
       }

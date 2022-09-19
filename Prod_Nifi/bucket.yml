@@ -63,8 +63,8 @@ flows:
     author: anonymous, created: 1662964682608, flowName: Сontracts, flowDesc: Start}
   f470e8ff-5d33-49bb-b4a4-3baddff5db59: {ver: 1, file: Hits.snapshot, comments: '',
     author: anonymous, created: 1663325390649, flowName: Hits, flowDesc: ''}
-  427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 3, file: ShipmentAndShipmentItem.snapshot,
-    comments: CRON, author: anonymous, created: 1662964723579, flowName: ShipmentAndShipmentItem,
+  427d1f1d-6ad3-423b-9334-d3592b5a3f28: {ver: 4, file: ShipmentAndShipmentItem.snapshot,
+    comments: '', author: anonymous, created: 1663570659667, flowName: ShipmentAndShipmentItem,
     flowDesc: Start}
   20d4132f-443e-4051-8df9-4cc510552662: {ver: 5, file: contractors_subtypes.snapshot,
     comments: CRON, author: anonymous, created: 1662964671126, flowName: contractors_subtypes,
