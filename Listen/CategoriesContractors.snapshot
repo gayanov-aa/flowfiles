@@ -301,10 +301,10 @@
         "labels" : [ {
           "componentType" : "LABEL",
           "groupIdentifier" : "02a02737-e344-3bc7-9fd3-1e6b6b640b4e",
-          "height" : 40.0,
+          "height" : 48.0,
           "identifier" : "2d2c7327-2cd5-34dd-8fa0-d8f4e9960756",
           "instanceIdentifier" : "c1fb31b0-9d06-1aaa-81ee-e80a954fdcd3",
-          "label" : "Синонимы артикулов",
+          "label" : "Список категорий контрагентов\n",
           "position" : {
             "x" : -664.0,
             "y" : -952.0
@@ -312,7 +312,7 @@
           "style" : {
             "font-size" : "24px"
           },
-          "width" : 304.0,
+          "width" : 408.0,
           "zIndex" : 0
         } ],
         "name" : "CategoriesContractors",
@@ -842,7 +842,7 @@
           },
           "properties" : {
             "table-schema-cache-size" : "100",
-            "Table Name" : "article_synonyms",
+            "Table Name" : "categories_contractors",
             "jts-sql-param-attr-prefix" : "sql",
             "Unmatched Field Behavior" : "Ignore Unmatched Fields",
             "Unmatched Column Behavior" : "Fail on Unmatched Columns",
@@ -1184,7 +1184,7 @@
             "compression-format" : "NONE",
             "esql-output-batch-size" : "0",
             "esql-fetch-size" : "0",
-            "SQL select query" : "TRUNCATE TABLE article_synonyms;",
+            "SQL select query" : "TRUNCATE TABLE categories_contractors;",
             "dbf-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -1320,7 +1320,7 @@
             "idle-timeout" : "30 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{UrlApiABOM}article-synonyms?page_size=3000&page=${page}",
+            "Remote URL" : "#{UrlApiABOM}categories-contractors?page_size=3000&page=${page}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
