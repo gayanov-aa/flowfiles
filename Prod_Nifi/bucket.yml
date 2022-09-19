@@ -48,8 +48,8 @@ flows:
   e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91: {ver: 1, file: PriceListAndPriceListeItem.snapshot,
     comments: '', author: anonymous, created: 1662974481596, flowName: PriceListAndPriceListeItem,
     flowDesc: Start}
-  2151bc30-03f8-4249-abe0-a29cb821889e: {ver: 2, file: AdvertisingAndStandard.snapshot,
-    comments: '', author: anonymous, created: 1663059384310, flowName: AdvertisingAndStandard,
+  2151bc30-03f8-4249-abe0-a29cb821889e: {ver: 3, file: AdvertisingAndStandard.snapshot,
+    comments: '', author: anonymous, created: 1663570634653, flowName: AdvertisingAndStandard,
     flowDesc: ''}
   325df6b3-e98d-4b6d-9184-2157aa1f1069: {ver: 1, file: StandardProdCategory.snapshot,
     comments: '', author: anonymous, created: 1663315328988, flowName: StandardProdCategory,
