@@ -505,7 +505,23 @@
         "identifier" : "c72e0425-54bb-3930-b031-d7d79b3f3d95",
         "inputPorts" : [ ],
         "instanceIdentifier" : "44e83db6-0183-1000-0000-000033030361",
-        "labels" : [ ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "c72e0425-54bb-3930-b031-d7d79b3f3d95",
+          "height" : 56.0,
+          "identifier" : "6bbf8f2e-a6ee-3e09-acde-b7f432bd4bed",
+          "instanceIdentifier" : "45440070-0183-1000-0000-00004675d4ca",
+          "label" : "Эталоны",
+          "position" : {
+            "x" : -1440.0,
+            "y" : -648.0
+          },
+          "style" : {
+            "font-size" : "24px"
+          },
+          "width" : 168.0,
+          "zIndex" : 0
+        } ],
         "name" : "Standards",
         "outputPorts" : [ ],
         "parameterContextName" : "Connector",

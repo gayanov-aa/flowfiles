@@ -22,8 +22,8 @@ flows:
   32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 3, file: Price_lists_conform.snapshot,
     comments: CRON, author: anonymous, created: 1662964710844, flowName: Price_lists_conform,
     flowDesc: Start}
-  76565a03-3cca-440c-9420-649fc3deaca2: {ver: 1, file: Standard.snapshot, comments: '',
-    author: anonymous, created: 1663308455046, flowName: Standard, flowDesc: Start}
+  76565a03-3cca-440c-9420-649fc3deaca2: {ver: 2, file: Standard.snapshot, comments: '',
+    author: anonymous, created: 1663570638925, flowName: Standard, flowDesc: Start}
   4b680076-79da-4710-b023-1f76d223a286: {ver: 3, file: Products.snapshot, comments: CRON,
     author: anonymous, created: 1662964715160, flowName: Products, flowDesc: Test}
   42bbcf65-363e-4252-8850-1ab4bccefc9d: {ver: 3, file: Price_lists.snapshot, comments: CRON,
