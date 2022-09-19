@@ -17,8 +17,8 @@ flows:
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 2, file: StandardSigns.snapshot, comments: '',
     author: anonymous, created: 1663235010661, flowName: StandardSigns, flowDesc: ''}
-  c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 4, file: Brands.snapshot, comments: CRON,
-    author: anonymous, created: 1662964660798, flowName: Brands, flowDesc: Start}
+  c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 5, file: Brands.snapshot, comments: '',
+    author: anonymous, created: 1663570699725, flowName: Brands, flowDesc: Start}
   32a57e59-f09e-4939-9880-245b523e0bd3: {ver: 4, file: Price_lists_conform.snapshot,
     comments: '', author: anonymous, created: 1663570672996, flowName: Price_lists_conform,
     flowDesc: Start}
