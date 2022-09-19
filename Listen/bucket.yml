@@ -6,6 +6,9 @@ flows:
   810d8043-d39f-46f4-a4a9-f3e38f576b67: {ver: 1, file: GetContractorProductCodes.snapshot,
     comments: '', author: anonymous, created: 1663335693344, flowName: GetContractorProductCodes,
     flowDesc: ''}
+  46bedb4b-868a-4189-8b1f-4f0f9f2846d7: {ver: 1, file: CategoriesContractors.snapshot,
+    comments: '', author: anonymous, created: 1663578197334, flowName: CategoriesContractors,
+    flowDesc: ''}
   be80c94c-e763-4e4e-9d46-912a06fab3c9: {ver: 1, file: Сontracts.snapshot, comments: '',
     author: anonymous, created: 1662460512593, flowName: Сontracts, flowDesc: Test}
   32d2bb6f-c8b8-4a7f-a907-8159cf7ba611: {ver: 1, file: Price_lists_categories.snapshot,
