@@ -58,6 +58,9 @@ flows:
     flowDesc: ''}
   eee9bca6-70c3-47ec-82f2-5ff7ca403c7e: {ver: 1, file: Originals.snapshot, comments: '',
     author: anonymous, created: 1663567401150, flowName: Originals, flowDesc: ''}
+  a914c8f7-3402-4302-8901-43d276462f1e: {ver: 1, file: StandardTechCategory.snapshot,
+    comments: '', author: anonymous, created: 1663592359652, flowName: StandardTechCategory,
+    flowDesc: ''}
   4851391a-5fa8-4705-9c75-3776fef00026: {ver: 1, file: storages.snapshot, comments: '',
     author: anonymous, created: 1662560778892, flowName: storages, flowDesc: Test}
   5916b0b9-4202-42f1-8e75-0a6f9af9738d: {ver: 1, file: ShortestSupplyChains.snapshot,
