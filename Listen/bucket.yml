@@ -43,6 +43,9 @@ flows:
   edb886d7-914f-43f7-89b3-f7dfae0dcba3: {ver: 4, file: ShipmentAndShipmentItem.snapshot,
     comments: v3, author: anonymous, created: 1662969987340, flowName: ShipmentAndShipmentItem,
     flowDesc: v1}
+  e89303b8-fe97-4d49-b96e-1c0c5a68bcad: {ver: 1, file: RegulationDiscounts.snapshot,
+    comments: '', author: anonymous, created: 1663577485558, flowName: RegulationDiscounts,
+    flowDesc: ''}
   d26c634c-ccb5-4943-a632-99435a0a87af: {ver: 1, file: standard_ids_with_product_reserve.snapshot,
     comments: '', author: anonymous, created: 1663339528794, flowName: standard_ids_with_product_reserve,
     flowDesc: ''}
