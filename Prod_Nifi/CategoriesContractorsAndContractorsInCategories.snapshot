@@ -3293,7 +3293,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 10 17 * * ?",
+          "schedulingPeriod" : "0 20 10 ? * SAT",
           "schedulingStrategy" : "CRON_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQL",

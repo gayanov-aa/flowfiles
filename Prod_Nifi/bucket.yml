@@ -20,8 +20,8 @@ flows:
       conext, author: anonymous, created: 1662448790852, flowName: Wms_ZnO, flowDesc: first_version}
   15d6b882-e3a5-4838-aa37-038e037e0428: {ver: 2, file: StandardSigns.snapshot, comments: '',
     author: anonymous, created: 1663235010661, flowName: StandardSigns, flowDesc: ''}
-  2730bc49-6912-42e0-af62-b8ff76f4b4a2: {ver: 1, file: CategoriesContractorsAndContractorsInCategories.snapshot,
-    comments: '', author: anonymous, created: 1663581206336, flowName: CategoriesContractorsAndContractorsInCategories,
+  2730bc49-6912-42e0-af62-b8ff76f4b4a2: {ver: 2, file: CategoriesContractorsAndContractorsInCategories.snapshot,
+    comments: '', author: anonymous, created: 1663581267967, flowName: CategoriesContractorsAndContractorsInCategories,
     flowDesc: ''}
   c6ea7cf8-873c-4086-96df-8089cd259ed6: {ver: 5, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1663570699725, flowName: Brands, flowDesc: Start}
