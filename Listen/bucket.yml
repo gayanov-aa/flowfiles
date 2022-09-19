@@ -15,8 +15,6 @@ flows:
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
   87157c28-f543-4624-a3cb-69d88085faaf: {ver: 1, file: hits.snapshot, comments: '',
     author: anonymous, created: 1663325338961, flowName: hits, flowDesc: ''}
-  79c420a4-6ae0-483e-ba5e-dd0421e614a2: {ver: 1, file: ArticleSynonyms.snapshot, comments: '',
-    author: anonymous, created: 1663569806396, flowName: ArticleSynonyms, flowDesc: ''}
   46d38b8d-5910-4d80-a480-1323e59d93d6: {ver: 1, file: StandardsAnalogs.snapshot,
     comments: '', author: anonymous, created: 1663327895748, flowName: StandardsAnalogs,
     flowDesc: ''}
