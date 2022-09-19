@@ -36,6 +36,8 @@ flows:
   008498f3-7ae6-41dc-91f9-003716df20cf: {ver: 2, file: RequestAndRequestItem.snapshot,
     comments: cron, author: anonymous, created: 1663049217503, flowName: RequestAndRequestItem,
     flowDesc: Start}
+  2529bb8b-80c1-424a-b999-eeb5616747c3: {ver: 1, file: Originals.snapshot, comments: '',
+    author: anonymous, created: 1663567447520, flowName: Originals, flowDesc: ''}
   d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8: {ver: 5, file: Contractors.snapshot, comments: CRON,
     author: anonymous, created: 1662964666133, flowName: Contractors, flowDesc: ''}
   0bbfdb09-1c22-4dcb-a498-83030bdafd06: {ver: 3, file: standard_ids_with_product_reserve.snapshot,
