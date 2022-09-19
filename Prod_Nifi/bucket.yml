@@ -57,8 +57,8 @@ flows:
   a4c5b5e2-9fc7-451b-9785-4df3e0904332: {ver: 4, file: OrderAndOrderItem.snapshot,
     comments: '', author: anonymous, created: 1663570663910, flowName: OrderAndOrderItem,
     flowDesc: v2}
-  29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 4, file: Logistic_cards.snapshot, comments: CRON,
-    author: anonymous, created: 1662964706420, flowName: Logistic_cards, flowDesc: ''}
+  29168dcf-276c-4620-97dd-9f0b391d5cd3: {ver: 5, file: Logistic_cards.snapshot, comments: '',
+    author: anonymous, created: 1663570686355, flowName: Logistic_cards, flowDesc: ''}
   f183079f-4235-461d-b1f0-b82fd1734b07: {ver: 5, file: Сontracts.snapshot, comments: '',
     author: anonymous, created: 1663570676614, flowName: Сontracts, flowDesc: Start}
   f470e8ff-5d33-49bb-b4a4-3baddff5db59: {ver: 1, file: Hits.snapshot, comments: '',
