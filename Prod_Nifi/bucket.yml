@@ -2,6 +2,9 @@ flows:
   349fbd98-29c4-4a30-a640-4ab656403e75: {ver: 3, file: RefusalAndRefusalItem.snapshot,
     comments: '', author: anonymous, created: 1663570656540, flowName: RefusalAndRefusalItem,
     flowDesc: Start}
+  e191ef63-4185-467b-8577-e1b7d4446e0d: {ver: 1, file: StandardTechCategory.snapshot,
+    comments: '', author: anonymous, created: 1663592402251, flowName: StandardTechCategory,
+    flowDesc: ''}
   fb37e848-ed7c-4061-888c-bc75ff6e1842: {ver: 2, file: GetContractorProductCodes.snapshot,
     comments: '', author: anonymous, created: 1663336216967, flowName: GetContractorProductCodes,
     flowDesc: ''}
