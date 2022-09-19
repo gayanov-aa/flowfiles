@@ -11,6 +11,8 @@ flows:
   885517f0-1c4b-44af-ad3f-3693d043cbd4: {ver: 1, file: StandardsAnalogs.snapshot,
     comments: '', author: anonymous, created: 1663327936419, flowName: StandardsAnalogs,
     flowDesc: ''}
+  f5c9573a-f3e8-44e2-9818-1bff2a62b942: {ver: 1, file: StandardGroups.snapshot, comments: '',
+    author: anonymous, created: 1663590418736, flowName: StandardGroups, flowDesc: ''}
   5f27c429-a23c-493e-b7d8-156081104996: {ver: 2, file: ProdCategories.snapshot, comments: '',
     author: anonymous, created: 1663589414578, flowName: ProdCategories, flowDesc: ''}
   58b87bcb-2572-41f9-914a-131d4558bd87: {ver: 1, file: ArticleSynonyms.snapshot, comments: '',
