@@ -30,8 +30,8 @@ flows:
     author: anonymous, created: 1662964697325, flowName: Price_lists, flowDesc: ''}
   0ed493ef-abe0-4068-8ec4-2d553fb16d76: {ver: 4, file: Storages.snapshot, comments: CRON,
     author: anonymous, created: 1662964676850, flowName: Storages, flowDesc: Start}
-  2739e423-e96f-4abc-8e5c-9f554349c6d8: {ver: 2, file: ShortestRoutes.snapshot, comments: CRON,
-    author: anonymous, created: 1663054264390, flowName: ShortestRoutes, flowDesc: Start}
+  2739e423-e96f-4abc-8e5c-9f554349c6d8: {ver: 3, file: ShortestRoutes.snapshot, comments: '',
+    author: anonymous, created: 1663570631961, flowName: ShortestRoutes, flowDesc: Start}
   a73aba11-1a2a-432e-ae14-23a41a4f5dea: {ver: 2, file: ShortestSupplyChains.snapshot,
     comments: '', author: anonymous, created: 1663051294554, flowName: ShortestSupplyChains,
     flowDesc: Start}

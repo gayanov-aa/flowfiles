@@ -289,7 +289,23 @@
         "identifier" : "a1747304-408e-3b0e-9dd9-01140c521350",
         "inputPorts" : [ ],
         "instanceIdentifier" : "35c0e50c-0183-1000-0000-00007765ce21",
-        "labels" : [ ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "a1747304-408e-3b0e-9dd9-01140c521350",
+          "height" : 56.0,
+          "identifier" : "a6796775-73ee-35b0-8a50-cc8ef4d198db",
+          "instanceIdentifier" : "4543198f-0183-1000-0000-000018422c76",
+          "label" : "Кратчайшие маршруты\n",
+          "position" : {
+            "x" : 408.0,
+            "y" : -424.0
+          },
+          "style" : {
+            "font-size" : "24px"
+          },
+          "width" : 312.0,
+          "zIndex" : 0
+        } ],
         "name" : "ShortestRoutes",
         "outputPorts" : [ ],
         "parameterContextName" : "Connector",
@@ -1630,6 +1646,11 @@
             "value" : "authentication=NotSpecified;encrypt=true;trustservercertificate=true"
           }, {
             "description" : "",
+            "name" : "WMSZnO",
+            "sensitive" : false,
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/WMSZnO/NiFi_Info"
+          }, {
+            "description" : "",
             "name" : "Stop",
             "sensitive" : false,
             "value" : "0"
@@ -1640,6 +1661,11 @@
             "value" : "database=wmsintegration;"
           }, {
             "description" : "",
+            "name" : "WMSZnP",
+            "sensitive" : false,
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/WMSZnP/NiFi_Info"
+          }, {
+            "description" : "",
             "name" : "WmsServer",
             "sensitive" : false,
             "value" : "10.2.1.51;port=1433;"
@@ -1648,6 +1674,11 @@
             "name" : "UrlJdbcMsSql",
             "sensitive" : false,
             "value" : "jdbc:sqlserver://"
+          }, {
+            "description" : "",
+            "name" : "WMS_Host",
+            "sensitive" : false,
+            "value" : "10.2.1.51;port=1433;"
           }, {
             "description" : "",
             "name" : "ObmenMagentaZnO",
@@ -1678,6 +1709,11 @@
             "name" : "DriverLocation",
             "sensitive" : false,
             "value" : "/drivers_nifi/sqljdbc_10.2/rus/mssql-jdbc-10.2.0.jre8.jar"
+          }, {
+            "description" : "",
+            "name" : "WMS_BD",
+            "sensitive" : false,
+            "value" : "database=wmsintegration;"
           }, {
             "description" : "",
             "name" : "Bearer",
