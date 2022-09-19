@@ -33,6 +33,8 @@ flows:
     author: anonymous, created: 1663308395695, flowName: Standard, flowDesc: ''}
   d1b42786-6c61-4456-b932-83756bb53b49: {ver: 1, file: New.snapshot, comments: '',
     author: anonymous, created: 1661953562987, flowName: New, flowDesc: 31.08.22}
+  7d593b72-6d55-4e8e-b34d-f883d0f5bbaf: {ver: 1, file: ProdCategories.snapshot, comments: '',
+    author: anonymous, created: 1663589361117, flowName: ProdCategories, flowDesc: ''}
   5dd03003-0867-4392-bebc-5aa1d3b922f6: {ver: 2, file: Price_list.snapshot, comments: Group
       cycle, author: anonymous, created: 1662537138646, flowName: Price_list, flowDesc: 'цикл '}
   8a004c4e-22df-4b3b-a898-29b336c2ee1d: {ver: 1, file: ShortestRoutes.snapshot, comments: '',
