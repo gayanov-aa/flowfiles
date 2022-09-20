@@ -289,39 +289,6 @@
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "fa555933-a0c8-379b-929c-72dbd8532c67",
-            "id" : "43ba26e5-bcd8-3938-a69e-c28a48441735",
-            "instanceIdentifier" : "ec684265-4415-3f71-9c35-5c86dc6a567a",
-            "name" : "Funnel",
-            "type" : "FUNNEL"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "fa555933-a0c8-379b-929c-72dbd8532c67",
-          "identifier" : "6b6fd1bd-d6d1-353a-a304-80bf2c4df850",
-          "instanceIdentifier" : "36f22428-0183-1000-0000-00000a082439",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "WMSZnP" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "fa555933-a0c8-379b-929c-72dbd8532c67",
-            "id" : "ae90a9a5-a145-3590-b51d-0ebb376573c4",
-            "instanceIdentifier" : "3ec0d4a8-f085-34f0-9111-c1d17fbd4226",
-            "name" : "RouteOnAttribute",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
           "bends" : [ {
             "x" : 2136.0,
             "y" : 520.0
@@ -345,6 +312,39 @@
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
           "selectedRelationships" : [ "WMSZnO" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "fa555933-a0c8-379b-929c-72dbd8532c67",
+            "id" : "ae90a9a5-a145-3590-b51d-0ebb376573c4",
+            "instanceIdentifier" : "3ec0d4a8-f085-34f0-9111-c1d17fbd4226",
+            "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "e1ffd638-87eb-30aa-9df2-75ac6afc5197",
+            "id" : "6c569ce8-dead-344b-97d8-0c518fd48c7b",
+            "instanceIdentifier" : "b2679556-1879-35b3-aaa8-257e1e79cdef",
+            "name" : "InputPortWMSZnP",
+            "type" : "INPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fa555933-a0c8-379b-929c-72dbd8532c67",
+          "identifier" : "2c4b3840-44cf-358a-9bfb-6a5596cd024b",
+          "instanceIdentifier" : "5ade462f-0183-1000-0000-00004e299883",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "WMSZnP" ],
           "source" : {
             "comments" : "",
             "groupId" : "fa555933-a0c8-379b-929c-72dbd8532c67",
@@ -392,6 +392,156 @@
           "zIndex" : 0
         } ],
         "controllerServices" : [ {
+          "bundle" : {
+            "artifact" : "nifi-dbcp-service-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "type" : "org.apache.nifi.dbcp.DBCPService"
+          } ],
+          "groupIdentifier" : "fa555933-a0c8-379b-929c-72dbd8532c67",
+          "identifier" : "c81caa86-b145-301d-b8cc-1522b5ead90a",
+          "instanceIdentifier" : "5ae66978-0183-1000-0000-00007af173a2",
+          "name" : "DBCPConnectionPoolWMS",
+          "properties" : {
+            "dbcp-min-idle-conns" : "0",
+            "Max Wait Time" : "500 millis",
+            "Database Driver Class Name" : "#{DriverClassMsSqlJdbc}",
+            "dbcp-min-evictable-idle-time" : "30 mins",
+            "Max Total Connections" : "8",
+            "dbcp-max-conn-lifetime" : "-1",
+            "Database Connection URL" : "#{UrlJdbcMsSql}#{WmsServer}#{WmsDB}#{Protocols}",
+            "dbcp-time-between-eviction-runs" : "-1",
+            "Database User" : "Wizard",
+            "dbcp-soft-min-evictable-idle-time" : "-1",
+            "database-driver-locations" : "#{DriverLocation}",
+            "dbcp-max-idle-conns" : "8"
+          },
+          "propertyDescriptors" : {
+            "kerberos-password" : {
+              "displayName" : "Kerberos Password",
+              "identifiesControllerService" : false,
+              "name" : "kerberos-password",
+              "sensitive" : true
+            },
+            "dbcp-min-idle-conns" : {
+              "displayName" : "Minimum Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-idle-conns",
+              "sensitive" : false
+            },
+            "Max Wait Time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Driver Class Name" : {
+              "displayName" : "Database Driver Class Name",
+              "identifiesControllerService" : false,
+              "name" : "Database Driver Class Name",
+              "sensitive" : false
+            },
+            "dbcp-min-evictable-idle-time" : {
+              "displayName" : "Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "kerberos-principal" : {
+              "displayName" : "Kerberos Principal",
+              "identifiesControllerService" : false,
+              "name" : "kerberos-principal",
+              "sensitive" : false
+            },
+            "Max Total Connections" : {
+              "displayName" : "Max Total Connections",
+              "identifiesControllerService" : false,
+              "name" : "Max Total Connections",
+              "sensitive" : false
+            },
+            "kerberos-credentials-service" : {
+              "displayName" : "Kerberos Credentials Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-credentials-service",
+              "sensitive" : false
+            },
+            "dbcp-max-conn-lifetime" : {
+              "displayName" : "Max Connection Lifetime",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-conn-lifetime",
+              "sensitive" : false
+            },
+            "Validation-query" : {
+              "displayName" : "Validation query",
+              "identifiesControllerService" : false,
+              "name" : "Validation-query",
+              "sensitive" : false
+            },
+            "Database Connection URL" : {
+              "displayName" : "Database Connection URL",
+              "identifiesControllerService" : false,
+              "name" : "Database Connection URL",
+              "sensitive" : false
+            },
+            "dbcp-time-between-eviction-runs" : {
+              "displayName" : "Time Between Eviction Runs",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-time-between-eviction-runs",
+              "sensitive" : false
+            },
+            "Database User" : {
+              "displayName" : "Database User",
+              "identifiesControllerService" : false,
+              "name" : "Database User",
+              "sensitive" : false
+            },
+            "kerberos-user-service" : {
+              "displayName" : "Kerberos User Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-user-service",
+              "sensitive" : false
+            },
+            "dbcp-soft-min-evictable-idle-time" : {
+              "displayName" : "Soft Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-soft-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "database-driver-locations" : {
+              "displayName" : "Database Driver Location(s)",
+              "identifiesControllerService" : false,
+              "name" : "database-driver-locations",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
+              },
+              "sensitive" : false
+            },
+            "dbcp-max-idle-conns" : {
+              "displayName" : "Max Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-idle-conns",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.dbcp.DBCPConnectionPool"
+        }, {
           "bundle" : {
             "artifact" : "nifi-distributed-cache-services-nar",
             "group" : "org.apache.nifi",
@@ -847,15 +997,6 @@
           "position" : {
             "x" : 112.0,
             "y" : 760.0
-          }
-        }, {
-          "componentType" : "FUNNEL",
-          "groupIdentifier" : "fa555933-a0c8-379b-929c-72dbd8532c67",
-          "identifier" : "43ba26e5-bcd8-3938-a69e-c28a48441735",
-          "instanceIdentifier" : "ec684265-4415-3f71-9c35-5c86dc6a567a",
-          "position" : {
-            "x" : 1368.0,
-            "y" : 1016.0
           }
         }, {
           "componentType" : "FUNNEL",
@@ -2244,157 +2385,7 @@
             },
             "zIndex" : 0
           } ],
-          "controllerServices" : [ {
-            "bundle" : {
-              "artifact" : "nifi-dbcp-service-nar",
-              "group" : "org.apache.nifi",
-              "version" : "1.17.0"
-            },
-            "comments" : "",
-            "componentType" : "CONTROLLER_SERVICE",
-            "controllerServiceApis" : [ {
-              "bundle" : {
-                "artifact" : "nifi-standard-services-api-nar",
-                "group" : "org.apache.nifi",
-                "version" : "1.17.0"
-              },
-              "type" : "org.apache.nifi.dbcp.DBCPService"
-            } ],
-            "groupIdentifier" : "bb1874bb-2059-366e-9beb-96543aab0210",
-            "identifier" : "563b94d6-267d-3f7d-aa9a-d34945ccb0a2",
-            "instanceIdentifier" : "9fe968df-b650-3336-a20e-36226aa488a1",
-            "name" : "DBCPConnectionPoolWMS",
-            "properties" : {
-              "dbcp-min-idle-conns" : "0",
-              "Max Wait Time" : "500 millis",
-              "Database Driver Class Name" : "#{DriverClassMsSqlJdbc}",
-              "dbcp-min-evictable-idle-time" : "30 mins",
-              "Max Total Connections" : "8",
-              "dbcp-max-conn-lifetime" : "-1",
-              "Database Connection URL" : "#{UrlJdbcMsSql}#{WmsServer}#{WmsDB}#{Protocols}",
-              "dbcp-time-between-eviction-runs" : "-1",
-              "Database User" : "Wizard",
-              "dbcp-soft-min-evictable-idle-time" : "-1",
-              "database-driver-locations" : "#{DriverLocation}",
-              "dbcp-max-idle-conns" : "8"
-            },
-            "propertyDescriptors" : {
-              "kerberos-password" : {
-                "displayName" : "Kerberos Password",
-                "identifiesControllerService" : false,
-                "name" : "kerberos-password",
-                "sensitive" : true
-              },
-              "dbcp-min-idle-conns" : {
-                "displayName" : "Minimum Idle Connections",
-                "identifiesControllerService" : false,
-                "name" : "dbcp-min-idle-conns",
-                "sensitive" : false
-              },
-              "Max Wait Time" : {
-                "displayName" : "Max Wait Time",
-                "identifiesControllerService" : false,
-                "name" : "Max Wait Time",
-                "sensitive" : false
-              },
-              "Database Driver Class Name" : {
-                "displayName" : "Database Driver Class Name",
-                "identifiesControllerService" : false,
-                "name" : "Database Driver Class Name",
-                "sensitive" : false
-              },
-              "dbcp-min-evictable-idle-time" : {
-                "displayName" : "Minimum Evictable Idle Time",
-                "identifiesControllerService" : false,
-                "name" : "dbcp-min-evictable-idle-time",
-                "sensitive" : false
-              },
-              "kerberos-principal" : {
-                "displayName" : "Kerberos Principal",
-                "identifiesControllerService" : false,
-                "name" : "kerberos-principal",
-                "sensitive" : false
-              },
-              "Max Total Connections" : {
-                "displayName" : "Max Total Connections",
-                "identifiesControllerService" : false,
-                "name" : "Max Total Connections",
-                "sensitive" : false
-              },
-              "kerberos-credentials-service" : {
-                "displayName" : "Kerberos Credentials Service",
-                "identifiesControllerService" : true,
-                "name" : "kerberos-credentials-service",
-                "sensitive" : false
-              },
-              "dbcp-max-conn-lifetime" : {
-                "displayName" : "Max Connection Lifetime",
-                "identifiesControllerService" : false,
-                "name" : "dbcp-max-conn-lifetime",
-                "sensitive" : false
-              },
-              "Validation-query" : {
-                "displayName" : "Validation query",
-                "identifiesControllerService" : false,
-                "name" : "Validation-query",
-                "sensitive" : false
-              },
-              "Database Connection URL" : {
-                "displayName" : "Database Connection URL",
-                "identifiesControllerService" : false,
-                "name" : "Database Connection URL",
-                "sensitive" : false
-              },
-              "dbcp-time-between-eviction-runs" : {
-                "displayName" : "Time Between Eviction Runs",
-                "identifiesControllerService" : false,
-                "name" : "dbcp-time-between-eviction-runs",
-                "sensitive" : false
-              },
-              "Database User" : {
-                "displayName" : "Database User",
-                "identifiesControllerService" : false,
-                "name" : "Database User",
-                "sensitive" : false
-              },
-              "kerberos-user-service" : {
-                "displayName" : "Kerberos User Service",
-                "identifiesControllerService" : true,
-                "name" : "kerberos-user-service",
-                "sensitive" : false
-              },
-              "dbcp-soft-min-evictable-idle-time" : {
-                "displayName" : "Soft Minimum Evictable Idle Time",
-                "identifiesControllerService" : false,
-                "name" : "dbcp-soft-min-evictable-idle-time",
-                "sensitive" : false
-              },
-              "database-driver-locations" : {
-                "displayName" : "Database Driver Location(s)",
-                "identifiesControllerService" : false,
-                "name" : "database-driver-locations",
-                "resourceDefinition" : {
-                  "cardinality" : "MULTIPLE",
-                  "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
-                },
-                "sensitive" : false
-              },
-              "dbcp-max-idle-conns" : {
-                "displayName" : "Max Idle Connections",
-                "identifiesControllerService" : false,
-                "name" : "dbcp-max-idle-conns",
-                "sensitive" : false
-              },
-              "Password" : {
-                "displayName" : "Password",
-                "identifiesControllerService" : false,
-                "name" : "Password",
-                "sensitive" : true
-              }
-            },
-            "scheduledState" : "DISABLED",
-            "type" : "org.apache.nifi.dbcp.DBCPConnectionPool"
-          } ],
+          "controllerServices" : [ ],
           "defaultBackPressureDataSizeThreshold" : "1 GB",
           "defaultBackPressureObjectThreshold" : 10000,
           "defaultFlowFileExpiration" : "0 sec",
@@ -3021,7 +3012,7 @@
                 "Support Fragmented Transactions" : "false",
                 "Batch Size" : "100",
                 "Obtain Generated Keys" : "false",
-                "JDBC Connection Pool" : "563b94d6-267d-3f7d-aa9a-d34945ccb0a2",
+                "JDBC Connection Pool" : "c81caa86-b145-301d-b8cc-1522b5ead90a",
                 "database-session-autocommit" : "false",
                 "rollback-on-failure" : "false"
               },
@@ -3280,7 +3271,7 @@
                 "Unmatched Column Behavior" : "Fail on Unmatched Columns",
                 "jts-quoted-identifiers" : "false",
                 "jts-quoted-table-identifiers" : "false",
-                "JDBC Connection Pool" : "563b94d6-267d-3f7d-aa9a-d34945ccb0a2",
+                "JDBC Connection Pool" : "c81caa86-b145-301d-b8cc-1522b5ead90a",
                 "Translate Field Names" : "true",
                 "Statement Type" : "INSERT"
               },
@@ -3736,7 +3727,7 @@
                 "Support Fragmented Transactions" : "false",
                 "Batch Size" : "100",
                 "Obtain Generated Keys" : "false",
-                "JDBC Connection Pool" : "563b94d6-267d-3f7d-aa9a-d34945ccb0a2",
+                "JDBC Connection Pool" : "c81caa86-b145-301d-b8cc-1522b5ead90a",
                 "database-session-autocommit" : "false",
                 "rollback-on-failure" : "false"
               },
@@ -4071,7 +4062,7 @@
                 "Unmatched Column Behavior" : "Fail on Unmatched Columns",
                 "jts-quoted-identifiers" : "false",
                 "jts-quoted-table-identifiers" : "false",
-                "JDBC Connection Pool" : "563b94d6-267d-3f7d-aa9a-d34945ccb0a2",
+                "JDBC Connection Pool" : "c81caa86-b145-301d-b8cc-1522b5ead90a",
                 "Translate Field Names" : "true",
                 "Statement Type" : "INSERT"
               },
@@ -6294,6 +6285,38 @@
           } ],
           "remoteProcessGroups" : [ ],
           "variables" : { }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "fa555933-a0c8-379b-929c-72dbd8532c67",
+          "identifier" : "e1ffd638-87eb-30aa-9df2-75ac6afc5197",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "5ade0b63-0183-1000-ffff-ffffe4867700",
+          "labels" : [ ],
+          "name" : "WMSZnP",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 1240.0,
+            "y" : 952.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "06337f92-d08b-4cc4-9c1b-493316e95bae",
+            "flowId" : "f4e56d57-daf6-4904-81fe-e79462f0b5fd",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 1
+          }
         } ],
         "processors" : [ {
           "autoTerminatedRelationships" : [ ],
