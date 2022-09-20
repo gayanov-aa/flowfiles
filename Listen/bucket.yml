@@ -58,6 +58,8 @@ flows:
   d26c634c-ccb5-4943-a632-99435a0a87af: {ver: 1, file: standard_ids_with_product_reserve.snapshot,
     comments: '', author: anonymous, created: 1663339528794, flowName: standard_ids_with_product_reserve,
     flowDesc: ''}
+  f4e56d57-daf6-4904-81fe-e79462f0b5fd: {ver: 1, file: 1.snapshot, comments: '', author: anonymous,
+    created: 1663676800333, flowName: '1', flowDesc: ''}
   eee9bca6-70c3-47ec-82f2-5ff7ca403c7e: {ver: 1, file: Originals.snapshot, comments: '',
     author: anonymous, created: 1663567401150, flowName: Originals, flowDesc: ''}
   a914c8f7-3402-4302-8901-43d276462f1e: {ver: 1, file: StandardTechCategory.snapshot,
