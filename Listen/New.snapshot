@@ -10,7 +10,7 @@
         "componentType" : "PROCESS_GROUP",
         "connections" : [ {
           "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 100000,
+          "backPressureObjectThreshold" : 10000,
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -171,39 +171,6 @@
             "id" : "fd739cf1-30c2-3134-8767-9bb4ef2e995f",
             "instanceIdentifier" : "97e95a5b-02ff-1524-0000-000046c18731",
             "name" : "GenerateFlowFile",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
-            "id" : "a4346496-1858-370a-baef-014d3688eed5",
-            "instanceIdentifier" : "d48e4523-c803-1127-0000-000035326543",
-            "name" : "SplitJson",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
-          "identifier" : "463bb27a-b81b-3975-99ec-6072b1c6be70",
-          "instanceIdentifier" : "d48e45de-c803-1127-0000-0000579d91fc",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
-            "id" : "af20fcd2-56ba-3d5c-afd7-0eb117e24aba",
-            "instanceIdentifier" : "8bd53cc1-1180-1489-ad41-8f6ed4191d16",
-            "name" : "ReplaceText",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -1139,20 +1106,23 @@
             "AvroWmsEktZnO" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"MessageID\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"AdvancedShipNotice\",\n            \"type\": {\n              \"name\": \"AdvancedShipNotice\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"AdvancedShipNoticeHeader\",\n                  \"type\": {\n                    \"name\": \"AdvancedShipNoticeHeader\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"StorerKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Company\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Description\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address1\",\n                        \"type\": {\n                          \"name\": \"Address1\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Address2\",\n                        \"type\": {\n                          \"name\": \"Address2\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Address3\",\n                        \"type\": {\n                          \"name\": \"Address3\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Phone1\",\n                        \"type\": {\n                          \"name\": \"Phone1\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "StorerWMS2" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"MessageID\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"Storer\",\n            \"type\": {\n              \"name\": \"Storer\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"StorerHeader\",\n                  \"type\": {\n                    \"name\": \"StorerHeader\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"StorerKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Company\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Description\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address1\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address2\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address3\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Phone1\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "AvroWmsNsb" : "{\n  \"name\":\"Message\",\n  \"type\":\"record\",\n  \"namespace\":\"com.acme.avro\",\n  \"fields\":[\n    {\n      \"name\":\"Head\",\n      \"type\":{\n        \"name\":\"Head\",\n        \"type\":\"record\",\n        \"fields\":[\n          {\n            \"name\":\"MessageID\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"Date\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"MessageType\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"Action\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"Recipient\",\n            \"type\":{\n              \"name\":\"Recipient\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"SystemID\",\n                  \"type\":\"string\"\n                },\n                {\n                  \"name\":\"CompanyID\",\n                  \"type\":\"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\":\"Sender\",\n            \"type\":{\n              \"name\":\"Sender\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"SystemID\",\n                  \"type\":\"string\"\n                },\n                {\n                  \"name\":\"CompanyID\",\n                  \"type\":\"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\":\"Body\",\n      \"type\":{\n        \"name\":\"Body\",\n        \"type\":\"record\",\n        \"fields\":[\n          {\n            \"name\":\"ShipmentOrder\",\n            \"type\":{\n              \"name\":\"ShipmentOrder\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"ShipmentOrderHeader\",\n                  \"type\":{\n                    \"name\":\"ShipmentOrderHeader\",\n                    \"type\":\"record\",\n                    \"fields\":[\n                      {\n                        \"name\":\"StorerKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Type\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ExternOrderKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ConsigneeKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"RequestedShipDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Stop\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Route\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ContainerType\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Stage\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"BuyerPO\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"B_Company\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"DriverName\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ProNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"TrailerNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"BOLNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"CarrierCode\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Notes\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"FormatedNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ReferenceDocument\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ActualArrivalDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"LoadId\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"BillToKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"SUsr2\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"SUsr3\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"SUsr5\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ShipmentOrderDetail\",\n                        \"type\":{\n                          \"name\":\"ShipmentOrderDetail\",\n                          \"type\":\"record\",\n                          \"fields\":[\n                            {\n                              \"name\": \"StorerKey\",\n                              \"type\": \"string\"\n                            },\n                            {\n                              \"name\": \"ExternOrderKey\",\n                              \"type\": \"string\"\n                            },\n                            {\n                              \"name\": \"OrderLineNumber\",\n                              \"type\": \"string\"\n                            },\n                            {\n                              \"name\": \"Sku\",\n                              \"type\": \"string\"\n                            },\n                            {\n                              \"name\":\"Lottable01\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable02\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable03\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable04\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"MatchLottable\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\": \"OpenQty\",\n                              \"type\": \"string\"\n                            },\n                            {\n                              \"name\":\"SKURotation\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Rotation\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"OppRequest\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"OrderGroup\",\n                              \"type\":\"string\"\n                            }\n                          ]\n                        }\n                      },\n                      {\n                        \"name\":\"TransportationMode\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"OrderGroup\",\n                        \"type\":\"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
+            "ShAvroXMLZnONsb" : "{\n    \"name\":\"Message\",\n    \"type\":\"record\",\n    \"namespace\":\"com.acme.avro\",\n    \"fields\":[\n      {\n        \"name\":\"Head\",\n        \"type\":{\n          \"name\":\"Head\",\n          \"type\":\"record\",\n          \"fields\":[\n            {\n              \"name\":\"MessageID\",\n              \"type\":\"string\"\n            },\n            {\n              \"name\":\"Date\",\n              \"type\":\"string\"\n            },\n            {\n              \"name\":\"MessageType\",\n              \"type\":\"string\"\n            },\n            {\n              \"name\":\"Sender\",\n              \"type\":{\n                \"name\":\"Sender\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"SystemID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"CompanyID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"ReplyToQ\",\n                    \"type\":\"string\"\n                  }\n                ]\n              }\n            },\n            {\n              \"name\":\"Recipient\",\n              \"type\":{\n                \"name\":\"Recipient\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"SystemID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"CompanyID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"ReplyToQ\",\n                    \"type\":\"string\"\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      },\n      {\n        \"name\":\"Body\",\n        \"type\":{\n          \"name\":\"Body\",\n          \"type\":\"record\",\n          \"fields\":[\n            {\n              \"name\":\"OrderHeader\",\n              \"type\":{\n                \"name\":\"OrderHeader\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"Date\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"OrderNumber\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"IntOrderNumber\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"STORERKEY\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"Split\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"OrderDetail\",\n                    \"type\":{\n                      \"type\":\"array\",\n                      \"items\":{\n                        \"name\":\"OrderDetail_record\",\n                        \"type\":\"record\",\n                        \"fields\":[\n                          {\n                            \"name\":\"STORERKEY\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SKU\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"TM\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SHIPPEDQTY\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"STDNETWGT\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"STDGROSSWGT\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"LD\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SN\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SHORTSHIPREASON\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"TARETYPE\",\n                            \"type\":\"string\"\n                          }\n                        ]\n                      }\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }",
             "AdvancedShipNoticeWMS" : "{\n    \"name\": \"Message\",\n    \"type\": \"record\",\n    \"namespace\": \"com.acme.avro\",\n    \"fields\": [\n      {\n        \"name\": \"Head\",\n        \"type\": {\n          \"name\": \"Head\",\n          \"type\": \"record\",\n          \"fields\": [\n            {\n              \"name\": \"MessageID\",\n              \"type\": \"string\"\n            },\n            {\n              \"name\": \"Date\",\n              \"type\": \"string\"\n            },\n            {\n              \"name\": \"MessageType\",\n              \"type\": \"string\"\n            },\n            {\n              \"name\": \"Action\",\n              \"type\": \"string\"\n            },\n            {\n              \"name\": \"Recipient\",\n              \"type\": {\n                \"name\": \"Recipient\",\n                \"type\": \"record\",\n                \"fields\": [\n                  {\n                    \"name\": \"SystemID\",\n                    \"type\": \"string\"\n                  },\n                  {\n                    \"name\": \"CompanyID\",\n                    \"type\": \"string\"\n                  }\n                ]\n              }\n            },\n            {\n              \"name\": \"Sender\",\n              \"type\": {\n                \"name\": \"Sender\",\n                \"type\": \"record\",\n                \"fields\": [\n                  {\n                    \"name\": \"SystemID\",\n                    \"type\": \"string\"\n                  },\n                  {\n                    \"name\": \"CompanyID\",\n                    \"type\": \"string\"\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      },\n      {\n        \"name\": \"Body\",\n        \"type\": {\n          \"name\": \"Body\",\n          \"type\": \"record\",\n          \"fields\": [\n            {\n              \"name\": \"AdvancedShipNotice\",\n              \"type\": {\n                \"name\": \"AdvancedShipNotice\",\n                \"type\": \"record\",\n                \"fields\": [\n                  {\n                    \"name\": \"AdvancedShipNoticeHeader\",\n                    \"type\": {\n                      \"name\": \"AdvancedShipNoticeHeader\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"StorerKey\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ExpectedReceiptDate\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ReceiptDate\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"CarrierKey\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"CarrierReference\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ExternReceiptKey\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Type\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ReferenceDocument\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Notes\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ReceiptGroup\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"VehicleNumber\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"VehicleDate\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ActualShipDate\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"PlannedShipDate\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"SUsr4\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"AdvancedShipNoticeDetail\",\n                            \"type\": {\n                              \"type\": \"array\",\n                              \"items\": {\n                                \"name\": \"AdvancedShipNoticeDetail_record\",\n                                \"type\": \"record\",\n                                \"fields\": [\n                                  {\n                                  \"name\": \"ExternReceiptKey\",\n                                  \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"ExternLineNo\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"StorerKey\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"Sku\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"Lottable01\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"Lottable02\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"Lottable09\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"ToId\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"SUsr1\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"SUsr2\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"QtyExpected\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"Lottable03\",\n                                    \"type\": \"string\"\n                                  },\n                                  {\n                                    \"name\": \"MatchLottable\",\n                                    \"type\": \"string\"\n                                  }\n                                ]\n                            }\n                        }\n                    }\n                      ]\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }",
+            "ConfZnPNsb" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"MessageID\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"ReplyToQ\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"ReplyToQ\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"AsnHeader\",\n            \"type\": {\n              \"name\": \"AsnHeader\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"Date\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"EXTERNRECEIPTKEY\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"IntReceiptNumber\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"STORERKEY\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"Type\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"AsnDetail\",\n                  \"type\": {\n                    \"name\": \"AsnDetail\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"STORERKEY\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"SKU\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"QTYRECEIVED\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"STATUS\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"TM\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"LOTTABLE02\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "ItemMasterWMS" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"ItemMaster\",\n            \"type\": {\n              \"name\": \"ItemMaster\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"Item\",\n                  \"type\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                      \"name\": \"Item_record\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"StorerKey\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Sku\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Descr\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"StdNetWgt2\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"StdGrossWgt2\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"StdCube2\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Tare\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"AltSku\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"PackKey\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"CountryOfOrigin\",\n                          \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "ItemMasterWMS2" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"ItemMaster\",\n            \"type\": {\n              \"name\": \"ItemMaster\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"Item\",\n                  \"type\": {\n                    \"name\": \"Item\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"StorerKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Sku\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Descr\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"StdNetWgt2\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"StdGrossWgt2\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"StdCube2\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Tare\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"AltSku\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"PackKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"CountryOfOrigin\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "AvroWmsEktItem" : "{\n  \"name\": \"PACKAGE\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"POSTOBJECT\",\n      \"type\": {\n        \"type\": \"array\",\n        \"items\": {\n          \"name\": \"POSTOBJECT_record\",\n          \"type\": \"record\",\n          \"fields\": [\n            {\n              \"name\": \"item\",\n              \"type\": {\n                \"name\": \"item\",\n                \"type\": \"record\",\n                \"fields\": [\n                  {\n                    \"name\": \"t_ax_item_master\",\n                    \"type\": {\n                      \"name\": \"t_ax_item_master\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"Id\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"TransactionCode\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"TranDttm\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ItemID\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Description\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Serial\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"LotControl\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"WhseID\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Weight\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"InvClass\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Vendor\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Group\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Expiry\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Pick_Put_Id\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"abc\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"TM\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"NameWar\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"KodProizv\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"KodWar\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Price\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"StorerKey\",\n                          \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"name\": \"t_ax_item_uom\",\n                    \"type\": {\n                      \"name\": \"t_ax_item_uom\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"Id\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"TransactionCode\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"ItemID\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"WhseID\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"UOM\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"CnvrsionFactor\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"UnitVolume\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"NestedVolume\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Pickable\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Pick_Put_Id\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"StorerKey\",\n                          \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"name\": \"Id\",\n                    \"type\": \"string\"\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
             "SchAvroZnPEkt" : "{\n    \"name\":\"Message\",\n    \"type\":\"record\",\n    \"namespace\":\"com.acme.avro\",\n    \"fields\":[\n      {\n        \"name\":\"Head\",\n        \"type\":{\n          \"name\":\"Head\",\n          \"type\":\"record\",\n          \"fields\":[\n            {\n              \"name\":\"MessageID\",\n              \"type\":\"string\"\n            },\n            {\n              \"name\":\"Date\",\n              \"type\":\"string\"\n            },\n            {\n              \"name\":\"MessageType\",\n              \"type\":\"string\"\n            },\n            {\n              \"name\":\"Sender\",\n              \"type\":{\n                \"name\":\"Sender\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"SystemID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"CompanyID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"ReplyToQ\",\n                    \"type\":\"string\"\n                  }\n                ]\n              }\n            },\n            {\n              \"name\":\"Recipient\",\n              \"type\":{\n                \"name\":\"Recipient\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"SystemID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"CompanyID\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"ReplyToQ\",\n                    \"type\":\"string\"\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      },\n      {\n        \"name\":\"Body\",\n        \"type\":{\n          \"name\":\"Body\",\n          \"type\":\"record\",\n          \"fields\":[\n            {\n              \"name\":\"OrderHeader\",\n              \"type\":{\n                \"name\":\"OrderHeader\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"Date\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"OrderNumber\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"IntOrderNumber\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"STORERKEY\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"Split\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"OrderDetail\",\n                    \"type\":{\n                      \"type\":\"array\",\n                      \"items\":{\n                        \"name\":\"OrderDetail_record\",\n                        \"type\":\"record\",\n                        \"fields\":[\n                          {\n                            \"name\":\"STORERKEY\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SKU\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"TM\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SHIPPEDQTY\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"STDNETWGT\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"STDGROSSWGT\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"LD\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SN\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"SHORTSHIPREASON\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"TARETYPE\",\n                            \"type\":\"string\"\n                          }\n                        ]\n                      }\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }",
             "StorerWMS" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"MessageID\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"Storer\",\n            \"type\": {\n              \"name\": \"Storer\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"StorerHeader\",\n                  \"type\": {\n                    \"name\": \"StorerHeader\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"StorerKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Company\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Description\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address1\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address2\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address3\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Phone1\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "avro-reg-validated-field-names" : "false",
-            "ShAvroXMLZnOEkt" : "{\n  \"name\":\"PACKAGE\",\n  \"type\":\"record\",\n  \"namespace\":\"com.acme.avro\",\n  \"fields\":[\n    {\n      \"name\":\"POSTOBJECT\",\n      \"type\":{\n        \"name\":\"POSTOBJECT\",\n        \"type\":\"record\",\n        \"fields\":[\n          {\n            \"name\":\"SOHJ\",\n            \"type\":{\n              \"name\":\"SOHJ\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"t_ax_order\",\n                  \"type\":{\n                    \"name\":\"t_ax_order\",\n                    \"type\":\"record\",\n                    \"fields\":[\n                      {\n                        \"name\":\"OrderNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"IntOrderNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"DateShip\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Split\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Type\",\n                        \"type\":\"string\"\n                      }\n                    ]\n                  }\n                },\n                {\n                  \"name\":\"Id\",\n                  \"type\":\"string\"\n                },\n                {\n                  \"name\":\"t_ax_order_detail\",\n                  \"type\":{\n                    \"type\":\"array\",\n                    \"items\":{\n                      \"name\":\"t_ax_order_detail_record\",\n                      \"type\":\"record\",\n                      \"fields\":[\n                        {\n                          \"name\":\"OrderNumber\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"LineNum\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"ItemID\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"QtyShipped\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Type\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Whse\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Lottable01\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Lottable02\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Lottable09\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"CrossNumber\",\n                          \"type\":\"string\"\n                        }\n                      ]\n                    }\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
+            "ShAvroXMLZnOEkt" : "{\n    \"name\":\"PACKAGE\",\n    \"type\":\"record\",\n    \"namespace\":\"com.acme.avro\",\n    \"fields\":[\n      {\n        \"name\":\"POSTOBJECT\",\n        \"type\":{\n          \"name\":\"POSTOBJECT\",\n          \"type\":\"record\",\n          \"fields\":[\n            {\n              \"name\":\"SOHJ\",\n              \"type\":{\n                \"name\":\"SOHJ\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"t_ax_order\",\n                    \"type\":{\n                      \"name\":\"t_ax_order\",\n                      \"type\":\"record\",\n                      \"fields\":[\n                        {\n                          \"name\":\"OrderNumber\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"IntOrderNumber\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"DateShip\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Split\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Type\",\n                          \"type\":\"string\"\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"name\":\"Id\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"t_ax_order_detail\",\n                    \"type\":{\n                      \"type\":\"array\",\n                      \"items\":{\n                        \"name\":\"t_ax_order_detail_record\",\n                        \"type\":\"record\",\n                        \"fields\":[\n                          {\n                            \"name\":\"OrderNumber\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"LineNum\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"ItemID\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"QtyShipped\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Type\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Whse\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Lottable01\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Lottable02\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Lottable09\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"CrossNumber\",\n                            \"type\":\"string\"\n                          }\n                        ]\n                      }\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }",
             "AvroWmsEkt" : "{\n  \"name\":\"PACKAGE\",\n  \"type\":\"record\",\n  \"namespace\":\"com.acme.avro\",\n  \"fields\":[\n    {\n      \"name\":\"POSTOBJECT\",\n      \"type\":{\n        \"name\":\"POSTOBJECT\",\n        \"type\":\"record\",\n        \"fields\":[\n          {\n            \"name\":\"CUST\",\n            \"type\":{\n              \"name\":\"CUST\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"CM\",\n                  \"type\":{\n                    \"name\":\"CM\",\n                    \"type\":\"record\",\n                    \"fields\":[\n                      {\n                        \"name\":\"id\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"TransactionCode\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"TranDttm\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Code\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Description\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Address\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Address2\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"City\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Zip\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Fax\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Inn\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Okpo\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Kpp\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Bank\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Bik\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Bill\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"CorBill\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Phone\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Type\",\n                        \"type\":\"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "AvroWmsNsbZnPAdvancedShipNotice" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"MessageID\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"AdvancedShipNotice\",\n            \"type\": {\n              \"name\": \"AdvancedShipNotice\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"AdvancedShipNoticeHeader\",\n                  \"type\": {\n                    \"name\": \"AdvancedShipNoticeHeader\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"StorerKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Company\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Description\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address1\",\n                        \"type\": {\n                          \"name\": \"Address1\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Address2\",\n                        \"type\": {\n                          \"name\": \"Address2\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Address3\",\n                        \"type\": {\n                          \"name\": \"Address3\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Phone1\",\n                        \"type\": {\n                          \"name\": \"Phone1\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "AvroWmsNsbStorer" : "{\n  \"name\": \"Message\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"Head\",\n      \"type\": {\n        \"name\": \"Head\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"MessageID\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Date\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"MessageType\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Action\",\n            \"type\": \"string\"\n          },\n          {\n            \"name\": \"Recipient\",\n            \"type\": {\n              \"name\": \"Recipient\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\": \"Sender\",\n            \"type\": {\n              \"name\": \"Sender\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"SystemID\",\n                  \"type\": \"string\"\n                },\n                {\n                  \"name\": \"CompanyID\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\": \"Body\",\n      \"type\": {\n        \"name\": \"Body\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"Storer\",\n            \"type\": {\n              \"name\": \"Storer\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"StorerHeader\",\n                  \"type\": {\n                    \"name\": \"StorerHeader\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"StorerKey\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Company\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Description\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address1\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address2\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Address3\",\n                        \"type\": {\n                          \"name\": \"Address3\",\n                          \"type\": \"record\",\n                          \"fields\": []\n                        }\n                      },\n                      {\n                        \"name\": \"Phone1\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "AdvancedShipNoticeWMS2" : "{\n  \"name\":\"Message\",\n  \"type\":\"record\",\n  \"namespace\":\"com.acme.avro\",\n  \"fields\":[\n    {\n      \"name\":\"Head\",\n      \"type\":{\n        \"name\":\"Head\",\n        \"type\":\"record\",\n        \"fields\":[\n          {\n            \"name\":\"MessageID\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"Date\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"MessageType\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"Action\",\n            \"type\":\"string\"\n          },\n          {\n            \"name\":\"Recipient\",\n            \"type\":{\n              \"name\":\"Recipient\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"SystemID\",\n                  \"type\":\"string\"\n                },\n                {\n                  \"name\":\"CompanyID\",\n                  \"type\":\"string\"\n                }\n              ]\n            }\n          },\n          {\n            \"name\":\"Sender\",\n            \"type\":{\n              \"name\":\"Sender\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"SystemID\",\n                  \"type\":\"string\"\n                },\n                {\n                  \"name\":\"CompanyID\",\n                  \"type\":\"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"name\":\"Body\",\n      \"type\":{\n        \"name\":\"Body\",\n        \"type\":\"record\",\n        \"fields\":[\n          {\n            \"name\":\"AdvancedShipNotice\",\n            \"type\":{\n              \"name\":\"AdvancedShipNotice\",\n              \"type\":\"record\",\n              \"fields\":[\n                {\n                  \"name\":\"AdvancedShipNoticeHeader\",\n                  \"type\":{\n                    \"name\":\"AdvancedShipNoticeHeader\",\n                    \"type\":\"record\",\n                    \"fields\":[\n                      {\n                        \"name\":\"StorerKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ExpectedReceiptDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ReceiptDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"CarrierKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"CarrierReference\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ExternReceiptKey\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Type\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ReferenceDocument\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"Notes\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ReceiptGroup\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"VehicleNumber\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"VehicleDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"ActualShipDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"PlannedShipDate\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"SUsr4\",\n                        \"type\":\"string\"\n                      },\n                      {\n                        \"name\":\"AdvancedShipNoticeDetail\",\n                        \"type\":{\n                          \"name\":\"AdvancedShipNoticeDetail\",\n                          \"type\":\"record\",\n                          \"fields\":[\n                            {\n                              \"name\":\"ExternReceiptKey\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"ExternLineNo\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"StorerKey\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Sku\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable01\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable02\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable09\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"ToId\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"SUsr1\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"SUsr2\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"QtyExpected\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"Lottable03\",\n                              \"type\":\"string\"\n                            },\n                            {\n                              \"name\":\"MatchLottable\",\n                              \"type\":\"string\"\n                            }\n                          ]\n                        }\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
             "AvroWmsEktSoax" : "{\n    \"name\":\"PACKAGE\",\n    \"type\":\"record\",\n    \"namespace\":\"com.acme.avro\",\n    \"fields\":[\n      {\n        \"name\":\"POSTOBJECT\",\n        \"type\":{\n          \"name\":\"POSTOBJECT\",\n          \"type\":\"record\",\n          \"fields\":[\n            {\n              \"name\":\"SOAX\",\n              \"type\":{\n                \"name\":\"SOAX\",\n                \"type\":\"record\",\n                \"fields\":[\n                  {\n                    \"name\":\"id\",\n                    \"type\":\"string\"\n                  },\n                  {\n                    \"name\":\"t_ax_order\",\n                    \"type\":{\n                      \"name\":\"t_ax_order\",\n                      \"type\":\"record\",\n                      \"fields\":[\n                        {\n                          \"name\":\"id\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"TransactionCode\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"TranDttm\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"OrderNumber\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Customer\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"CustomerLaw\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Carrier\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Whse\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Type\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Owner\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"DateShip\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Priority\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"LoadId\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"LoadEnd\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Owner_id\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"FormatedNumber\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Route\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"StorerKey\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Stop\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"CarrierKey\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"ReferenceDocument\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"RequestedShipDate\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"SUsr3\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"SUsr5\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"CarrierCode\",\n                          \"type\":\"string\"\n                        },\n                        {\n                          \"name\":\"Notes\",\n                          \"type\":\"string\"\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"name\":\"t_ax_order_detail\",\n                    \"type\":{\n                      \"type\":\"array\",\n                      \"items\":{\n                        \"name\":\"t_ax_order_detail_record\",\n                        \"type\":\"record\",\n                        \"fields\":[\n                          {\n                            \"name\":\"OrderNumber\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"LineNum\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Product\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Qty\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Whse\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Lottable01\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Lottable02\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"Lottable09\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"StorerKey\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"OppRequest\",\n                            \"type\":\"string\"\n                          },\n                          {\n                            \"name\":\"OrderGroup\",\n                            \"type\":\"string\"\n                          }\n                        ]\n                      }\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }",
-            "AvroWmsEktPOAX" : "{\n    \"name\": \"PACKAGE\",\n    \"type\": \"record\",\n    \"namespace\": \"com.acme.avro\",\n    \"fields\": [\n      {\n        \"name\": \"POSTOBJECT\",\n        \"type\": {\n          \"name\": \"POSTOBJECT\",\n          \"type\": \"record\",\n          \"fields\": [\n            {\n              \"name\": \"POAX\",\n              \"type\": {\n                \"name\": \"POAX\",\n                \"type\": \"record\",\n                \"fields\": [\n                  {\n                        \"name\": \"id\",\n                        \"type\": \"string\"\n                  },\n                  {\n                    \"name\": \"t_ax_po_master\",\n                    \"type\": {\n                      \"name\": \"t_ax_po_master\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"id\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"TransactionCode\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"TranDttm\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"PoNumber\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Vendor\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Whse\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Type\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Owner\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"ShipmentInNumber\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"HOSTACC\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"StorerKey\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"CarrierKey\",\n                            \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"SUsr2\",\n                          \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"name\": \"t_ax_po_detail\",\n                    \"type\": {\n                      \"type\": \"array\",\n                      \"items\": {\n                        \"name\": \"t_ax_po_detail_record\",\n                        \"type\": \"record\",\n                        \"fields\": [\n\n                          {\n                            \"name\": \"PoNumber\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"LineNum\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"StorerKey\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Product\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Qty\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Whse\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"CrossNumber\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Price\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"SN\",\n                            \"type\": \"string\"\n                          },                        \n                          {\n                            \"name\": \"Lottable01\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Lottable02\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Lottable09\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"SUsr1\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"GrossWgt\",\n                            \"type\": \"string\"\n                          }\n                        ]\n                      }\n                    }\n                  },\n                  {\n                    \"name\": \"t_ax_po_detail_comment\",\n                    \"type\": {\n                      \"name\": \"t_ax_po_detail_comment\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"PoNumber\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"LineNum\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"CommentType\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"CommentText\",\n                            \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Seq\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Whse\",\n                            \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }"
+            "AvroWmsEktPOAX" : "{\n    \"name\": \"PACKAGE\",\n    \"type\": \"record\",\n    \"namespace\": \"com.acme.avro\",\n    \"fields\": [\n      {\n        \"name\": \"POSTOBJECT\",\n        \"type\": {\n          \"name\": \"POSTOBJECT\",\n          \"type\": \"record\",\n          \"fields\": [\n            {\n              \"name\": \"POAX\",\n              \"type\": {\n                \"name\": \"POAX\",\n                \"type\": \"record\",\n                \"fields\": [\n                  {\n                        \"name\": \"id\",\n                        \"type\": \"string\"\n                  },\n                  {\n                    \"name\": \"t_ax_po_master\",\n                    \"type\": {\n                      \"name\": \"t_ax_po_master\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"id\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"TransactionCode\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"TranDttm\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"PoNumber\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Vendor\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Whse\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Type\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Owner\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"ShipmentInNumber\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"HOSTACC\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"StorerKey\",\n                            \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"CarrierKey\",\n                            \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"SUsr2\",\n                          \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"name\": \"t_ax_po_detail\",\n                    \"type\": {\n                      \"type\": \"array\",\n                      \"items\": {\n                        \"name\": \"t_ax_po_detail_record\",\n                        \"type\": \"record\",\n                        \"fields\": [\n\n                          {\n                            \"name\": \"PoNumber\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"LineNum\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"StorerKey\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Product\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Qty\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Whse\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"CrossNumber\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Price\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"SN\",\n                            \"type\": \"string\"\n                          },                        \n                          {\n                            \"name\": \"Lottable01\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Lottable02\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"Lottable09\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"SUsr1\",\n                            \"type\": \"string\"\n                          },\n                          {\n                            \"name\": \"GrossWgt\",\n                            \"type\": \"string\"\n                          }\n                        ]\n                      }\n                    }\n                  },\n                  {\n                    \"name\": \"t_ax_po_detail_comment\",\n                    \"type\": {\n                      \"name\": \"t_ax_po_detail_comment\",\n                      \"type\": \"record\",\n                      \"fields\": [\n                        {\n                          \"name\": \"PoNumber\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"LineNum\",\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"CommentType\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"CommentText\",\n                            \"type\": \"string\"\n                        },\n                        {\n                          \"name\": \"Seq\",\n                          \"type\": \"string\"\n                        },\n                        {\n                            \"name\": \"Whse\",\n                            \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }",
+            "ConfZnPEkt" : "{\n  \"name\": \"PACKAGE\",\n  \"type\": \"record\",\n  \"namespace\": \"com.acme.avro\",\n  \"fields\": [\n    {\n      \"name\": \"POSTOBJECT\",\n      \"type\": {\n        \"name\": \"POSTOBJECT\",\n        \"type\": \"record\",\n        \"fields\": [\n          {\n            \"name\": \"POHJ\",\n            \"type\": {\n              \"name\": \"POHJ\",\n              \"type\": \"record\",\n              \"fields\": [\n                {\n                  \"name\": \"t_ax_po_master\",\n                  \"type\": {\n                    \"name\": \"t_ax_po_master\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"PoNumber\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"DateRecvd\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"IntReceiptNumber\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                },\n                {\n                  \"name\": \"t_ax_po_detail\",\n                  \"type\": {\n                    \"name\": \"t_ax_po_detail\",\n                    \"type\": \"record\",\n                    \"fields\": [\n                      {\n                        \"name\": \"PoNumber\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"LineNum\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"ItemID\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"QtyRecvd\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"STATUS\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Type\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Whse\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"CrossNumber\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"TOID\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Lottable01\",\n                        \"type\": \"string\"\n                      },\n                      {\n                        \"name\": \"Lottable02\",\n                        \"type\": \"string\"\n                      }\n                    ]\n                  }\n                },\n                {\n                  \"name\": \"Id\",\n                  \"type\": \"string\"\n                }\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}"
           },
           "propertyDescriptors" : {
             "AvroTMS" : {
@@ -1179,10 +1149,22 @@
               "name" : "AvroWmsNsb",
               "sensitive" : false
             },
+            "ShAvroXMLZnONsb" : {
+              "displayName" : "ShAvroXMLZnONsb",
+              "identifiesControllerService" : false,
+              "name" : "ShAvroXMLZnONsb",
+              "sensitive" : false
+            },
             "AdvancedShipNoticeWMS" : {
               "displayName" : "AdvancedShipNoticeWMS",
               "identifiesControllerService" : false,
               "name" : "AdvancedShipNoticeWMS",
+              "sensitive" : false
+            },
+            "ConfZnPNsb" : {
+              "displayName" : "ConfZnPNsb",
+              "identifiesControllerService" : false,
+              "name" : "ConfZnPNsb",
               "sensitive" : false
             },
             "ItemMasterWMS" : {
@@ -1261,6 +1243,12 @@
               "displayName" : "AvroWmsEktPOAX",
               "identifiesControllerService" : false,
               "name" : "AvroWmsEktPOAX",
+              "sensitive" : false
+            },
+            "ConfZnPEkt" : {
+              "displayName" : "ConfZnPEkt",
+              "identifiesControllerService" : false,
+              "name" : "ConfZnPEkt",
               "sensitive" : false
             }
           },
@@ -1752,15 +1740,48 @@
             "destination" : {
               "comments" : "",
               "groupId" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
-              "id" : "2774df9d-9626-3902-9b78-79dfb1c148bf",
-              "instanceIdentifier" : "97e9400a-02ff-1524-ffff-ffffdac1c4b4",
-              "name" : "Funnel",
-              "type" : "FUNNEL"
+              "id" : "d772876a-bd41-3b97-88b9-a7ed874bece8",
+              "instanceIdentifier" : "d48e38c4-c803-1127-0000-00002639cefc",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
             },
             "flowFileExpiration" : "0 sec",
             "groupIdentifier" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
-            "identifier" : "7332062c-a560-3638-bbe1-203a54759257",
-            "instanceIdentifier" : "97e9400c-02ff-1524-0000-000037de59e6",
+            "identifier" : "917baff0-012f-3292-9906-036132c1b9c1",
+            "instanceIdentifier" : "d48e38c7-c803-1127-0000-000072400856",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+              "id" : "dae1331e-b83f-3ca2-8d9e-659723ba08ec",
+              "instanceIdentifier" : "d48e3885-c803-1127-ffff-ffffb560c015",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+              "id" : "dae1331e-b83f-3ca2-8d9e-659723ba08ec",
+              "instanceIdentifier" : "d48e3885-c803-1127-ffff-ffffb560c015",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+            "identifier" : "4b115789-f722-3c58-86a7-0de8ac96bb56",
+            "instanceIdentifier" : "d48e3889-c803-1127-0000-00005cc8085f",
             "labelIndex" : 1,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
             "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -1840,6 +1861,39 @@
               "id" : "b648a0dc-6991-32f4-bf59-77fec29fb879",
               "instanceIdentifier" : "97e93f00-02ff-1524-0000-00004bba41dc",
               "name" : "UpdateAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+              "id" : "9207d00a-e3d1-3f53-ae93-608b70b154df",
+              "instanceIdentifier" : "d48e3908-c803-1127-ffff-ffff94049c2e",
+              "name" : "Funnel",
+              "type" : "FUNNEL"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+            "identifier" : "38595119-a434-33a3-96a4-c8272b959f8d",
+            "instanceIdentifier" : "d48e390a-c803-1127-0000-00005aaa10a2",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+              "id" : "d772876a-bd41-3b97-88b9-a7ed874bece8",
+              "instanceIdentifier" : "d48e38c4-c803-1127-0000-00002639cefc",
+              "name" : "ReplaceText",
               "type" : "PROCESSOR"
             },
             "zIndex" : 0
@@ -2108,11 +2162,11 @@
           "funnels" : [ {
             "componentType" : "FUNNEL",
             "groupIdentifier" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
-            "identifier" : "2774df9d-9626-3902-9b78-79dfb1c148bf",
-            "instanceIdentifier" : "97e9400a-02ff-1524-ffff-ffffdac1c4b4",
+            "identifier" : "9207d00a-e3d1-3f53-ae93-608b70b154df",
+            "instanceIdentifier" : "d48e3908-c803-1127-ffff-ffff94049c2e",
             "position" : {
-              "x" : 400.0,
-              "y" : 696.0
+              "x" : 425.3662997357205,
+              "y" : 1236.5749546966326
             }
           } ],
           "groupIdentifier" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
@@ -2123,11 +2177,96 @@
           "name" : "Подтверждение ЗНО ЕКТ",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 2088.0,
+            "x" : 1992.0,
             "y" : 1336.0
           },
           "processGroups" : [ ],
           "processors" : [ {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+            "identifier" : "dae1331e-b83f-3ca2-8d9e-659723ba08ec",
+            "instanceIdentifier" : "d48e3885-c803-1127-ffff-ffffb560c015",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 240.0,
+              "y" : 664.0
+            },
+            "properties" : {
+              "Regular Expression" : "[{\"POSTOBJECT\"",
+              "Replacement Value" : "{\"PACKAGE\":{\"POSTOBJECT\"",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          }, {
             "autoTerminatedRelationships" : [ "failure" ],
             "backoffMechanism" : "PENALIZE_FLOWFILE",
             "bulletinLevel" : "WARN",
@@ -2343,6 +2482,91 @@
             "schedulingStrategy" : "TIMER_DRIVEN",
             "style" : { },
             "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "a4e4459b-7e8f-3f85-bcc6-928bcf3fb5a3",
+            "identifier" : "d772876a-bd41-3b97-88b9-a7ed874bece8",
+            "instanceIdentifier" : "d48e38c4-c803-1127-0000-00002639cefc",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 248.0,
+              "y" : 936.0
+            },
+            "properties" : {
+              "Regular Expression" : "}]}}}]",
+              "Replacement Value" : "}]}}}}",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Regex Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
             "yieldDuration" : "1 sec"
           } ],
           "remoteProcessGroups" : [ ],
@@ -3718,10 +3942,7 @@
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
-            "bends" : [ {
-              "x" : 3518.1358503013553,
-              "y" : 166.16747545263786
-            } ],
+            "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
               "comments" : "",
@@ -3735,7 +3956,7 @@
             "groupIdentifier" : "87a4493f-d57a-3c03-a554-2b74e7177d10",
             "identifier" : "1dbd88f2-c2d8-320a-912e-0559a16a8e8d",
             "instanceIdentifier" : "e6599bcb-0183-1000-0000-0000642c3f28",
-            "labelIndex" : 1,
+            "labelIndex" : 0,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
             "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
             "name" : "",
@@ -4019,7 +4240,7 @@
           "name" : "ПодтверждениеЗнПВмсТвр",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 1648.0,
+            "x" : 1576.0,
             "y" : 1528.0
           },
           "processGroups" : [ ],
@@ -13124,10 +13345,7 @@
           }, {
             "backPressureDataSizeThreshold" : "1 GB",
             "backPressureObjectThreshold" : 10000,
-            "bends" : [ {
-              "x" : 3907.0488560879357,
-              "y" : -164.70017250851217
-            } ],
+            "bends" : [ ],
             "componentType" : "CONNECTION",
             "destination" : {
               "comments" : "",
@@ -13141,7 +13359,7 @@
             "groupIdentifier" : "e4b19856-6269-3250-9443-4c019a327002",
             "identifier" : "859dd7db-614b-3871-bdd0-0b3a49996d8b",
             "instanceIdentifier" : "9b50309c-04a4-1b1b-be75-6682f7311bf4",
-            "labelIndex" : 1,
+            "labelIndex" : 0,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
             "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
             "name" : "",
@@ -13191,7 +13409,7 @@
           "name" : "ПодтверждениеЗнОВмсТвр",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 1648.0,
+            "x" : 1576.0,
             "y" : 1336.0
           },
           "processGroups" : [ ],
@@ -14822,16 +15040,610 @@
             "componentType" : "CONNECTION",
             "destination" : {
               "comments" : "",
-              "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
-              "id" : "31b7748c-8142-32c6-be6c-85f3428e2679",
-              "instanceIdentifier" : "97e94c02-02ff-1524-0000-000065d5d7dc",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "74863f25-159d-34fa-a43e-8364df911a20",
+              "instanceIdentifier" : "d1eb31d3-0b1e-179e-b2ed-065f62c9a364",
+              "name" : "ConvertRecord",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "bb414078-408f-31be-afd5-441d9617c383",
+            "instanceIdentifier" : "0e043424-9cc4-1b18-8e6f-1e17c443f04c",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "59b103c1-0f6c-3f4a-a463-8ba569400690",
+              "instanceIdentifier" : "77de3b29-65bc-1ade-9e06-5107771d27c6",
+              "name" : "UpdateAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "50be4938-1d1d-332e-b7d6-93ed1ccd8490",
+              "instanceIdentifier" : "660e3894-1c2e-1d9a-0000-0000220c0835",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "5da9042a-64f3-3dec-864d-8a3b713e10ce",
+            "instanceIdentifier" : "660e389a-1c2e-1d9a-ffff-ffffe11f2327",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "99aac008-40a2-3d58-9bcb-cf7f354c3748",
+              "instanceIdentifier" : "d2e639c5-2a74-150d-8f26-eed185f24601",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "59b103c1-0f6c-3f4a-a463-8ba569400690",
+              "instanceIdentifier" : "77de3b29-65bc-1ade-9e06-5107771d27c6",
+              "name" : "UpdateAttribute",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "a153bfed-b84f-3f9b-9606-49befa10b793",
+            "instanceIdentifier" : "5bde3a6b-ba4b-1ede-aeda-036d8bf4cf13",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "19bf44f6-f649-351e-bb20-a872a2eb8285",
+              "instanceIdentifier" : "01fb303c-5289-1d4e-9833-8d99efa5b230",
+              "name" : "GenerateFlowFile",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "99aac008-40a2-3d58-9bcb-cf7f354c3748",
+              "instanceIdentifier" : "d2e639c5-2a74-150d-8f26-eed185f24601",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "0798bdd0-55c7-3dde-8a57-070b02a8e696",
+            "instanceIdentifier" : "e47833f6-90e7-1342-983c-5c92449f03fb",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "74863f25-159d-34fa-a43e-8364df911a20",
+              "instanceIdentifier" : "d1eb31d3-0b1e-179e-b2ed-065f62c9a364",
+              "name" : "ConvertRecord",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "257f0576-99a0-34b8-a209-a076d6bfc46c",
+              "instanceIdentifier" : "a6be3e3c-083d-1571-9091-b738ed4d6fb8",
               "name" : "Funnel",
               "type" : "FUNNEL"
             },
             "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "7fc24472-0e85-395b-98e5-b8a86ebe3a82",
+            "instanceIdentifier" : "660e38b1-1c2e-1d9a-0000-00006dfcccee",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+              "id" : "50be4938-1d1d-332e-b7d6-93ed1ccd8490",
+              "instanceIdentifier" : "660e3894-1c2e-1d9a-0000-0000220c0835",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ {
+            "componentType" : "FUNNEL",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "257f0576-99a0-34b8-a209-a076d6bfc46c",
+            "instanceIdentifier" : "a6be3e3c-083d-1571-9091-b738ed4d6fb8",
+            "position" : {
+              "x" : 517.4999858228493,
+              "y" : 1323.511435180632
+            }
+          } ],
+          "groupIdentifier" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
+          "identifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "2b8e36b3-dfac-1aaf-a764-b9bc35942d8e",
+          "labels" : [ ],
+          "name" : "Подтверждение ЗнП НСБ",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 2400.0,
+            "y" : 1528.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "74863f25-159d-34fa-a43e-8364df911a20",
+            "instanceIdentifier" : "d1eb31d3-0b1e-179e-b2ed-065f62c9a364",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ConvertRecord",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 376.0,
+              "y" : 576.0
+            },
+            "properties" : {
+              "record-writer" : "b0f8e983-bf95-321c-8c36-8cd864836e31",
+              "record-reader" : "2b67f540-6926-3e17-83c1-9c2eb970d374",
+              "include-zero-record-flowfiles" : "true"
+            },
+            "propertyDescriptors" : {
+              "record-writer" : {
+                "displayName" : "Record Writer",
+                "identifiesControllerService" : true,
+                "name" : "record-writer",
+                "sensitive" : false
+              },
+              "record-reader" : {
+                "displayName" : "Record Reader",
+                "identifiesControllerService" : true,
+                "name" : "record-reader",
+                "sensitive" : false
+              },
+              "include-zero-record-flowfiles" : {
+                "displayName" : "Include Zero Record FlowFiles",
+                "identifiesControllerService" : false,
+                "name" : "include-zero-record-flowfiles",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "PRIMARY",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "19bf44f6-f649-351e-bb20-a872a2eb8285",
+            "instanceIdentifier" : "01fb303c-5289-1d4e-9833-8d99efa5b230",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "GenerateFlowFile",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 382.99998582284934,
+              "y" : 110.00297116085653
+            },
+            "properties" : {
+              "character-set" : "UTF-8",
+              "File Size" : "0B",
+              "generate-ff-custom-text" : "<Message>\n<Head>\n<MessageID/>\n<Date>02.09.2022 10:26:00</Date>\n<MessageType>asnverified</MessageType>\n<Sender>\n<SystemID>НСБ1</SystemID>\n<CompanyID>LADA</CompanyID>\n<ReplyToQ>LVS</ReplyToQ>\n</Sender>\n<Recipient>\n<SystemID/>\n<CompanyID>LADA</CompanyID>\n<ReplyToQ>1C</ReplyToQ>\n</Recipient>\n</Head>\n<Body>\n<AsnHeader>\n<Date>02.09.2022 10:22:47</Date>\n<EXTERNRECEIPTKEY>NVS22004857</EXTERNRECEIPTKEY>\n<IntReceiptNumber>NVS22004857</IntReceiptNumber>\n<STORERKEY>LADA</STORERKEY>\n<Type>1</Type>\n<AsnDetail>\n<STORERKEY>LADA</STORERKEY>\n<SKU>CROSS</SKU>\n<QTYRECEIVED>1.000000</QTYRECEIVED>\n<STATUS>OK</STATUS>\n<TM>IN19688169</TM>\n<LOTTABLE02>IN19688169</LOTTABLE02>\n</AsnDetail>\n</AsnHeader>\n</Body>\n</Message>",
+              "Batch Size" : "1",
+              "schema.name" : "SchAvroZnPEkt",
+              "Unique FlowFiles" : "false",
+              "Data Format" : "Text"
+            },
+            "propertyDescriptors" : {
+              "character-set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "character-set",
+                "sensitive" : false
+              },
+              "File Size" : {
+                "displayName" : "File Size",
+                "identifiesControllerService" : false,
+                "name" : "File Size",
+                "sensitive" : false
+              },
+              "mime-type" : {
+                "displayName" : "Mime Type",
+                "identifiesControllerService" : false,
+                "name" : "mime-type",
+                "sensitive" : false
+              },
+              "generate-ff-custom-text" : {
+                "displayName" : "Custom Text",
+                "identifiesControllerService" : false,
+                "name" : "generate-ff-custom-text",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "schema.name" : {
+                "displayName" : "schema.name",
+                "identifiesControllerService" : false,
+                "name" : "schema.name",
+                "sensitive" : false
+              },
+              "Unique FlowFiles" : {
+                "displayName" : "Unique FlowFiles",
+                "identifiesControllerService" : false,
+                "name" : "Unique FlowFiles",
+                "sensitive" : false
+              },
+              "Data Format" : {
+                "displayName" : "Data Format",
+                "identifiesControllerService" : false,
+                "name" : "Data Format",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "99aac008-40a2-3d58-9bcb-cf7f354c3748",
+            "instanceIdentifier" : "d2e639c5-2a74-150d-8f26-eed185f24601",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 376.0,
+              "y" : 808.0
+            },
+            "properties" : {
+              "Regular Expression" : "[{\"Head\"",
+              "Replacement Value" : "{\"Message\":{\"Head\"",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-update-attribute-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "59b103c1-0f6c-3f4a-a463-8ba569400690",
+            "instanceIdentifier" : "77de3b29-65bc-1ade-9e06-5107771d27c6",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "UpdateAttribute",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 376.0,
+              "y" : 336.0
+            },
+            "properties" : {
+              "filename" : "${filename}.xml",
+              "Store State" : "Do not store state",
+              "canonical-value-lookup-cache-size" : "100",
+              "schema.name" : "ConfZnPNsb"
+            },
+            "propertyDescriptors" : {
+              "Delete Attributes Expression" : {
+                "displayName" : "Delete Attributes Expression",
+                "identifiesControllerService" : false,
+                "name" : "Delete Attributes Expression",
+                "sensitive" : false
+              },
+              "filename" : {
+                "displayName" : "filename",
+                "identifiesControllerService" : false,
+                "name" : "filename",
+                "sensitive" : false
+              },
+              "Store State" : {
+                "displayName" : "Store State",
+                "identifiesControllerService" : false,
+                "name" : "Store State",
+                "sensitive" : false
+              },
+              "canonical-value-lookup-cache-size" : {
+                "displayName" : "Cache Value Lookup Cache Size",
+                "identifiesControllerService" : false,
+                "name" : "canonical-value-lookup-cache-size",
+                "sensitive" : false
+              },
+              "schema.name" : {
+                "displayName" : "schema.name",
+                "identifiesControllerService" : false,
+                "name" : "schema.name",
+                "sensitive" : false
+              },
+              "Stateful Variables Initial Value" : {
+                "displayName" : "Stateful Variables Initial Value",
+                "identifiesControllerService" : false,
+                "name" : "Stateful Variables Initial Value",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "88d6b644-7091-32fe-82b9-a4e880a33927",
+            "identifier" : "50be4938-1d1d-332e-b7d6-93ed1ccd8490",
+            "instanceIdentifier" : "660e3894-1c2e-1d9a-0000-0000220c0835",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 416.0,
+              "y" : 1056.0
+            },
+            "properties" : {
+              "Regular Expression" : "}}}}]",
+              "Replacement Value" : "}}}}}",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+              "id" : "9b292684-4ac9-3dff-a34d-50b3e04fd86b",
+              "instanceIdentifier" : "d48e3932-c803-1127-0000-00006888bda7",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
             "groupIdentifier" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
-            "identifier" : "a12f39b6-2284-38da-b754-0d1a798ef206",
-            "instanceIdentifier" : "97e94c08-02ff-1524-0000-00004d3da848",
+            "identifier" : "cfca0075-3c7d-3545-b061-38518287df7f",
+            "instanceIdentifier" : "d48e3935-c803-1127-ffff-ffffe9cc14f2",
             "labelIndex" : 1,
             "loadBalanceCompression" : "DO_NOT_COMPRESS",
             "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -14889,6 +15701,39 @@
             "destination" : {
               "comments" : "",
               "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+              "id" : "77dfd3cb-00b3-3ee7-8c1a-e832d7adc965",
+              "instanceIdentifier" : "d48e3948-c803-1127-ffff-ffff93456611",
+              "name" : "Funnel",
+              "type" : "FUNNEL"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+            "identifier" : "7d77698c-ec1c-3719-80e4-c3ec0404fc86",
+            "instanceIdentifier" : "d48e394a-c803-1127-0000-00005fdcaf7a",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+              "id" : "885daf17-49df-33b2-9768-aefff246fb9f",
+              "instanceIdentifier" : "d48e3938-c803-1127-ffff-ffffb1a2085e",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
               "id" : "59b103c1-0f6c-3f4a-a463-8ba569400690",
               "instanceIdentifier" : "97e94b09-02ff-1524-0000-00005d466de8",
               "name" : "UpdateAttribute",
@@ -14914,6 +15759,39 @@
               "type" : "PROCESSOR"
             },
             "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+              "id" : "885daf17-49df-33b2-9768-aefff246fb9f",
+              "instanceIdentifier" : "d48e3938-c803-1127-ffff-ffffb1a2085e",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+            "identifier" : "2d51d79a-ad5f-35e3-a19b-4963262c08b5",
+            "instanceIdentifier" : "d48e393b-c803-1127-0000-000038ae4bdd",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+              "id" : "9b292684-4ac9-3dff-a34d-50b3e04fd86b",
+              "instanceIdentifier" : "d48e3932-c803-1127-0000-00006888bda7",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
           } ],
           "controllerServices" : [ ],
           "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -14924,11 +15802,11 @@
           "funnels" : [ {
             "componentType" : "FUNNEL",
             "groupIdentifier" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
-            "identifier" : "31b7748c-8142-32c6-be6c-85f3428e2679",
-            "instanceIdentifier" : "97e94c02-02ff-1524-0000-000065d5d7dc",
+            "identifier" : "77dfd3cb-00b3-3ee7-8c1a-e832d7adc965",
+            "instanceIdentifier" : "d48e3948-c803-1127-ffff-ffff93456611",
             "position" : {
-              "x" : 497.49998582284934,
-              "y" : 809.5113436278975
+              "x" : 517.4999858228493,
+              "y" : 1323.511435180632
             }
           } ],
           "groupIdentifier" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
@@ -14936,11 +15814,11 @@
           "inputPorts" : [ ],
           "instanceIdentifier" : "97e93d7e-02ff-1524-b574-2aaa7621d40b",
           "labels" : [ ],
-          "name" : "Подтверждение ЗнП ЕКТ",
+          "name" : "Подтверждение ЗнО НСБ",
           "outputPorts" : [ ],
           "position" : {
-            "x" : 2088.0,
-            "y" : 1528.0
+            "x" : 2400.0,
+            "y" : 1336.0
           },
           "processGroups" : [ ],
           "processors" : [ {
@@ -15118,7 +15996,764 @@
               "filename" : "${filename}.xml",
               "Store State" : "Do not store state",
               "canonical-value-lookup-cache-size" : "100",
-              "schema.name" : "SchAvroZnPEkt"
+              "schema.name" : "ShAvroXMLZnONsb"
+            },
+            "propertyDescriptors" : {
+              "Delete Attributes Expression" : {
+                "displayName" : "Delete Attributes Expression",
+                "identifiesControllerService" : false,
+                "name" : "Delete Attributes Expression",
+                "sensitive" : false
+              },
+              "filename" : {
+                "displayName" : "filename",
+                "identifiesControllerService" : false,
+                "name" : "filename",
+                "sensitive" : false
+              },
+              "Store State" : {
+                "displayName" : "Store State",
+                "identifiesControllerService" : false,
+                "name" : "Store State",
+                "sensitive" : false
+              },
+              "canonical-value-lookup-cache-size" : {
+                "displayName" : "Cache Value Lookup Cache Size",
+                "identifiesControllerService" : false,
+                "name" : "canonical-value-lookup-cache-size",
+                "sensitive" : false
+              },
+              "schema.name" : {
+                "displayName" : "schema.name",
+                "identifiesControllerService" : false,
+                "name" : "schema.name",
+                "sensitive" : false
+              },
+              "Stateful Variables Initial Value" : {
+                "displayName" : "Stateful Variables Initial Value",
+                "identifiesControllerService" : false,
+                "name" : "Stateful Variables Initial Value",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+            "identifier" : "885daf17-49df-33b2-9768-aefff246fb9f",
+            "instanceIdentifier" : "d48e3938-c803-1127-ffff-ffffb1a2085e",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 376.0,
+              "y" : 1024.0
+            },
+            "properties" : {
+              "Regular Expression" : "}]}}}]",
+              "Replacement Value" : "}]}}}}",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "aed02140-2304-3d1f-8e50-357e6eeb5d8b",
+            "identifier" : "9b292684-4ac9-3dff-a34d-50b3e04fd86b",
+            "instanceIdentifier" : "d48e3932-c803-1127-0000-00006888bda7",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 376.0,
+              "y" : 808.0
+            },
+            "properties" : {
+              "Regular Expression" : "[{\"Head\"",
+              "Replacement Value" : "{\"Message\":{\"Head\"",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "70345d5e-a042-3e49-b46e-f39d08800542",
+              "instanceIdentifier" : "660e3788-1c2e-1d9a-0000-000072e45bd8",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "de723b90-4ca5-385c-91e1-7e1e0b2b9497",
+            "instanceIdentifier" : "660e378e-1c2e-1d9a-0000-0000017278ba",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "039da0cd-aea6-3e78-97ab-24035faefa28",
+              "instanceIdentifier" : "62663f36-a685-187b-a86a-d53454329288",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "b648a0dc-6991-32f4-bf59-77fec29fb879",
+              "instanceIdentifier" : "84083d11-07fb-1052-a657-b05577d98e2a",
+              "name" : "UpdateAttribute",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "726df35b-3af7-3975-92f8-392a480c209c",
+            "instanceIdentifier" : "f211325d-de9d-166b-9fa3-06b33860d68e",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "86d664cc-714e-3bd2-8a38-955d300d22cc",
+              "instanceIdentifier" : "b5423e54-ea62-19b7-9bf3-8e7d834df97b",
+              "name" : "GenerateFlowFile",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "039da0cd-aea6-3e78-97ab-24035faefa28",
+              "instanceIdentifier" : "62663f36-a685-187b-a86a-d53454329288",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "c010afe3-c4c3-3510-8dd7-f69bc25de77b",
+            "instanceIdentifier" : "4c513d57-d903-1b2d-88ef-24aaa86c3b3b",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "dec51332-1586-3fb1-81c0-a5233f1ea6d1",
+              "instanceIdentifier" : "b4123b77-ab22-1219-aee2-977b670e3485",
+              "name" : "ConvertRecord",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "dec51332-1586-3fb1-81c0-a5233f1ea6d1",
+              "instanceIdentifier" : "b4123b77-ab22-1219-aee2-977b670e3485",
+              "name" : "ConvertRecord",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "e0252c64-2fc3-388b-a6af-21f02b8b775c",
+            "instanceIdentifier" : "e8cc334e-e497-14c6-93c7-31116cccfa1b",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "b648a0dc-6991-32f4-bf59-77fec29fb879",
+              "instanceIdentifier" : "84083d11-07fb-1052-a657-b05577d98e2a",
+              "name" : "UpdateAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "82f33489-3e5e-3fc3-9baf-c96bb856f01c",
+              "instanceIdentifier" : "924b37e4-aa69-19f1-a0e7-db001eb524f0",
+              "name" : "Funnel",
+              "type" : "FUNNEL"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "605cb39c-968c-36fd-a037-eeb6e4fc0c79",
+            "instanceIdentifier" : "660e3794-1c2e-1d9a-ffff-ffffe3dc9df1",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "ec6ce067-2c87-36df-addc-4defeb255274",
+              "id" : "70345d5e-a042-3e49-b46e-f39d08800542",
+              "instanceIdentifier" : "660e3788-1c2e-1d9a-0000-000072e45bd8",
+              "name" : "ReplaceText",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ {
+            "componentType" : "FUNNEL",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "82f33489-3e5e-3fc3-9baf-c96bb856f01c",
+            "instanceIdentifier" : "924b37e4-aa69-19f1-a0e7-db001eb524f0",
+            "position" : {
+              "x" : 425.3662997357205,
+              "y" : 1236.5749546966326
+            }
+          } ],
+          "groupIdentifier" : "273c4754-ed4d-384e-9467-ed7afe99b0ff",
+          "identifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "97ac394c-4216-15c4-992c-e81888e85bb1",
+          "labels" : [ ],
+          "name" : "Подтверждение ЗнП ЕКТ",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 1992.0,
+            "y" : 1528.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "dec51332-1586-3fb1-81c0-a5233f1ea6d1",
+            "instanceIdentifier" : "b4123b77-ab22-1219-aee2-977b670e3485",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ConvertRecord",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 248.0,
+              "y" : 432.0
+            },
+            "properties" : {
+              "record-writer" : "b0f8e983-bf95-321c-8c36-8cd864836e31",
+              "record-reader" : "2b67f540-6926-3e17-83c1-9c2eb970d374",
+              "include-zero-record-flowfiles" : "true"
+            },
+            "propertyDescriptors" : {
+              "record-writer" : {
+                "displayName" : "Record Writer",
+                "identifiesControllerService" : true,
+                "name" : "record-writer",
+                "sensitive" : false
+              },
+              "record-reader" : {
+                "displayName" : "Record Reader",
+                "identifiesControllerService" : true,
+                "name" : "record-reader",
+                "sensitive" : false
+              },
+              "include-zero-record-flowfiles" : {
+                "displayName" : "Include Zero Record FlowFiles",
+                "identifiesControllerService" : false,
+                "name" : "include-zero-record-flowfiles",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "039da0cd-aea6-3e78-97ab-24035faefa28",
+            "instanceIdentifier" : "62663f36-a685-187b-a86a-d53454329288",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 240.0,
+              "y" : 664.0
+            },
+            "properties" : {
+              "Regular Expression" : "[{\"POSTOBJECT\"",
+              "Replacement Value" : "{\"PACKAGE\":{\"POSTOBJECT\"",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "PRIMARY",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "86d664cc-714e-3bd2-8a38-955d300d22cc",
+            "instanceIdentifier" : "b5423e54-ea62-19b7-9bf3-8e7d834df97b",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "GenerateFlowFile",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 248.0,
+              "y" : 8.0
+            },
+            "properties" : {
+              "character-set" : "UTF-8",
+              "File Size" : "0B",
+              "generate-ff-custom-text" : "<PACKAGE>\n<POSTOBJECT>\n<POHJ>\n<t_ax_po_master>\n<PoNumber>EKT22007540</PoNumber>\n<DateRecvd>02.09.2022 05:39:35</DateRecvd>\n<Type>922</Type>\n<IntReceiptNumber>0000056764</IntReceiptNumber>\n</t_ax_po_master>\n<t_ax_po_detail>\n<PoNumber>EKT22007540</PoNumber>\n<LineNum>1</LineNum>\n<ItemID>CROSS</ItemID>\n<QtyRecvd>1.00000</QtyRecvd>\n<STATUS>OK</STATUS>\n<Type>N</Type>\n<Whse>01</Whse>\n<CrossNumber/>\n<TOID>TB00919299</TOID>\n<Lottable01/>\n<Lottable02>TB00919299</Lottable02>\n</t_ax_po_detail>\n<Id>OEKT22007540</Id>\n</POHJ>\n</POSTOBJECT>\n</PACKAGE>",
+              "Batch Size" : "1",
+              "Unique FlowFiles" : "false",
+              "Data Format" : "Text"
+            },
+            "propertyDescriptors" : {
+              "character-set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "character-set",
+                "sensitive" : false
+              },
+              "File Size" : {
+                "displayName" : "File Size",
+                "identifiesControllerService" : false,
+                "name" : "File Size",
+                "sensitive" : false
+              },
+              "mime-type" : {
+                "displayName" : "Mime Type",
+                "identifiesControllerService" : false,
+                "name" : "mime-type",
+                "sensitive" : false
+              },
+              "generate-ff-custom-text" : {
+                "displayName" : "Custom Text",
+                "identifiesControllerService" : false,
+                "name" : "generate-ff-custom-text",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Unique FlowFiles" : {
+                "displayName" : "Unique FlowFiles",
+                "identifiesControllerService" : false,
+                "name" : "Unique FlowFiles",
+                "sensitive" : false
+              },
+              "Data Format" : {
+                "displayName" : "Data Format",
+                "identifiesControllerService" : false,
+                "name" : "Data Format",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "70345d5e-a042-3e49-b46e-f39d08800542",
+            "instanceIdentifier" : "660e3788-1c2e-1d9a-0000-000072e45bd8",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ReplaceText",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 240.0,
+              "y" : 936.0
+            },
+            "properties" : {
+              "Regular Expression" : "}}}]",
+              "Replacement Value" : "}}}}",
+              "Evaluation Mode" : "Line-by-Line",
+              "Line-by-Line Evaluation Mode" : "All",
+              "Character Set" : "UTF-8",
+              "Maximum Buffer Size" : "1 MB",
+              "Replacement Strategy" : "Literal Replace"
+            },
+            "propertyDescriptors" : {
+              "Regular Expression" : {
+                "displayName" : "Search Value",
+                "identifiesControllerService" : false,
+                "name" : "Regular Expression",
+                "sensitive" : false
+              },
+              "Replacement Value" : {
+                "displayName" : "Replacement Value",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Value",
+                "sensitive" : false
+              },
+              "Evaluation Mode" : {
+                "displayName" : "Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Evaluation Mode",
+                "sensitive" : false
+              },
+              "Line-by-Line Evaluation Mode" : {
+                "displayName" : "Line-by-Line Evaluation Mode",
+                "identifiesControllerService" : false,
+                "name" : "Line-by-Line Evaluation Mode",
+                "sensitive" : false
+              },
+              "Character Set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "Character Set",
+                "sensitive" : false
+              },
+              "Maximum Buffer Size" : {
+                "displayName" : "Maximum Buffer Size",
+                "identifiesControllerService" : false,
+                "name" : "Maximum Buffer Size",
+                "sensitive" : false
+              },
+              "Replacement Strategy" : {
+                "displayName" : "Replacement Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Replacement Strategy",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ReplaceText",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-update-attribute-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "ec6ce067-2c87-36df-addc-4defeb255274",
+            "identifier" : "b648a0dc-6991-32f4-bf59-77fec29fb879",
+            "instanceIdentifier" : "84083d11-07fb-1052-a657-b05577d98e2a",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "UpdateAttribute",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 248.0,
+              "y" : 208.0
+            },
+            "properties" : {
+              "filename" : "${filename}.xml",
+              "Store State" : "Do not store state",
+              "canonical-value-lookup-cache-size" : "100",
+              "schema.name" : "ConfZnPEkt"
             },
             "propertyDescriptors" : {
               "Delete Attributes Expression" : {
@@ -18253,8 +19888,8 @@
             "name" : "WMSZnPTvr",
             "outputPorts" : [ ],
             "position" : {
-              "x" : 640.0,
-              "y" : 1416.0
+              "x" : 632.0,
+              "y" : 1432.0
             },
             "processGroups" : [ {
               "comments" : "",
@@ -27320,8 +28955,8 @@
           "name" : "SplitJson",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 2328.0,
-            "y" : 328.0
+            "x" : 2432.0,
+            "y" : 152.0
           },
           "properties" : {
             "Null Value Representation" : "empty string",
