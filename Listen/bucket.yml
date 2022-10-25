@@ -14,6 +14,8 @@ flows:
   32d2bb6f-c8b8-4a7f-a907-8159cf7ba611: {ver: 1, file: Price_lists_categories.snapshot,
     comments: '', author: anonymous, created: 1662538712067, flowName: Price_lists_categories,
     flowDesc: Test}
+  60ae8a2d-e643-456f-9595-c3894c13a3ff: {ver: 1, file: Api_Abom.snapshot, comments: '',
+    author: anonymous, created: 1666677710884, flowName: Api Abom, flowDesc: ''}
   89550ae0-583d-4b4f-b307-fd1b61c55318: {ver: 1, file: Brands.snapshot, comments: '',
     author: anonymous, created: 1662457553872, flowName: Brands, flowDesc: TestBrands}
   2d61743d-8ad0-49a4-bcf4-57b570917c5f: {ver: 1, file: TechCategories.snapshot, comments: '',

@@ -1,0 +1,1342 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ {
+          "bundle" : {
+            "artifact" : "nifi-dbcp-service-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.17.0"
+            },
+            "type" : "org.apache.nifi.dbcp.DBCPService"
+          } ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d01a89eb-d67d-3658-8b3c-b4d9ee061326",
+          "instanceIdentifier" : "1bfe32c2-0183-1000-ffff-ffff9dd8093c",
+          "name" : "MsSqlConnector(92)",
+          "properties" : {
+            "dbcp-min-idle-conns" : "0",
+            "Max Wait Time" : "500 millis",
+            "Database Driver Class Name" : "#{DriverClassMsSqlJdbc}",
+            "dbcp-min-evictable-idle-time" : "30 mins",
+            "Max Total Connections" : "8",
+            "dbcp-max-conn-lifetime" : "-1",
+            "Database Connection URL" : "#{UrlJdbcMsSql}#{ServerMsSql92}#{MsSqlAbomApiDB}#{Protocols}",
+            "dbcp-time-between-eviction-runs" : "-1",
+            "Database User" : "nifi",
+            "dbcp-soft-min-evictable-idle-time" : "-1",
+            "database-driver-locations" : "#{DriverLocation}",
+            "dbcp-max-idle-conns" : "8"
+          },
+          "propertyDescriptors" : {
+            "kerberos-password" : {
+              "displayName" : "Kerberos Password",
+              "identifiesControllerService" : false,
+              "name" : "kerberos-password",
+              "sensitive" : true
+            },
+            "dbcp-min-idle-conns" : {
+              "displayName" : "Minimum Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-idle-conns",
+              "sensitive" : false
+            },
+            "Max Wait Time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Driver Class Name" : {
+              "displayName" : "Database Driver Class Name",
+              "identifiesControllerService" : false,
+              "name" : "Database Driver Class Name",
+              "sensitive" : false
+            },
+            "dbcp-min-evictable-idle-time" : {
+              "displayName" : "Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "kerberos-principal" : {
+              "displayName" : "Kerberos Principal",
+              "identifiesControllerService" : false,
+              "name" : "kerberos-principal",
+              "sensitive" : false
+            },
+            "Max Total Connections" : {
+              "displayName" : "Max Total Connections",
+              "identifiesControllerService" : false,
+              "name" : "Max Total Connections",
+              "sensitive" : false
+            },
+            "kerberos-credentials-service" : {
+              "displayName" : "Kerberos Credentials Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-credentials-service",
+              "sensitive" : false
+            },
+            "dbcp-max-conn-lifetime" : {
+              "displayName" : "Max Connection Lifetime",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-conn-lifetime",
+              "sensitive" : false
+            },
+            "Validation-query" : {
+              "displayName" : "Validation query",
+              "identifiesControllerService" : false,
+              "name" : "Validation-query",
+              "sensitive" : false
+            },
+            "Database Connection URL" : {
+              "displayName" : "Database Connection URL",
+              "identifiesControllerService" : false,
+              "name" : "Database Connection URL",
+              "sensitive" : false
+            },
+            "dbcp-time-between-eviction-runs" : {
+              "displayName" : "Time Between Eviction Runs",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-time-between-eviction-runs",
+              "sensitive" : false
+            },
+            "Database User" : {
+              "displayName" : "Database User",
+              "identifiesControllerService" : false,
+              "name" : "Database User",
+              "sensitive" : false
+            },
+            "kerberos-user-service" : {
+              "displayName" : "Kerberos User Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-user-service",
+              "sensitive" : false
+            },
+            "dbcp-soft-min-evictable-idle-time" : {
+              "displayName" : "Soft Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-soft-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "database-driver-locations" : {
+              "displayName" : "Database Driver Location(s)",
+              "identifiesControllerService" : false,
+              "name" : "database-driver-locations",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
+              },
+              "sensitive" : false
+            },
+            "dbcp-max-idle-conns" : {
+              "displayName" : "Max Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-idle-conns",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.dbcp.DBCPConnectionPool"
+        } ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "1bfb6330-0183-1000-0000-00005567995c",
+        "labels" : [ ],
+        "name" : "ABOM_API",
+        "outputPorts" : [ ],
+        "parameterContextName" : "Connector",
+        "position" : {
+          "x" : 288.0,
+          "y" : 160.0
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "60743051-de88-384d-b7ad-0da1a89d40ea",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "468909bf-0183-1000-ffff-fffff435ded9",
+          "labels" : [ ],
+          "name" : "GetContractorProductCodes",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1952.0,
+            "y" : 440.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "fb37e848-ed7c-4061-888c-bc75ff6e1842",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d3dad4a2-1e9b-3bf0-b918-e89eeaf1734c",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c0133ec-0183-1000-0000-000035c6051f",
+          "labels" : [ ],
+          "name" : "Contractors_subtype",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 288.0,
+            "y" : 440.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "20d4132f-443e-4051-8df9-4cc510552662",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 6
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "63984a5c-33a5-30cc-97a9-934896e760cb",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "46c36e2a-0183-1000-0000-00000478625c",
+          "labels" : [ ],
+          "name" : "Standard_ids_with_product_reserve",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1952.0,
+            "y" : 632.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "0bbfdb09-1c22-4dcb-a498-83030bdafd06",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "a1cbc408-7396-35f0-a9b0-5556c65d480d",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c02300a-0183-1000-0000-00004ce1323a",
+          "labels" : [ ],
+          "name" : "Price_lists_conform",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 704.0,
+            "y" : 632.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "32a57e59-f09e-4939-9880-245b523e0bd3",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 4
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d710fede-b072-384d-9030-c597fb7f361e",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "552a4609-0183-1000-0000-0000366fdc04",
+          "labels" : [ ],
+          "name" : "CategoriesContractorsAndContractorsInCategories",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1120.0,
+            "y" : 1024.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "2730bc49-6912-42e0-af62-b8ff76f4b4a2",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "40f6c29e-eab8-36f4-95f7-a3c0eae5d8c9",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "55a76a28-0183-1000-0000-00005c48cb85",
+          "labels" : [ ],
+          "name" : "ProdCategories",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1528.0,
+            "y" : 1024.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "5f27c429-a23c-493e-b7d8-156081104996",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "56002b0d-697e-3016-997d-b6fa801bd1f8",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "3593dfd2-0183-1000-0000-00005eda00f7",
+          "labels" : [ ],
+          "name" : "ShortestSupplyChains",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1120.0,
+            "y" : 824.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "a73aba11-1a2a-432e-ae14-23a41a4f5dea",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "4bbb5cbd-5176-36a2-a60c-9955f45d97ec",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "d8cf3276-b079-16d9-862f-695430debc6c",
+          "labels" : [ ],
+          "name" : "AdvertisingAndStandard",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1528.0,
+            "y" : 248.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "2151bc30-03f8-4249-abe0-a29cb821889e",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "a23667ff-ef7a-3730-936d-07e854daa9e0",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "59a2481c-0183-1000-0000-00006e163450",
+          "labels" : [ ],
+          "name" : "StandardGroups",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 2368.0,
+            "y" : 248.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "f5c9573a-f3e8-44e2-9818-1bff2a62b942",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "8d2020b0-9a37-3730-9050-2cb91ede41cb",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "54588562-0183-1000-ffff-ffffbcc9a11e",
+          "labels" : [ ],
+          "name" : "Originals",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1952.0,
+            "y" : 824.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "2529bb8b-80c1-424a-b999-eeb5616747c3",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "fc6c5b53-65ba-326f-9f23-4501e3757ea7",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "3573c56f-0183-1000-0000-00004882b9e4",
+          "labels" : [ ],
+          "name" : "RequestAndRequestItem",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1120.0,
+            "y" : 632.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "008498f3-7ae6-41dc-91f9-003716df20cf",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "2a857a01-46ac-3458-b1f0-db026d11a627",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c017ae3-0183-1000-ffff-ffffa875511d",
+          "labels" : [ ],
+          "name" : "Logistic_cards",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 704.0,
+            "y" : 440.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "29168dcf-276c-4620-97dd-9f0b391d5cd3",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 5
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d2ce68a3-eec4-36d9-8e16-c43be89e015d",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c00fdd9-0183-1000-ffff-ffffbc1b0b52",
+          "labels" : [ ],
+          "name" : "contractors",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 288.0,
+            "y" : 248.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "d9ffed9f-fbcb-4364-ab1a-a8d91da0bab8",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 6
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "4ada509e-d6c0-3e01-8f36-67dda64198f9",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c01ff82-0183-1000-ffff-ffff9bf498bc",
+          "labels" : [ ],
+          "name" : "Price_lists_categories",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 704.0,
+            "y" : 248.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "6e6a3c9a-b829-4bb3-90f2-9b8207501f54",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 4
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d21feddf-b568-3582-a084-14d66d658c98",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "55cb4724-0183-1000-0000-0000404f7103",
+          "labels" : [ ],
+          "name" : "TechCategories",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1952.0,
+            "y" : 1024.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "93026e50-4ad5-48de-887e-985e6baae69a",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "ead88a97-4ec7-3ced-b08b-824ce7112672",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "55d553d2-0183-1000-0000-00005351b641",
+          "labels" : [ ],
+          "name" : "StandardTechCategory",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 2368.0,
+            "y" : 48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "e191ef63-4185-467b-8577-e1b7d4446e0d",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 1
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "1889df38-c466-373e-85d5-d08bcf64ef44",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "26537c9f-0183-1000-ffff-fffff8a123a1",
+          "labels" : [ ],
+          "name" : "ShipmentAndShipmentItem",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1120.0,
+            "y" : 248.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "427d1f1d-6ad3-423b-9334-d3592b5a3f28",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 4
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "4fc98566-057c-31a7-96d1-82b05009fdc0",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "4086d8b9-0183-1000-0000-000054ae49cf",
+          "labels" : [ ],
+          "name" : "StandardSigns",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1528.0,
+            "y" : 440.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "15d6b882-e3a5-4838-aa37-038e037e0428",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "2e48ab1c-14f7-3d7d-981f-cd64d7e4c6f6",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "305d9004-0183-1000-ffff-ffffdf307248",
+          "labels" : [ ],
+          "name" : "OrderAndOrderItem",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1120.0,
+            "y" : 48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "a4c5b5e2-9fc7-451b-9785-4df3e0904332",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 4
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "afeeb7fe-e4ee-3380-b541-99b34564e0e7",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c026e2d-0183-1000-0000-00006328028e",
+          "labels" : [ ],
+          "name" : "Storages",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 288.0,
+            "y" : 632.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "0ed493ef-abe0-4068-8ec4-2d553fb16d76",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 5
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "a1747304-408e-3b0e-9dd9-01140c521350",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "35c0e50c-0183-1000-0000-00007765ce21",
+          "labels" : [ ],
+          "name" : "ShortestRoutes",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1528.0,
+            "y" : 48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "2739e423-e96f-4abc-8e5c-9f554349c6d8",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "208d6388-4e65-383d-9001-14c61df6e9eb",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "54f26010-0183-1000-ffff-ffffa3314d72",
+          "labels" : [ ],
+          "name" : "RegulationDiscounts",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 704.0,
+            "y" : 1024.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "d2917888-86cb-490f-8a7c-299198f42eb6",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 1
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "1ce69255-48a2-32bb-aee3-171878a4da0f",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "45eac722-0183-1000-0000-000044baf7a7",
+          "labels" : [ ],
+          "name" : "Hits",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1952.0,
+            "y" : 48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "f470e8ff-5d33-49bb-b4a4-3baddff5db59",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 1
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d9938b78-ebe3-3d58-bc28-71b48b71cb01",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c319ded-0183-1000-0000-000072b6974b",
+          "labels" : [ ],
+          "name" : "Products",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 704.0,
+            "y" : 824.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "4b680076-79da-4710-b023-1f76d223a286",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 4
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "de1340b1-cbca-3fb2-b6b8-d247417efba6",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "30bcca4a-0183-1000-0000-00002efebe4a",
+          "labels" : [ ],
+          "name" : "RefusalAndRefusalItem",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1120.0,
+            "y" : 440.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "349fbd98-29c4-4a30-a640-4ab656403e75",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "3605e8d0-11ae-3531-b9ea-e02fcf90b6a4",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "4611b46b-0183-1000-ffff-fffffbccba8b",
+          "labels" : [ ],
+          "name" : "StandardAnalogs",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1952.0,
+            "y" : 248.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "885517f0-1c4b-44af-ad3f-3693d043cbd4",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 1
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "69171c84-09c0-38e4-9b71-af4ee2a02c83",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1c02ac8b-0183-1000-0000-00005db28cd8",
+          "labels" : [ ],
+          "name" : "Сontracts",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 288.0,
+            "y" : 824.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "f183079f-4235-461d-b1f0-b82fd1734b07",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 5
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "5b9b779e-fea5-3266-9b0e-191c7f97e6a1",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "5488ac66-0183-1000-0000-00003be7fbd3",
+          "labels" : [ ],
+          "name" : "ArticleSynonyms",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 288.0,
+            "y" : 1024.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "58b87bcb-2572-41f9-914a-131d4558bd87",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 1
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "c72e0425-54bb-3930-b031-d7d79b3f3d95",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "44e83db6-0183-1000-0000-000033030361",
+          "labels" : [ ],
+          "name" : "Standards",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1528.0,
+            "y" : 632.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "76565a03-3cca-440c-9420-649fc3deaca2",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "663a3973-2216-3fdd-ba58-e96940d6a67b",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "1bfb9c40-0183-1000-ffff-ffffd603b061",
+          "labels" : [ ],
+          "name" : "Brands",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 288.0,
+            "y" : 48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "c6ea7cf8-873c-4086-96df-8089cd259ed6",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 5
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "55ccfb73-eb1a-3fd3-8ae8-06bebdcd8b0d",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "455177aa-0183-1000-ffff-ffffe65bb860",
+          "labels" : [ ],
+          "name" : "StandardProdCategory",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 1528.0,
+            "y" : 824.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "325df6b3-e98d-4b6d-9184-2157aa1f1069",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7d1a21a5-9c1e-3f92-9ee1-486de5d2820d",
+          "identifier" : "d9d71fbe-bbdf-31ed-8ab8-5c27867d5bca",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "31006911-0183-1000-0000-000014d4fed5",
+          "labels" : [ ],
+          "name" : "PriceListAndPriceListItem",
+          "outputPorts" : [ ],
+          "parameterContextName" : "Connector",
+          "position" : {
+            "x" : 704.0,
+            "y" : 48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "016c05e8-37e2-40c0-accf-bfc6976b1d9a",
+            "flowId" : "e2bd8ba8-02be-43d1-ab9d-a0b4ae7bcf91",
+            "registryUrl" : "http://10.2.1.90:18080",
+            "version" : 2
+          }
+        } ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : {
+        "Connector" : {
+          "componentType" : "PARAMETER_CONTEXT",
+          "inheritedParameterContexts" : [ ],
+          "name" : "Connector",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "Protocols",
+            "sensitive" : false,
+            "value" : "authentication=NotSpecified;encrypt=true;trustservercertificate=true"
+          }, {
+            "description" : "",
+            "name" : "WMSZnO",
+            "sensitive" : false,
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/WMSZnO/NiFi_Info"
+          }, {
+            "description" : "",
+            "name" : "Stop",
+            "sensitive" : false,
+            "value" : "0"
+          }, {
+            "description" : "",
+            "name" : "WmsDB",
+            "sensitive" : false,
+            "value" : "database=wmsintegration;"
+          }, {
+            "description" : "",
+            "name" : "WMSZnP",
+            "sensitive" : false,
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/WMSZnP/NiFi_Info"
+          }, {
+            "description" : "",
+            "name" : "WmsServer",
+            "sensitive" : false,
+            "value" : "10.2.1.51;port=1433;"
+          }, {
+            "description" : "",
+            "name" : "UrlJdbcMsSql",
+            "sensitive" : false,
+            "value" : "jdbc:sqlserver://"
+          }, {
+            "description" : "",
+            "name" : "WMS_Host",
+            "sensitive" : false,
+            "value" : "10.2.1.51;port=1433;"
+          }, {
+            "description" : "",
+            "name" : "ObmenMagentaZnO",
+            "sensitive" : false,
+            "value" : "http://mars:8082/alpha/hs/ObmenNiFi/MagentaZnO/NiFi_Info"
+          }, {
+            "description" : "",
+            "name" : "HttpSessionId",
+            "sensitive" : false,
+            "value" : "http://84.23.54.182/rest/2/authentication/createSession?accountID=alpha&user=erpapi&password=yasle5193m "
+          }, {
+            "description" : "",
+            "name" : "ServerMsSql92",
+            "sensitive" : false,
+            "value" : "10.2.1.92;port=1433;"
+          }, {
+            "description" : "",
+            "name" : "DriverClassMsSqlJdbc",
+            "sensitive" : false,
+            "value" : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+          }, {
+            "description" : "",
+            "name" : "MsSqlAbomApiDB",
+            "sensitive" : false,
+            "value" : "database=reports_abomAPI;"
+          }, {
+            "description" : "",
+            "name" : "DriverLocation",
+            "sensitive" : false,
+            "value" : "/drivers_nifi/sqljdbc_10.2/rus/mssql-jdbc-10.2.0.jre8.jar"
+          }, {
+            "description" : "",
+            "name" : "WMS_BD",
+            "sensitive" : false,
+            "value" : "database=wmsintegration;"
+          }, {
+            "description" : "",
+            "name" : "Bearer",
+            "sensitive" : false,
+            "value" : "Bearer bddba698214e6a4de9ae38bce45435fd"
+          }, {
+            "description" : "",
+            "name" : "UrlApiABOM",
+            "sensitive" : false,
+            "value" : "http://10.2.2.92:9601/"
+          }, {
+            "description" : "",
+            "name" : "supplier-refusals",
+            "sensitive" : false,
+            "value" : "${sql.args.1.value}"
+          } ]
+        }
+      }
+    }
+  }
+}
